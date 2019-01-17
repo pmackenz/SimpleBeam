@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  16 JAN 2019 16:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  17 JAN 2019 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -480,40 +480,51 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3]
-l. 31 Writing theory.idv[1] (theory0x.png)
-l. 37 Writing theory.idv[2] (theory1x.png)
-l. 43 Writing theory.idv[3] (theory2x.png)
- [4]
-l. 47 Writing theory.idv[4] (theory3x.png)
-l. 54 Writing theory.idv[5] (theory4x.png)
+) [3] [4
 
-[5]
-l. 59 Writing theory.idv[6] (theory5x.png)
-l. 64 Writing theory.idv[7] (theory6x.png)
- [6]
-l. 69 Writing theory.idv[8] (theory7x.png)
-l. 80 Writing theory.idv[9] (theory8x.png)
+]
+l.25 --- TeX4ht warning --- File `"beam.xbb"' not found ---
+l.25 --- TeX4ht warning --- Cannot determine size of graphic in "beam.xbb" (no 
+BoundingBox) ---
+l. 25 --- needs --- beam.png ---
+[5
+
+]
+l. 38 Writing theory.idv[1] (theory0x.png)
+l. 45 Writing theory.idv[2] (theory1x.png)
+ [6
+
+]
+l. 53 Writing theory.idv[3] (theory2x.png)
  [7]
-l. 87 Writing theory.idv[10] (theory9x.png)
-l. 94 Writing theory.idv[11] (theory10x.png)
+l. 60 Writing theory.idv[4] (theory3x.png)
+l. 68 Writing theory.idv[5] (theory4x.png)
  [8]
-l. 102 Writing theory.idv[12] (theory11x.png)
-l. 110 Writing theory.idv[13] (theory12x.png)
+l. 73 Writing theory.idv[6] (theory5x.png)
+l. 78 Writing theory.idv[7] (theory6x.png)
+l. 83 Writing theory.idv[8] (theory7x.png)
  [9]
-l. 119 Writing theory.idv[14] (theory13x.png)
-l. 126 Writing theory.idv[15] (theory14x.png)
+l. 94 Writing theory.idv[9] (theory8x.png)
+l. 101 Writing theory.idv[10] (theory9x.png)
  [10]
-l. 131 Writing theory.idv[16] (theory15x.png)
-l. 136 Writing theory.idv[17] (theory16x.png)
- [11] (./theory.aux) ) 
+l. 108 Writing theory.idv[11] (theory10x.png)
+ [11]
+l. 116 Writing theory.idv[12] (theory11x.png)
+l. 124 Writing theory.idv[13] (theory12x.png)
+ [12]
+l. 133 Writing theory.idv[14] (theory13x.png)
+l. 140 Writing theory.idv[15] (theory14x.png)
+l. 145 Writing theory.idv[16] (theory15x.png)
+ [13]
+l. 150 Writing theory.idv[17] (theory16x.png)
+ [14] (./theory.aux) ) 
 Here is how much of TeX's memory you used:
- 5328 strings out of 492996
- 61280 string characters out of 6132730
- 249834 words of memory out of 5000000
- 8790 multiletter control sequences out of 15000+600000
+ 5341 strings out of 492996
+ 61418 string characters out of 6132730
+ 249847 words of memory out of 5000000
+ 8800 multiletter control sequences out of 15000+600000
  11251 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,6n,32p,887b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on theory.dvi (11 pages, 29204 bytes).
+Output written on theory.dvi (14 pages, 31500 bytes).

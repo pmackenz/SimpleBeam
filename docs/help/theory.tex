@@ -20,6 +20,13 @@
 \maketitle
 
 \section{Introduction}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.50]{beam.png}
+		\caption{Deformation of the Bernoulli-Euler beam. Definition of coordinate axes and components of displacement.}
+	\end{center}
+	\label{Fig:1}
+\end{figure}
 This tool employs the Bernoulli-Euler beam theory.  This theory, also known as \emph{shear rigid beam theory}, is based on the kinematic assumption  that
 \begin{quote}
    Any plane cross section perpendicular to the undeformed beam's axis remain plane and perpendicular to the axis throughout the deformation.
@@ -34,20 +41,27 @@ Navier's assumption leads to
 	v(x,y) = v(x)
 	\label{Eq:1}
 \end{equation}
+This displacement field induces an axial strain of
 \begin{equation}
-	\varepsilon(x,y) = \frac{\partial u(x,y)}{\partial x} = -y\, v''(x)
+	\varepsilon(x,y) = \frac{\partial u(x,y)}{\partial x} = -y\, v''(x) ~.
 	\label{Eq:2}
 \end{equation}
+Equation~\eqref{Eq:2} states that a fiber parallel to the beam axis stretches in the bottom portion of the beam ($y<0$) and contracts if the fiber is located above the beam axis ($y>0$).  The beam axis itself  does not stretch.
 
 \section{Constitutive relations}
+For a slender beam, we can ignore stress components acting perpendicular to the beam's axis.  Thus, the constitutive relations can be simplified as the 1D-version of Hooke's law:
 \begin{equation}
 	\sigma(x,y) = E\,\varepsilon(x,y)
 	\label{Eq:3}
 \end{equation}
+where $E$ is the modulus of elasticity.
+
+The imposed state of deformation induces normal stress proportional to the strain field~\eqref{Eq:2} as
 \begin{equation}
-	\sigma(x,y) = -E y\,v''(x)
+	\sigma(x,y) = -E y\,v''(x) ~.
 	\label{Eq:4}
 \end{equation}
+This relation states that (i)~the stress varies linearly with the distance from the beam's axis, vanishing at the axis, and (ii)~the stress is proportional to the curvature of the beam.
 
 \section{Stress resultants}
 The beam sees two stress resultants: the internal moment, 

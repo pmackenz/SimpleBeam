@@ -27,5 +27,6 @@
         <file>docs/help/theory16x.png</file>
         <file>images/W-Logo_Purple_RGB.png</file>
         <file>docs/about.html</file>
+        <file>docs/help/beam.png</file>
     </qresource>
 </RCC>

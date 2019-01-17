@@ -132,6 +132,7 @@ Css: table.multline, table.multline-star {width:100%;}
 Css: td.gather {text-align:center; }
 Css: table.gather {width:100%;}
 Css: div.gather-star {text-align:center;}
+File: beam.png
 --- needs --- theory.idv[2] ==> theory0x.png ---
 --- needs --- theory.idv[3] ==> theory1x.png ---
 --- needs --- theory.idv[4] ==> theory2x.png ---
