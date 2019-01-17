@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/BoxChannel.png</file>
+        <file>images/I-Beam.png</file>
+        <file>images/Rectangle.png</file>
+        <file>docs/help/theory.html</file>
+        <file>docs/help/theory.4ct</file>
+        <file>docs/help/theory.4tc</file>
+        <file>docs/help/theory.css</file>
+        <file>docs/help/theory.xref</file>
+        <file>docs/help/theory0x.png</file>
+        <file>docs/help/theory1x.png</file>
+        <file>docs/help/theory2x.png</file>
+        <file>docs/help/theory3x.png</file>
+        <file>docs/help/theory4x.png</file>
+        <file>docs/help/theory5x.png</file>
+        <file>docs/help/theory6x.png</file>
+        <file>docs/help/theory7x.png</file>
+        <file>docs/help/theory8x.png</file>
+        <file>docs/help/theory9x.png</file>
+        <file>docs/help/theory10x.png</file>
+        <file>docs/help/theory11x.png</file>
+        <file>docs/help/theory12x.png</file>
+        <file>docs/help/theory13x.png</file>
+        <file>docs/help/theory14x.png</file>
+        <file>docs/help/theory15x.png</file>
+        <file>docs/help/theory16x.png</file>
+        <file>images/W-Logo_Purple_RGB.png</file>
+        <file>docs/about.html</file>
+    </qresource>
+</RCC>

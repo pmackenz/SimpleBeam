@@ -1,0 +1,140 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+%\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+%\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amsmath,amssymb}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{Bernoulli-Euler beam theory}
+\author{Peter Mackenzie-Helnwein}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This tool employs the Bernoulli-Euler beam theory.  This theory, also known as \emph{shear rigid beam theory}, is based on the kinematic assumption  that
+\begin{quote}
+   Any plane cross section perpendicular to the undeformed beam's axis remain plane and perpendicular to the axis throughout the deformation.
+\end{quote}
+This allows us to reduce the three-dimensional problem to a single unknown function, $v(x)$, known as \emph{deflection} of the beam.
+
+\section{Kinematics}
+Navier's assumption leads to
+\begin{equation}
+	u(x,y) = -y \,v'(x)
+	\qquad
+	v(x,y) = v(x)
+	\label{Eq:1}
+\end{equation}
+\begin{equation}
+	\varepsilon(x,y) = \frac{\partial u(x,y)}{\partial x} = -y\, v''(x)
+	\label{Eq:2}
+\end{equation}
+
+\section{Constitutive relations}
+\begin{equation}
+	\sigma(x,y) = E\,\varepsilon(x,y)
+	\label{Eq:3}
+\end{equation}
+\begin{equation}
+	\sigma(x,y) = -E y\,v''(x)
+	\label{Eq:4}
+\end{equation}
+
+\section{Stress resultants}
+The beam sees two stress resultants: the internal moment, 
+\begin{equation}
+	M(x) = -\int_A y\sigma(x,y)\, dA
+	\label{Eq:5}
+\end{equation}
+and the transverse shear force,
+\begin{equation}
+	V(x)  = -\int_A \tau_{xy}(x,y)\, dA
+	\label{Eq:6}
+\end{equation}
+Substituting \eqref{Eq:4} into \eqref{Eq:5} yields
+\begin{equation}
+	M(x) = \int_A E y^2 \, v''(x) \, dA = E\,v''(x) \int_A y^2\,dA = EI\,v''(x)
+	\label{Eq:7}
+\end{equation}
+where 
+\begin{equation}
+	I = \int_A y^2\,dA
+	\label{Eq:7b}
+\end{equation}
+is the \emph{area moment of inertia} or, short, \emph{moment of inertia}.
+
+Note that the modulus of elasticity, $E$, characterizes the material, the moment of inertia, $I$, characterized the shape of the cross section, and the second derivative of the deflection, $v''(x)$, characterizes the deformation (curvature) of the beam.
+
+\section{Equilibrium}
+Equilibrium is formulated in terms of shear forces, $V(x)$, and internal moments, $M(x)$.
+Equilibrium of forces on an beam element of infinitesimal length, formulated in the $y$-direction, yields
+\begin{equation}
+	V'(x) = -w(x)
+	\label{Eq:8}
+\end{equation}
+where $w(x)$ is the distributed lateral load per length.  $w(x)$ is defined positive if pointing against the (upward) positive $y$-axis.
+
+Moment equilibrium around the out-of-plane axis on the same element yields
+\begin{equation}
+	M'(x) = V(x) ~.
+	\label{Eq:9}
+\end{equation}
+A system for which equations~\eqref{Eq:8} and \eqref{Eq:9} are sufficient to determine the internal moment and shear functions is called \emph{statically determinate}. Otherwise, the system is called \emph{statically indeterminate}. Solving these equations for the latter requires consideration of the kinematic relation~\eqref{Eq:7} and respective boundary conditions.
+
+Equations~\eqref{Eq:8} and \eqref{Eq:9} may be combined into one equation as
+\begin{equation}
+	M''(x) = V'(x)=-w(x)
+	\label{Eq:10}
+\end{equation}
+Equation~\eqref{Eq:10} replaces both equilibrium equations \eqref{Eq:8} and \eqref{Eq:9}.
+
+\section{Governing equation}
+The governing equation is obtained by assuming the displacement function, $v(x)$, as the primary unknown and expressing $M(x)$ in \eqref{Eq:10} using \eqref{Eq:7} to obtain
+\begin{equation}
+	\left( EI(x)\,v''(x) \right)'' + w(x) = 0
+	\label{Eq:11}
+\end{equation}
+This equation is known as the governing equation of the Bernoulli-Euler beam.
+
+If the beam possesses a constant cross section and is made of one material, then $EI(x)=EI=const.$ and
+\eqref{Eq:11} simplifies to
+\begin{equation}
+	EI\,v''''(x) + w(x) = 0
+	\label{Eq:12}
+\end{equation}
+Equation~\eqref{Eq:12} is what is implemented in this program.
+
+\section{Finding moment, shear force, and slope from the displacement function}
+Solving \eqref{Eq:12} and applying suitable boundary conditions yields the displacement function, $v(x)$, for the beam.
+The slope, $\theta(x)$, is obtained through differentiation as
+\begin{equation}
+	\theta(x) = v'(x) ~.
+	\label{Eq:13}
+\end{equation}
+It is positive if the cross section rotates counter-clockwise during deformation.
+
+The moment follows from \eqref{Eq:7} as
+\begin{equation}
+	M(x) = EI(x)\, v''(x) = EI(x)\, \theta'(x) ~.
+	\label{Eq:14}
+\end{equation}
+The transverse shear force follows from~\eqref{Eq:10} as
+\begin{equation}
+	V(x) = M'(x) = \left( EI(x)\, v''(x) \right)'
+	\label{Eq:15}
+\end{equation}
+or, for constant $EI$, simplifies to
+\begin{equation}
+	V(x) = EI\, v'''(x) ~.
+	\label{Eq:16}
+\end{equation}
+\end{document}  

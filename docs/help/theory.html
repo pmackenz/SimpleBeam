@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Bernoulli-Euler beam theory</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,mathml-,html --> 
+<meta name="src" content="theory.tex" /> 
+<link rel="stylesheet" type="text/css" href="theory.css" /> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">Bernoulli-Euler beam theory</h2>
+<div class="author" ><span 
+class="cmr-12">Peter Mackenzie-Helnwein</span></div><br />
+<div class="date" ><span 
+class="cmr-12">January 16, 2019</span></div>
+   </div>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Introduction</h3>
+<!--l. 23--><p class="noindent" >This tool employs the Bernoulli-Euler beam theory. This theory, also
+known as <span 
+class="cmti-10x-x-109">shear rigid beam theory</span>, is based on the kinematic assumption
+that
+     </p><div class="quote">
+     <!--l. 25--><p class="noindent" >Any plane cross section perpendicular to the undeformed beam&#8217;s
+     axis remain plane and perpendicular to the axis throughout the
+     deformation.</p></div>
+<!--l. 27--><p class="noindent" >This allows us to reduce the three-dimensional problem to a single unknown
+function, <span 
+class="cmmi-10x-x-109">v</span>(<span 
+class="cmmi-10x-x-109">x</span>), known as <span 
+class="cmti-10x-x-109">deflection </span>of the beam.
+</p><!--l. 29--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Kinematics</h3>
+<!--l. 30--><p class="noindent" >Navier&#8217;s assumption leads to
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-2001r1"></a>
+
+   <center class="math-display" >
+<img 
+src="theory0x.png" alt="            &#x2032;
+u(x,y) = - yv (x)   v(x,y) = v(x )
+" class="math-display"  /></center></td><td class="equation-label">(1)</td></tr></table>
+<!--l. 36--><p class="nopar" >
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-2002r2"></a>
+   <center class="math-display" >
+<img 
+src="theory1x.png" alt="&#x03B5;(x,y) = &#x2202;u(x,y)-= - yv &#x2032;&#x2032;(x )
+           &#x2202;x
+" class="math-display"  /></center></td><td class="equation-label">(2)</td></tr></table>
+<!--l. 40--><p class="nopar" >
+</p><!--l. 42--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>Constitutive relations</h3>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-3001r3"></a>
+   <center class="math-display" >
+
+<img 
+src="theory2x.png" alt="&#x03C3;(x,y) = E&#x03B5;(x,y)
+" class="math-display"  /></center></td><td class="equation-label">(3)</td></tr></table>
+<!--l. 46--><p class="nopar" >
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-3002r4"></a>
+   <center class="math-display" >
+<img 
+src="theory3x.png" alt="&#x03C3;(x,y) = - Eyv&#x2032;&#x2032;(x)
+" class="math-display"  /></center></td><td class="equation-label">(4)</td></tr></table>
+<!--l. 50--><p class="nopar" >
+</p><!--l. 52--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-40004"></a>Stress resultants</h3>
+<!--l. 53--><p class="noindent" >The beam sees two stress resultants: the internal moment,
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4001r5"></a>
+   <center class="math-display" >
+<img 
+src="theory4x.png" alt="          &#x222B;
+M (x) = -    y&#x03C3;(x,y)dA
+           A
+" class="math-display"  /></center></td><td class="equation-label">(5)</td></tr></table>
+<!--l. 57--><p class="nopar" >
+and the transverse shear force,
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4002r6"></a>
+   <center class="math-display" >
+<img 
+src="theory5x.png" alt="         &#x222B;
+V (x ) = -   &#x03C4;  (x,y)dA
+          A  xy
+" class="math-display"  /></center></td><td class="equation-label">(6)</td></tr></table>
+<!--l. 62--><p class="nopar" >
+Substituting (<a 
+href="#x1-3002r4">4<!--tex4ht:ref: Eq:4 --></a>) into (<a 
+href="#x1-4001r5">5<!--tex4ht:ref: Eq:5 --></a>) yields
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4003r7"></a>
+   <center class="math-display" >
+<img 
+src="theory6x.png" alt="        &#x222B;                       &#x222B;
+              2 &#x2032;&#x2032;           &#x2032;&#x2032;       2         &#x2032;&#x2032;
+M  (x ) = A Ey  v (x)dA = Ev  (x) A y dA = EIv  (x)
+" class="math-display"  /></center></td><td class="equation-label">(7)</td></tr></table>
+<!--l. 67--><p class="nopar" >
+where
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4004r8"></a>
+
+   <center class="math-display" >
+<img 
+src="theory7x.png" alt="    &#x222B;
+I =    y2dA
+     A
+" class="math-display"  /></center></td><td class="equation-label">(8)</td></tr></table>
+<!--l. 72--><p class="nopar" >
+is the <span 
+class="cmti-10x-x-109">area moment of inertia </span>or, short, <span 
+class="cmti-10x-x-109">moment of inertia</span>.
+</p><!--l. 75--><p class="indent" >   Note that the modulus of elasticity, <span 
+class="cmmi-10x-x-109">E</span>, characterizes the material, the
+moment of inertia, <span 
+class="cmmi-10x-x-109">I</span>, characterized the shape of the cross section, and the second
+derivative of the deflection, <span 
+class="cmmi-10x-x-109">v</span><span 
+class="cmsy-10x-x-109">&#x2032;&#x2032;</span>(<span 
+class="cmmi-10x-x-109">x</span>), characterizes the deformation (curvature) of
+the beam.
+</p><!--l. 77--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
+ id="x1-50005"></a>Equilibrium</h3>
+<!--l. 78--><p class="noindent" >Equilibrium is formulated in terms of shear forces, <span 
+class="cmmi-10x-x-109">V </span>(<span 
+class="cmmi-10x-x-109">x</span>), and internal moments,
+<span 
+class="cmmi-10x-x-109">M</span>(<span 
+class="cmmi-10x-x-109">x</span>). Equilibrium of forces on an beam element of infinitesimal length,
+formulated in the <span 
+class="cmmi-10x-x-109">y</span>-direction, yields
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-5001r9"></a>
+   <center class="math-display" >
+<img 
+src="theory8x.png" alt="V &#x2032;(x) = - w(x)
+" class="math-display"  /></center></td><td class="equation-label">(9)</td></tr></table>
+<!--l. 83--><p class="nopar" >
+where <span 
+class="cmmi-10x-x-109">w</span>(<span 
+class="cmmi-10x-x-109">x</span>) is the distributed lateral load per length. <span 
+class="cmmi-10x-x-109">w</span>(<span 
+class="cmmi-10x-x-109">x</span>) is defined positive if
+pointing against the (upward) positive <span 
+class="cmmi-10x-x-109">y</span>-axis.
+
+</p><!--l. 86--><p class="indent" >   Moment equilibrium around the out-of-plane axis on the same element
+yields
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-5002r10"></a>
+   <center class="math-display" >
+<img 
+src="theory9x.png" alt="  &#x2032;
+M  (x) = V (x) .
+" class="math-display"  /></center></td><td class="equation-label">(10)</td></tr></table>
+<!--l. 90--><p class="nopar" >
+A system for which equations&#x00A0;(<a 
+href="#x1-5001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
+href="#x1-5002r10">10<!--tex4ht:ref: Eq:9 --></a>) are sufficient to determine the
+internal moment and shear functions is called <span 
+class="cmti-10x-x-109">statically determinate</span>. Otherwise,
+the system is called <span 
+class="cmti-10x-x-109">statically indeterminate</span>. Solving these equations for the
+latter requires consideration of the kinematic relation&#x00A0;(<a 
+href="#x1-4003r7">7<!--tex4ht:ref: Eq:7 --></a>) and respective
+boundary conditions.
+</p><!--l. 93--><p class="indent" >   Equations&#x00A0;(<a 
+href="#x1-5001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
+href="#x1-5002r10">10<!--tex4ht:ref: Eq:9 --></a>) may be combined into one equation as
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-5003r11"></a>
+   <center class="math-display" >
+<img 
+src="theory10x.png" alt="  &#x2032;&#x2032;       &#x2032;
+M  (x) = V (x) = - w (x )
+" class="math-display"  /></center></td><td class="equation-label">(11)</td></tr></table>
+<!--l. 97--><p class="nopar" >
+Equation&#x00A0;(<a 
+href="#x1-5003r11">11<!--tex4ht:ref: Eq:10 --></a>) replaces both equilibrium equations (<a 
+href="#x1-5001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
+href="#x1-5002r10">10<!--tex4ht:ref: Eq:9 --></a>).
+
+</p><!--l. 100--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
+ id="x1-60006"></a>Governing equation</h3>
+<!--l. 101--><p class="noindent" >The governing equation is obtained by assuming the displacement function,
+<span 
+class="cmmi-10x-x-109">v</span>(<span 
+class="cmmi-10x-x-109">x</span>), as the primary unknown and expressing <span 
+class="cmmi-10x-x-109">M</span>(<span 
+class="cmmi-10x-x-109">x</span>) in (<a 
+href="#x1-5003r11">11<!--tex4ht:ref: Eq:10 --></a>) using (<a 
+href="#x1-4003r7">7<!--tex4ht:ref: Eq:7 --></a>) to
+obtain
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-6001r12"></a>
+   <center class="math-display" >
+<img 
+src="theory11x.png" alt="(EI (x)v&#x2032;&#x2032;(x ))&#x2032;&#x2032; + w (x ) = 0
+" class="math-display"  /></center></td><td class="equation-label">(12)</td></tr></table>
+<!--l. 105--><p class="nopar" >
+This equation is known as the governing equation of the Bernoulli-Euler
+beam.
+</p><!--l. 108--><p class="indent" >   If the beam possesses a constant cross section and is made of one material,
+then <span 
+class="cmmi-10x-x-109">EI</span>(<span 
+class="cmmi-10x-x-109">x</span>) = <span 
+class="cmmi-10x-x-109">EI </span>= <span 
+class="cmmi-10x-x-109">const. </span>and (<a 
+href="#x1-6001r12">12<!--tex4ht:ref: Eq:11 --></a>) simplifies to
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-6002r13"></a>
+   <center class="math-display" >
+<img 
+src="theory12x.png" alt="   &#x2032;&#x2032;&#x2032;&#x2032;
+EIv  (x)+  w(x) = 0
+" class="math-display"  /></center></td><td class="equation-label">(13)</td></tr></table>
+<!--l. 113--><p class="nopar" >
+Equation&#x00A0;(<a 
+href="#x1-6002r13">13<!--tex4ht:ref: Eq:12 --></a>) is what is implemented in this program.
+
+</p><!--l. 116--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">7   </span> <a 
+ id="x1-70007"></a>Finding moment, shear force, and slope from the displacement
+function</h3>
+<!--l. 117--><p class="noindent" >Solving (<a 
+href="#x1-6002r13">13<!--tex4ht:ref: Eq:12 --></a>) and applying suitable boundary conditions yields the displacement
+function, <span 
+class="cmmi-10x-x-109">v</span>(<span 
+class="cmmi-10x-x-109">x</span>), for the beam. The slope, <span 
+class="cmmi-10x-x-109">&#x03B8;</span>(<span 
+class="cmmi-10x-x-109">x</span>), is obtained through differentiation
+as
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-7001r14"></a>
+   <center class="math-display" >
+<img 
+src="theory13x.png" alt="&#x03B8;(x) = v&#x2032;(x) .
+" class="math-display"  /></center></td><td class="equation-label">(14)</td></tr></table>
+<!--l. 122--><p class="nopar" >
+It is positive if the cross section rotates counter-clockwise during deformation.
+</p><!--l. 125--><p class="indent" >   The moment follows from (<a 
+href="#x1-4003r7">7<!--tex4ht:ref: Eq:7 --></a>) as
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-7002r15"></a>
+   <center class="math-display" >
+<img 
+src="theory14x.png" alt="              &#x2032;&#x2032;            &#x2032;
+M (x) = EI (x )v (x) = EI (x)&#x03B8;(x) .
+" class="math-display"  /></center></td><td class="equation-label">(15)</td></tr></table>
+
+<!--l. 129--><p class="nopar" >
+The transverse shear force follows from&#x00A0;(<a 
+href="#x1-5003r11">11<!--tex4ht:ref: Eq:10 --></a>) as
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-7003r16"></a>
+   <center class="math-display" >
+<img 
+src="theory15x.png" alt="         &#x2032;      (      &#x2032;&#x2032;  )&#x2032;
+V (x ) = M (x) = EI (x)v (x)
+" class="math-display"  /></center></td><td class="equation-label">(16)</td></tr></table>
+<!--l. 134--><p class="nopar" >
+or, for constant <span 
+class="cmmi-10x-x-109">EI</span>, simplifies to
+</p>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-7004r17"></a>
+   <center class="math-display" >
+<img 
+src="theory16x.png" alt="V(x) = EIv &#x2032;&#x2032;&#x2032;(x) .
+" class="math-display"  /></center></td><td class="equation-label">(17)</td></tr></table>
+<!--l. 139--><p class="nopar" >
+</p> 
+</body></html> 
+
+
+
