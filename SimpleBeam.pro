@@ -37,7 +37,8 @@ HEADERS += \
     qcp/qcustomplot.h \
     dialogabout.h \
     helpwindow.h \
-    solver.h
+    solver.h \
+    definitions.h
 
 FORMS += \
         mainwindow.ui \

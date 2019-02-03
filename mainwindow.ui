@@ -177,6 +177,12 @@
         <verstretch>1</verstretch>
        </sizepolicy>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true"/>
       </property>
@@ -955,7 +961,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox">
+        <widget class="QGroupBox" name="ComputedGroup">
          <property name="title">
           <string>Beam properties</string>
          </property>

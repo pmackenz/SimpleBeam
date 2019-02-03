@@ -5,6 +5,9 @@
 #include "qcp/qcustomplot.h"
 #include "helpwindow.h"
 #include "dialogabout.h"
+#include "solver.h"
+
+#include <QGuiApplication>
 
 #include <QDebug>
 
@@ -18,6 +21,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("Single Span Beam Tool");
+
+    m_solver = new Solver();
 
     m_length = ui->dimensionL->value() * 12.;
 
@@ -45,10 +50,19 @@ MainWindow::MainWindow(QWidget *parent) :
     this->on_materialSelection_currentIndexChanged(ui->materialSelection->currentText());
 
     ui->systemPlot->setBackground(QBrush(QColor("#ececec")));
+
+    //
+    // adjust size of application window to the available display
+    //
+    QRect rec = QGuiApplication::primaryScreen()->geometry();
+    int height = this->height()<0.65*rec.height()?0.65*rec.height():this->height();
+    int width  = this->width()<0.65*rec.width()?0.65*rec.width():this->width();
+    this->resize(width, height);
 }
 
 MainWindow::~MainWindow()
 {
+    delete m_solver;
     delete ui;
 }
 
@@ -461,12 +475,13 @@ void MainWindow::updateSystemPlot(void)
     plot->yAxis->setScaleRatio(plot->xAxis, 1.0);
     plot->graph(0)->rescaleAxes();
 
+    if (forceP) forceP->rescaleAxes(true);
+    if (forceW) forceW->rescaleAxes(true);
+
     if (LBC)  LBC->rescaleAxes(true);
     if (LBC2) LBC2->rescaleAxes(true);
     if (RBC)  RBC->rescaleAxes(true);
     if (RBC2) RBC2->rescaleAxes(true);
-    if (forceP) forceP->rescaleAxes(true);
-    if (forceW) forceW->rescaleAxes(true);
 
     //plot->xAxis->setVisible(false);
     plot->yAxis->setVisible(false);
@@ -510,10 +525,11 @@ void MainWindow::computeI(void)
 
 void MainWindow::doAnalysis(void)
 {
+    this->computeI();
+    m_solver->setParameters(m_E, m_I, m_length);
+
     double  kfu, kf0, kmu, km0;
     double  Pe, Me;
-
-    this->computeI();
 
     int N = 6;
 

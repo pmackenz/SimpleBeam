@@ -4,8 +4,9 @@
 #include <QMainWindow>
 #include <QVector>
 #include "./qcp/qcustomplot.h"
+#include "definitions.h"
 
-enum class BC { free, pinned, fixed, sliding };
+class Solver;
 
 namespace Ui {
 class MainWindow;
@@ -74,6 +75,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    Solver *m_solver;
 
     double  m_length;
     double  m_E;
