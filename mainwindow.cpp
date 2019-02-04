@@ -6,6 +6,7 @@
 #include "helpwindow.h"
 #include "dialogabout.h"
 #include "solver.h"
+#include "definitions.h"
 
 #include <QGuiApplication>
 
@@ -22,8 +23,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowTitle("Single Span Beam Tool");
 
-    m_solver = new Solver();
-    m_status = false;
+    m_solver   = new Solver();
+    m_status   = false;
+    m_filename = "";
 
     m_length = ui->dimensionL->value() * 12.;
 
@@ -103,9 +105,10 @@ void MainWindow::on_loadPslider_valueChanged(int value)
     this->updatePlots();
 }
 
-void MainWindow::on_loadXP_valueChanged()
+void MainWindow::on_loadXP_valueChanged(double arg1)
 {
-    this->updatePlots();
+    ui->loadXPslider->setValue(int(100.*arg1*12./m_length));
+    //this->updatePlots();
 }
 
 void MainWindow::on_loadXP_editingFinished()
@@ -551,14 +554,32 @@ void MainWindow::updateResultPlot(QCustomPlot * plot, QVector<double> &x, QVecto
 
 void MainWindow::updatePlots()
 {
+    QVector<double> AXIS({0., m_length/12.});
+    QVector<double> ZEROS({0.0, 0.0});
+
+    QVector<double> *X;
+    QVector<double> *M;
+    QVector<double> *V;
+    QVector<double> *th;
+    QVector<double> *d;
+
     this->doAnalysis();
 
-    // set up results containers
-    QVector<double> *X  = m_solver->getX();
-    QVector<double> *M  = m_solver->getMoment();
-    QVector<double> *V  = m_solver->getShear();
-    QVector<double> *th = m_solver->getRotation();
-    QVector<double> *d  = m_solver->getDeflection();
+    if (m_status) {
+        // set up results containers
+        X  = m_solver->getX();
+        M  = m_solver->getMoment();
+        V  = m_solver->getShear();
+        th = m_solver->getRotation();
+        d  = m_solver->getDeflection();
+    }
+    else {
+        X  = &AXIS;
+        M  = &ZEROS;
+        V  = &ZEROS;
+        th = &ZEROS;
+        d  = &ZEROS;
+    }
 
     this->updateSystemPlot();
     this->updateResultPlot(ui->momentPlot, *X, *M);
@@ -569,17 +590,227 @@ void MainWindow::updatePlots()
 
 void MainWindow::on_action_Load_triggered()
 {
+    // get a filename and location from the user
+    QFileDialog *dlg = new QFileDialog(this,
+                                       "open file",
+                                       ".",
+                                       "*.json");
+    m_filename = dlg->getOpenFileName();
+    delete dlg;
 
+    if (m_filename != "") {
+        // open the file
+        QFile loadfile(m_filename);
+        loadfile.open(QIODevice::ReadOnly);
+        QJsonDocument doc;
+        QJsonObject obj = doc.fromJson(loadfile.readAll()).object();
+        loadfile.close();
+
+        // parse the information
+        if (obj.contains("product"))
+        {
+            if (obj.value("product") == "SimpleBeam")
+            {
+                // version check in future releases goes here ...
+
+                // parse system information
+                QJsonObject system = obj.value("system").toObject();
+
+                m_length = system.value("span").toDouble() * 12.0;  // in
+
+                QString left  = system.value("leftBC").toString();
+                if (left == "pinned") { leftBC = BC::pinned; }
+                else if (left == "fixed") { leftBC = BC::fixed; }
+                else if (left == "sliding") { leftBC = BC::sliding; }
+                else  { leftBC = BC::free; }
+
+                QString right = system.value("rightBC").toString();
+                if (right == "pinned") { rightBC = BC::pinned; }
+                else if (right == "fixed") { rightBC = BC::fixed; }
+                else if (right == "sliding") { rightBC = BC::sliding; }
+                else  { rightBC = BC::free; }
+
+                // *** update the UI ***
+
+                // system properties
+                ui->dimensionL->setValue(m_length/12.);
+                switch (leftBC) {
+                case BC::free :
+                    ui->leftBCfree->setChecked(true);
+                    break;
+                case BC::fixed :
+                    ui->leftBCfixed->setChecked(true);
+                    break;
+                case BC::pinned :
+                    ui->leftBCpinned->setChecked(true);
+                    break;
+                case BC::sliding :
+                    ui->leftBCslide->setChecked(true);
+                    break;
+                }
+                switch (rightBC) {
+                case BC::free :
+                    ui->rightBCfree->setChecked(true);
+                    break;
+                case BC::fixed :
+                    ui->rightBCfixed->setChecked(true);
+                    break;
+                case BC::pinned :
+                    ui->rightBCpinned->setChecked(true);
+                    break;
+                case BC::sliding :
+                    ui->rightBCslide->setChecked(true);
+                    break;
+                }
+
+                // parse loads
+                QJsonObject loads = obj.value("loads").toObject();
+
+                m_w  = loads.value("w").toDouble() / 12.0;    // k/in
+                m_P  = loads.value("P").toDouble();           // kips
+                m_xP = loads.value("xP").toDouble() * 12.0;   // in
+
+                // load properties
+                ui->loadP->setValue(m_P);
+                ui->loadW->setValue(m_w*12.);
+                ui->loadXP->setValue(m_xP/12.);
+
+                // parse cross section data
+                QJsonObject sectionproperties = obj.value("sectionproperties").toObject();
+
+                m_rectB = sectionproperties.value("rectB").toDouble();
+                m_rectH = sectionproperties.value("rectH").toDouble();
+                m_IbeamB = sectionproperties.value("IbeamB").toDouble();
+                m_IbeamH = sectionproperties.value("IbeamH").toDouble();
+                m_IbeamTw = sectionproperties.value("IbeamTw").toDouble();
+                m_IbeamTf = sectionproperties.value("IbeamTf").toDouble();
+                m_channelB = sectionproperties.value("channelB").toDouble();
+                m_channelH = sectionproperties.value("channelH").toDouble();
+                m_channelTf = sectionproperties.value("channelTf").toDouble();
+                m_channelTtop = sectionproperties.value("channelTtop").toDouble();
+                m_channelTbottom = sectionproperties.value("channelTbottom").toDouble();
+
+                // cross section type and properties
+                ui->rectangleB->setValue(m_rectB);
+                ui->rectangleH->setValue(m_rectH);
+
+                ui->IbeamB->setValue(m_IbeamB);
+                ui->IbeamH->setValue(m_IbeamH);
+                ui->IbeamTf->setValue(m_IbeamTf);
+                ui->IbeamTw->setValue(m_IbeamTw);
+
+                ui->channelB->setValue(m_channelB);
+                ui->channelH->setValue(m_channelH);
+                ui->channelTf->setValue(m_channelTf);
+                ui->channelTtop->setValue(m_channelTtop);
+                ui->channelTbottom->setValue(m_channelTbottom);
+
+                int shapeIdx = obj.value("sectiontype").toInt();
+                ui->shapeSelection->setCurrentIndex(shapeIdx);
+                this->on_shapeSelection_currentIndexChanged(shapeIdx);
+
+                // material type
+                ui->materialSelection->setCurrentIndex(obj.value("materialtype").toInt());
+            }
+            else
+            {
+                qDebug() << "file is bad";
+            }
+        }
+    }
 }
 
 void MainWindow::on_action_Save_triggered()
 {
+    if (m_filename != "") {
 
+        // create the JSON representation
+        QJsonObject data;
+        data.insert("product", QJsonValue("SimpleBeam"));
+        data.insert("author", QJsonValue("Peter Mackenzie-Helnwein"));
+        data.insert("contact", QJsonValue("pmackenz@uw.edu"));
+        data.insert("version", QJsonValue("1.0"));
+
+        data.insert("sectiontype",  QJsonValue(ui->shapeSelection->currentIndex()));
+        data.insert("materialtype", QJsonValue(ui->materialSelection->currentIndex()));
+
+        QJsonObject loads;
+        loads.insert("w", QJsonValue(m_w*12.));     // k/ft
+        loads.insert("P", QJsonValue(m_P));         // kips
+        loads.insert("xP", QJsonValue(m_xP/12.));   // ft
+
+        QJsonObject sectionproperties;
+        sectionproperties.insert("rectB", QJsonValue(m_rectB));
+        sectionproperties.insert("rectH", QJsonValue(m_rectH));
+        sectionproperties.insert("IbeamB", QJsonValue(m_IbeamB));
+        sectionproperties.insert("IbeamH", QJsonValue(m_IbeamH));
+        sectionproperties.insert("IbeamTw", QJsonValue(m_IbeamTw));
+        sectionproperties.insert("IbeamTf", QJsonValue(m_IbeamTf));
+        sectionproperties.insert("channelB", QJsonValue(m_channelB));
+        sectionproperties.insert("channelH", QJsonValue(m_channelH));
+        sectionproperties.insert("channelTf", QJsonValue(m_channelTf));
+        sectionproperties.insert("channelTtop", QJsonValue(m_channelTtop));
+        sectionproperties.insert("channelTbottom", QJsonValue(m_channelTbottom));
+
+        QJsonObject system;
+        system.insert("span", QJsonValue(m_length/12.));    // ft
+        switch (leftBC) {
+        case BC::free :
+            system.insert("leftBC", QJsonValue("free"));
+            break;
+        case BC::fixed :
+            system.insert("leftBC", QJsonValue("fixed"));
+            break;
+        case BC::pinned :
+            system.insert("leftBC", QJsonValue("pinned"));
+            break;
+        case BC::sliding :
+            system.insert("leftBC", QJsonValue("sliding"));
+            break;
+        }
+        switch (rightBC) {
+        case BC::free :
+            system.insert("rightBC", QJsonValue("free"));
+            break;
+        case BC::fixed :
+            system.insert("rightBC", QJsonValue("fixed"));
+            break;
+        case BC::pinned :
+            system.insert("rightBC", QJsonValue("pinned"));
+            break;
+        case BC::sliding :
+            system.insert("rightBC", QJsonValue("sliding"));
+            break;
+        }
+
+        data.insert("loads", loads);
+        data.insert("sectionproperties", sectionproperties);
+        data.insert("system", system);
+
+        // save to file
+        QFile savefile(m_filename);
+        savefile.open(QIODevice::WriteOnly);
+        savefile.write(QJsonDocument(data).toJson());
+        savefile.close();
+    }
+    else {
+        this->on_actionSave_As_triggered();
+    }
 }
 
 void MainWindow::on_actionSave_As_triggered()
 {
+    // get a filename and location from the user
+    QFileDialog *dlg = new QFileDialog(this,
+                                       "save file as",
+                                       ".",
+                                       "*.json");
+    m_filename = dlg->getSaveFileName();
+    delete dlg;
 
+    if (m_filename != "") {
+        this->on_action_Save_triggered();
+    }
 }
 
 void MainWindow::on_actionE_xport_to_PNG_triggered()

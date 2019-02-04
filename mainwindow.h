@@ -33,7 +33,7 @@ private slots:
     void on_loadXPslider_valueChanged(int value);
     void on_loadW_valueChanged(double arg1);
     void on_loadP_valueChanged(double arg1);
-    void on_loadXP_valueChanged();
+    void on_loadXP_valueChanged(double arg1);
     void on_materialSelection_currentIndexChanged(const QString &arg1);
 
     void on_rectangleB_valueChanged(double arg1);
@@ -66,6 +66,7 @@ private slots:
     void on_loadW_editingFinished();
     void on_loadP_editingFinished();
     void on_loadXP_editingFinished();
+
     void on_action_Load_triggered();
     void on_action_Save_triggered();
     void on_actionSave_As_triggered();
@@ -79,6 +80,7 @@ private:
     Solver *m_solver;
 
     bool m_status;
+    QString m_filename;
 
     double  m_length;
     double  m_E;
