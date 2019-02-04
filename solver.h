@@ -8,8 +8,13 @@ class Solver
 {
 public:
     Solver();
-    void setParameters(double E, double I, double L);
-    void doAnalysis();
+    void setParameters(double E, double I, double L, BC lBC, BC rBC);
+    bool doAnalysis(double w, double P, double xP);
+    QVector<double> *getX();
+    QVector<double> *getMoment();
+    QVector<double> *getShear();
+    QVector<double> *getRotation();
+    QVector<double> *getDeflection();
 
 private:
     double  m_length;

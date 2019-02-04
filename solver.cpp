@@ -3,18 +3,29 @@
 
 Solver::Solver()
 {
-    setParameters(1.0, 1.0, 10.);
+    setParameters(1.0, 1.0, 10., BC::free, BC::free);
 }
 
-void Solver::setParameters(double E, double I, double L)
+void Solver::setParameters(double E, double I, double L, BC lBC, BC rBC)
 {
     m_E = E;
     m_I = I;
     m_length = L;
+    leftBC   = lBC;
+    rightBC  = rBC;
 }
 
-void Solver::doAnalysis()
+bool Solver::doAnalysis(double w, double P, double xP)
 {
+    bool retval = true;
+
+    // set up results containers
+    X.clear();
+    M.clear();
+    V.clear();
+    th.clear();
+    d.clear();
+
     double  kfu, kf0, kmu, km0;
     double  Pe, Me;
 
@@ -31,7 +42,7 @@ void Solver::doAnalysis()
 
     // element 1
 
-    double L = m_xP;
+    double L = xP;
     if (L < m_length/100.) L = m_length/100.;
 
     kfu = 12. * m_E * m_I / pow(L, 3) ;
@@ -39,7 +50,7 @@ void Solver::doAnalysis()
     kmu = kf0 ;
     km0 =  4. * m_E * m_I / L ;
 
-    Pe = m_w * L / 2.;
+    Pe = w * L / 2.;
     Me = -Pe * L / 6.0;
 
     Kmatrix[0][0] += kfu;
@@ -59,7 +70,7 @@ void Solver::doAnalysis()
     Pvector[3] -= Me;
 
     // element 2
-    L = m_length - m_xP;
+    L = m_length - xP;
     if (L < m_length/100.) L = m_length/100.;
 
     kfu = 12. * m_E * m_I / pow(L, 3) ;
@@ -67,7 +78,7 @@ void Solver::doAnalysis()
     kmu = kf0 ;
     km0 =  4. * m_E * m_I / L ;
 
-    Pe = m_w * L / 2.;
+    Pe = w * L / 2.;
     Me = -Pe * L / 6.0;
 
     Kmatrix[2][2] += kfu;
@@ -86,7 +97,7 @@ void Solver::doAnalysis()
     Pvector[4] -= Pe;
     Pvector[5] -= Me;
 
-    if (m_P != 0.0) Pvector[2] -= m_P;
+    if (P != 0.0) Pvector[2] -= P;
 
     for (int i=0; i<N; i++)
         for (int j=i+1; j<N; j++)
@@ -169,6 +180,13 @@ void Solver::doAnalysis()
     for (int i=0; i<N; i++)
     {
         for (int k=0; k<i; k++) Kmatrix[i][i] -= Kmatrix[i][k]*Kmatrix[i][k]*Kmatrix[k][k];
+        // singularity check ...
+        if (abs(Kmatrix[i][i]) < 1.e-10)
+        {
+            retval = false;
+            return retval;
+        }
+        // not singular
         for (int j=i+1; j<N; j++)
         {
             for (int k=0; k<i; k++) Kmatrix[j][i] -= Kmatrix[i][k]*Kmatrix[j][k]*Kmatrix[k][k];
@@ -187,14 +205,6 @@ void Solver::doAnalysis()
             Pvector[j] -= Kmatrix[m][j] * Pvector[m];
 
     double vi, vj, thetai, thetaj;
-
-    // set up results containers
-    X.clear();
-    M.clear();
-    V.clear();
-    th.clear();
-    d.clear();
-
     double x0;
 
     // ... element 1
@@ -205,7 +215,7 @@ void Solver::doAnalysis()
     vj     = Pvector[2];
     thetaj = Pvector[3];
 
-    L = m_xP;
+    L = xP;
     if (L < m_length/100.) L = m_length/100.;
 
     kfu = 12. * m_E * m_I / pow(L, 3) ;
@@ -213,7 +223,7 @@ void Solver::doAnalysis()
     kmu = kf0 ;
     km0 =  4. * m_E * m_I / L ;
 
-    Pe = m_w * L / 2.;
+    Pe = w * L / 2.;
     Me = -Pe * L / 6.0;
 
     for (int k=0; k<=20; k++)
@@ -224,20 +234,21 @@ void Solver::doAnalysis()
         // compute moment
         double moment = ( kmu - kfu * x ) * (vj - vi)
                 + (-km0 + kf0 * x ) * thetai  + (-0.5*km0 + kf0 * x) * thetaj
-                - m_w / 12. * (L*L - 6.*x*L + 6.*x*x);
+                - w / 12. * (L*L - 6.*x*L + 6.*x*x);
 
         // compute shear
-        double shear = kfu * (vi - vj) + kf0 * (thetai + thetaj) - m_w * (x - 0.5*L);
+        double shear = kfu * (vi - vj) + kf0 * (thetai + thetaj)
+                - w * (x - 0.5*L);
 
         // compute slope
         double slope = 6.*x/L*(1.0 - x/L) * (vj - vi) / L
                 + (1. - 4.*x/L + 3.*x*x/(L*L)) * thetai + (-2.*x/L + 3.*x*x/(L*L)) * thetaj
-                - m_w * x* (L*L - 3.*L*x + 2.*x*x)/(12.*m_E*m_I);
+                - w * x* (L*L - 3.*L*x + 2.*x*x)/(12.*m_E*m_I);
 
         // compute deflection
         double disp =  vj * (3. - 2.*x/L)*x*x/(L*L) + vi * (1. - 3.*x*x/(L*L) + 2.*x*x*x/(L*L*L))
                 + x*(1. - 2.*x/L + x*x/(L*L)) * thetai + x*(-x/L + x*x/(L*L)) * thetaj
-                - m_w * (L - x)*(L - x)*x*x/(24.*m_E*m_I) ;
+                - w * (L - x)*(L - x)*x*x/(24.*m_E*m_I) ;
 
         X.append((x0+x)/12.);
         M.append(moment/12.);
@@ -247,7 +258,7 @@ void Solver::doAnalysis()
     }
 
     // ... element 2
-    x0 = m_xP;
+    x0 = xP;
     if (x0 < m_length/100.) x0 = m_length/100.;
 
     vi     = Pvector[2];
@@ -255,7 +266,7 @@ void Solver::doAnalysis()
     vj     = Pvector[4];
     thetaj = Pvector[5];
 
-    L = m_length - m_xP;
+    L = m_length - xP;
     if (L < m_length/100.) L = m_length/100.;
 
     kfu = 12. * m_E * m_I / pow(L, 3) ;
@@ -263,7 +274,7 @@ void Solver::doAnalysis()
     kmu = kf0 ;
     km0 =  4. * m_E * m_I / L ;
 
-    Pe = m_w * L / 2.;
+    Pe = w * L / 2.;
     Me = -Pe * L / 6.0;
 
     for (int k=0; k<=20; k++)
@@ -274,20 +285,21 @@ void Solver::doAnalysis()
         // compute moment
         double moment = ( kmu - kfu * x ) * (vj - vi)
                 + (-km0 + kf0 * x ) * thetai  + (-0.5*km0 + kf0 * x) * thetaj
-                - m_w / 12. * (L*L - 6.*x*L + 6.*x*x);
+                - w / 12. * (L*L - 6.*x*L + 6.*x*x);
 
         // compute shear
-        double shear = kfu * (vi - vj) + kf0 * (thetai + thetaj) - m_w * (x - 0.5*L);
+        double shear = kfu * (vi - vj) + kf0 * (thetai + thetaj)
+                - w * (x - 0.5*L);
 
         // compute slope
         double slope = 6.*x/L*(1.0 - x/L) * (vj - vi) / L
                 + (1. - 4.*x/L + 3.*x*x/(L*L)) * thetai + (-2.*x/L + 3.*x*x/(L*L)) * thetaj
-                - m_w * x* (L*L - 3.*L*x + 2.*x*x)/(12.*m_E*m_I);
+                - w * x* (L*L - 3.*L*x + 2.*x*x)/(12.*m_E*m_I);
 
         // compute deflection
         double disp =  vj * (3. - 2.*x/L)*x*x/(L*L) + vi * (1. - 3.*x*x/(L*L) + 2.*x*x*x/(L*L*L))
                 + x*(1. - 2.*x/L + x*x/(L*L)) * thetai + x*(-x/L + x*x/(L*L)) * thetaj
-                - m_w * (L - x)*(L - x)*x*x/(24.*m_E*m_I) ;
+                - w * (L - x)*(L - x)*x*x/(24.*m_E*m_I) ;
 
         X.append((x0+x)/12.);
         M.append(moment/12.);
@@ -295,4 +307,32 @@ void Solver::doAnalysis()
         th.append(slope);
         d.append(disp);
     }
+
+    return retval;
+}
+
+
+QVector<double> *Solver::getX()
+{
+    return &X;
+}
+
+QVector<double> *Solver::getMoment()
+{
+    return &M;
+}
+
+QVector<double> *Solver::getShear()
+{
+    return &V;
+}
+
+QVector<double> *Solver::getRotation()
+{
+    return &th;
+}
+
+QVector<double> *Solver::getDeflection()
+{
+    return &d;
 }

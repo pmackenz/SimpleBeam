@@ -33,7 +33,7 @@ private slots:
     void on_loadXPslider_valueChanged(int value);
     void on_loadW_valueChanged(double arg1);
     void on_loadP_valueChanged(double arg1);
-    void on_loadXP_valueChanged(double arg1);
+    void on_loadXP_valueChanged();
     void on_materialSelection_currentIndexChanged(const QString &arg1);
 
     void on_rectangleB_valueChanged(double arg1);
@@ -78,6 +78,8 @@ private:
 
     Solver *m_solver;
 
+    bool m_status;
+
     double  m_length;
     double  m_E;
     double  m_I;
@@ -102,13 +104,6 @@ private:
 
     BC  leftBC;
     BC  rightBC;
-
-    // set up results containers
-    QVector<double> X;
-    QVector<double> M;
-    QVector<double> V;
-    QVector<double> th;
-    QVector<double> d;
 };
 
 #endif // MAINWINDOW_H
