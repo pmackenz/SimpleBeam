@@ -490,6 +490,9 @@ void MainWindow::updateSystemPlot(void)
 
     //plot->xAxis->setVisible(false);
     plot->yAxis->setVisible(false);
+
+    plot->xAxis->setRange(-1.5*s, L+1.5*s);
+
     plot->replot();
 };
 
