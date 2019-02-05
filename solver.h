@@ -21,10 +21,6 @@ private:
     double  m_E;
     double  m_I;
 
-    double  m_w;
-    double  m_P;
-    double  m_xP;
-
     BC  leftBC;
     BC  rightBC;
 

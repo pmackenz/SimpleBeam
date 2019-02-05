@@ -362,6 +362,7 @@ void MainWindow::updateSystemPlot(void)
         LBC->setData(x,y);
         LBC->rescaleAxes(true);
 
+        x.clear(); y.clear();
         x.append(-s/2.); y.append(s);
         x.append(-s/2.); y.append(-s);
 
