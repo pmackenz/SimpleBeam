@@ -20,115 +20,143 @@ class="cmr-12">Peter Mackenzie-Helnwein</span></div><br />
 <div class="date" ><span 
 class="cmr-12">June 27, 2019</span></div>
    </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Introduction</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-4">Kinematics</a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-40003" id="QQ2-1-5">Constitutive relations</a></span>
+<br />   <span class="sectionToc" >4 <a 
+href="#x1-50004" id="QQ2-1-6">Stress resultants</a></span>
+<br />   <span class="sectionToc" >5 <a 
+href="#x1-60005" id="QQ2-1-7">Equilibrium</a></span>
+<br />   <span class="sectionToc" >6 <a 
+href="#x1-70006" id="QQ2-1-8">Governing equation</a></span>
+<br />   <span class="sectionToc" >7 <a 
+href="#x1-80007" id="QQ2-1-9">Finding moment, shear force, and slope from the displacement function</a></span>
+<br />   <span class="sectionToc" >8 <a 
+href="#x1-90008" id="QQ2-1-10">Examples</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.1 <a 
+href="#x1-100008.1" id="QQ2-1-11">Single span beam with constant distributed force</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.2 <a 
+href="#x1-110008.2" id="QQ2-1-12">Single span beam with a single concentrated force</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.3 <a 
+href="#x1-120008.3" id="QQ2-1-13">Single span beam with a concentrated force and distributed
+load using the stiffness method</a></span>
+   </div>
+<!--l. 25--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
- id="x1-10001"></a>Introduction</h3>
-<!--l. 24--><p class="noindent" ><hr class="figure"><div class="figure" 
+ id="x1-20001"></a>Introduction</h3>
+<!--l. 26--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
 
 <a 
- id="x1-10011"></a>
+ id="x1-20011"></a>
 
 <div class="center" 
 >
-<!--l. 25--><p class="noindent" >
-<!--l. 26--><p class="noindent" ><img 
+<!--l. 27--><p class="noindent" >
+<!--l. 28--><p class="noindent" ><img 
 src="beam.png" alt="PIC"  
 >
 <br /> <div class="caption" 
 ><span class="id">Figure&#x00A0;1: </span><span  
 class="content">Deformation of the Bernoulli-Euler beam. Definition of coordinate
-axes and components of displacement.</span></div><!--tex4ht:label?: x1-10011 -->
+axes and components of displacement.</span></div><!--tex4ht:label?: x1-20011 -->
 </div>
 
-<!--l. 30--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 31--><p class="indent" >   This tool employs the Bernoulli-Euler beam theory. This theory, also
+<!--l. 32--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 33--><p class="indent" >   This tool employs the Bernoulli-Euler beam theory. This theory, also
 known as <span 
 class="cmti-10x-x-109">shear rigid beam theory</span>, is based on the kinematic assumption
 that
      <div class="quote">
-     <!--l. 33--><p class="noindent" >Any plane cross section perpendicular to the undeformed beam&#8217;s
+     <!--l. 35--><p class="noindent" >Any plane cross section perpendicular to the undeformed beam&#8217;s
      axis remain plane and perpendicular to the axis throughout the
      deformation.</div>
-<!--l. 35--><p class="noindent" >This allows us to reduce the three-dimensional problem to a single unknown
+<!--l. 37--><p class="noindent" >This allows us to reduce the three-dimensional problem to a single unknown
 function, <span 
 class="cmmi-10x-x-109">v</span>(<span 
 class="cmmi-10x-x-109">x</span>), known as <span 
 class="cmti-10x-x-109">deflection </span>of the beam.
    <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
- id="x1-20002"></a>Kinematics</h3>
-<!--l. 38--><p class="noindent" >Navier&#8217;s assumption leads to
+ id="x1-30002"></a>Kinematics</h3>
+<!--l. 40--><p class="noindent" >Navier&#8217;s assumption leads to
    <table 
 class="equation"><tr><td><a 
- id="x1-2001r1"></a>
+ id="x1-3001r1"></a>
    <center class="math-display" >
 <img 
 src="theory0x.png" alt="u(x,y) = - yv&#x2032;(x)   v(x,y) = v(x )
 " class="math-display" ></center></td><td class="equation-label">(1)</td></tr></table>
-<!--l. 44--><p class="nopar" >
+<!--l. 46--><p class="nopar" >
 This displacement field induces an axial strain of
    <table 
 class="equation"><tr><td><a 
- id="x1-2002r2"></a>
+ id="x1-3002r2"></a>
    <center class="math-display" >
 <img 
 src="theory1x.png" alt="&#x03B5;(x,y) = &#x2202;u(x,y)-= - yv&#x2032;&#x2032;(x) .
            &#x2202;x
 " class="math-display" ></center></td><td class="equation-label">(2)</td></tr></table>
-<!--l. 49--><p class="nopar" >
+<!--l. 51--><p class="nopar" >
 Equation&#x00A0;(<a 
-href="#x1-2002r2">2<!--tex4ht:ref: Eq:2 --></a>) states that a fiber parallel to the beam axis stretches in the bottom
+href="#x1-3002r2">2<!--tex4ht:ref: Eq:2 --></a>) states that a fiber parallel to the beam axis stretches in the bottom
 portion of the beam (<span 
 class="cmmi-10x-x-109">y &#x003C; </span>0) and contracts if the fiber is located above the beam
 axis (<span 
 class="cmmi-10x-x-109">y &#x003E; </span>0). The beam axis itself does not stretch.
-<!--l. 52--><p class="noindent" >
+<!--l. 54--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
- id="x1-30003"></a>Constitutive relations</h3>
-<!--l. 53--><p class="noindent" >For a slender beam, we can ignore stress components acting perpendicular to the
+ id="x1-40003"></a>Constitutive relations</h3>
+<!--l. 55--><p class="noindent" >For a slender beam, we can ignore stress components acting perpendicular to the
 beam&#8217;s axis. Thus, the constitutive relations can be simplified as the 1D-version
 of Hooke&#8217;s law:
    <table 
 class="equation"><tr><td><a 
- id="x1-3001r3"></a>
+ id="x1-4001r3"></a>
    <center class="math-display" >
 <img 
 src="theory2x.png" alt="&#x03C3;(x,y) = E&#x03B5;(x,y)
 " class="math-display" ></center></td><td class="equation-label">(3)</td></tr></table>
-<!--l. 57--><p class="nopar" >
+<!--l. 59--><p class="nopar" >
 where <span 
 class="cmmi-10x-x-109">E </span>is the modulus of elasticity.
-<!--l. 60--><p class="indent" >   The imposed state of deformation induces normal stress proportional to the
+<!--l. 62--><p class="indent" >   The imposed state of deformation induces normal stress proportional to the
 strain field&#x00A0;(<a 
-href="#x1-2002r2">2<!--tex4ht:ref: Eq:2 --></a>) as
+href="#x1-3002r2">2<!--tex4ht:ref: Eq:2 --></a>) as
    <table 
 class="equation"><tr><td><a 
- id="x1-3002r4"></a>
+ id="x1-4002r4"></a>
    <center class="math-display" >
 <img 
 src="theory3x.png" alt="&#x03C3; (x, y) = - Eyv &#x2032;&#x2032;(x) .
 " class="math-display" ></center></td><td class="equation-label">(4)</td></tr></table>
-<!--l. 64--><p class="nopar" >
+<!--l. 66--><p class="nopar" >
 This relation states that (i)&#x00A0;the stress varies linearly with the distance from the
 beam&#8217;s axis, vanishing at the axis, and (ii)&#x00A0;the stress is proportional to the
 curvature of the beam.
-<!--l. 67--><p class="noindent" >
+<!--l. 69--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
- id="x1-40004"></a>Stress resultants</h3>
-<!--l. 68--><p class="noindent" >The beam sees two stress resultants: the internal moment,
+ id="x1-50004"></a>Stress resultants</h3>
+<!--l. 70--><p class="noindent" >The beam sees two stress resultants: the internal moment,
    <table 
 class="equation"><tr><td><a 
- id="x1-4001r5"></a>
+ id="x1-5001r5"></a>
    <center class="math-display" >
 <img 
 src="theory4x.png" alt="          &#x222B;
 
 M (x) = -  A y&#x03C3;(x,y)dA
 " class="math-display" ></center></td><td class="equation-label">(5)</td></tr></table>
-<!--l. 72--><p class="nopar" >
+<!--l. 74--><p class="nopar" >
 and the transverse shear force,
    <table 
 class="equation"><tr><td><a 
- id="x1-4002r6"></a>
+ id="x1-5002r6"></a>
    <center class="math-display" >
 <img 
 src="theory5x.png" alt="         &#x222B;
@@ -136,35 +164,35 @@ V (x ) = -   &#x03C4;xy(x,y)dA
           A
 " class="math-display" ></center></td><td class="equation-label">(6)</td></tr></table>
 
-<!--l. 77--><p class="nopar" >
+<!--l. 79--><p class="nopar" >
 Substituting (<a 
-href="#x1-3002r4">4<!--tex4ht:ref: Eq:4 --></a>) into (<a 
-href="#x1-4001r5">5<!--tex4ht:ref: Eq:5 --></a>) yields
+href="#x1-4002r4">4<!--tex4ht:ref: Eq:4 --></a>) into (<a 
+href="#x1-5001r5">5<!--tex4ht:ref: Eq:5 --></a>) yields
    <table 
 class="equation"><tr><td><a 
- id="x1-4003r7"></a>
+ id="x1-5003r7"></a>
    <center class="math-display" >
 <img 
 src="theory6x.png" alt="        &#x222B;     2 &#x2032;&#x2032;           &#x2032;&#x2032;   &#x222B;   2         &#x2032;&#x2032;
 M  (x ) =   Ey  v (x)dA = Ev  (x)   y dA = EIv  (x)
          A                       A
 " class="math-display" ></center></td><td class="equation-label">(7)</td></tr></table>
-<!--l. 82--><p class="nopar" >
+<!--l. 84--><p class="nopar" >
 where
    <table 
 class="equation"><tr><td><a 
- id="x1-4004r8"></a>
+ id="x1-5004r8"></a>
    <center class="math-display" >
 <img 
 src="theory7x.png" alt="    &#x222B;
 I =    y2dA
      A
 " class="math-display" ></center></td><td class="equation-label">(8)</td></tr></table>
-<!--l. 87--><p class="nopar" >
+<!--l. 89--><p class="nopar" >
 is the <span 
 class="cmti-10x-x-109">area moment of inertia </span>or, short, <span 
 class="cmti-10x-x-109">moment of inertia</span>.
-<!--l. 90--><p class="indent" >   Note that the modulus of elasticity, <span 
+<!--l. 92--><p class="indent" >   Note that the modulus of elasticity, <span 
 class="cmmi-10x-x-109">E</span>, characterizes the material, the
 moment of inertia, <span 
 class="cmmi-10x-x-109">I</span>, characterized the shape of the cross section, and the second
@@ -174,10 +202,10 @@ class="cmsy-10x-x-109">&#x2032;&#x2032;</span>(<span
 class="cmmi-10x-x-109">x</span>), characterizes the deformation (curvature) of
 the beam.
 
-<!--l. 92--><p class="noindent" >
+<!--l. 94--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
- id="x1-50005"></a>Equilibrium</h3>
-<!--l. 93--><p class="noindent" >Equilibrium is formulated in terms of shear forces, <span 
+ id="x1-60005"></a>Equilibrium</h3>
+<!--l. 95--><p class="noindent" >Equilibrium is formulated in terms of shear forces, <span 
 class="cmmi-10x-x-109">V </span>(<span 
 class="cmmi-10x-x-109">x</span>), and internal moments,
 <span 
@@ -187,12 +215,12 @@ formulated in the <span
 class="cmmi-10x-x-109">y</span>-direction, yields
    <table 
 class="equation"><tr><td><a 
- id="x1-5001r9"></a>
+ id="x1-6001r9"></a>
    <center class="math-display" >
 <img 
 src="theory8x.png" alt="V &#x2032;(x) = - w(x)
 " class="math-display" ></center></td><td class="equation-label">(9)</td></tr></table>
-<!--l. 98--><p class="nopar" >
+<!--l. 100--><p class="nopar" >
 where <span 
 class="cmmi-10x-x-109">w</span>(<span 
 class="cmmi-10x-x-109">x</span>) is the distributed lateral load per length. <span 
@@ -200,91 +228,91 @@ class="cmmi-10x-x-109">w</span>(<span
 class="cmmi-10x-x-109">x</span>) is defined positive if
 pointing against the (upward) positive <span 
 class="cmmi-10x-x-109">y</span>-axis.
-<!--l. 101--><p class="indent" >   Moment equilibrium around the out-of-plane axis on the same element
+<!--l. 103--><p class="indent" >   Moment equilibrium around the out-of-plane axis on the same element
 yields
    <table 
 class="equation"><tr><td><a 
- id="x1-5002r10"></a>
+ id="x1-6002r10"></a>
    <center class="math-display" >
 <img 
 src="theory9x.png" alt="M &#x2032;(x) = V (x) .
 " class="math-display" ></center></td><td class="equation-label">(10)</td></tr></table>
-<!--l. 105--><p class="nopar" >
+<!--l. 107--><p class="nopar" >
 A system for which equations&#x00A0;(<a 
-href="#x1-5001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
-href="#x1-5002r10">10<!--tex4ht:ref: Eq:9 --></a>) are sufficient to determine the
+href="#x1-6001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
+href="#x1-6002r10">10<!--tex4ht:ref: Eq:9 --></a>) are sufficient to determine the
 internal moment and shear functions is called <span 
 class="cmti-10x-x-109">statically determinate</span>. Otherwise,
 the system is called <span 
 class="cmti-10x-x-109">statically indeterminate</span>. Solving these equations for the
 latter requires consideration of the kinematic relation&#x00A0;(<a 
-href="#x1-4003r7">7<!--tex4ht:ref: Eq:7 --></a>) and respective
+href="#x1-5003r7">7<!--tex4ht:ref: Eq:7 --></a>) and respective
 
 boundary conditions.
-<!--l. 108--><p class="indent" >   Equations&#x00A0;(<a 
-href="#x1-5001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
-href="#x1-5002r10">10<!--tex4ht:ref: Eq:9 --></a>) may be combined into one equation as
+<!--l. 110--><p class="indent" >   Equations&#x00A0;(<a 
+href="#x1-6001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
+href="#x1-6002r10">10<!--tex4ht:ref: Eq:9 --></a>) may be combined into one equation as
    <table 
 class="equation"><tr><td><a 
- id="x1-5003r11"></a>
+ id="x1-6003r11"></a>
    <center class="math-display" >
 <img 
 src="theory10x.png" alt="  &#x2032;&#x2032;       &#x2032;
 M  (x) = V (x) = - w (x )
 " class="math-display" ></center></td><td class="equation-label">(11)</td></tr></table>
-<!--l. 112--><p class="nopar" >
+<!--l. 114--><p class="nopar" >
 Equation&#x00A0;(<a 
-href="#x1-5003r11">11<!--tex4ht:ref: Eq:10 --></a>) replaces both equilibrium equations (<a 
-href="#x1-5001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
-href="#x1-5002r10">10<!--tex4ht:ref: Eq:9 --></a>).
-<!--l. 115--><p class="noindent" >
+href="#x1-6003r11">11<!--tex4ht:ref: Eq:10 --></a>) replaces both equilibrium equations (<a 
+href="#x1-6001r9">9<!--tex4ht:ref: Eq:8 --></a>) and (<a 
+href="#x1-6002r10">10<!--tex4ht:ref: Eq:9 --></a>).
+<!--l. 117--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
- id="x1-60006"></a>Governing equation</h3>
-<!--l. 116--><p class="noindent" >The governing equation is obtained by assuming the displacement function,
+ id="x1-70006"></a>Governing equation</h3>
+<!--l. 118--><p class="noindent" >The governing equation is obtained by assuming the displacement function,
 <span 
 class="cmmi-10x-x-109">v</span>(<span 
 class="cmmi-10x-x-109">x</span>), as the primary unknown and expressing <span 
 class="cmmi-10x-x-109">M</span>(<span 
 class="cmmi-10x-x-109">x</span>) in (<a 
-href="#x1-5003r11">11<!--tex4ht:ref: Eq:10 --></a>) using (<a 
-href="#x1-4003r7">7<!--tex4ht:ref: Eq:7 --></a>) to
+href="#x1-6003r11">11<!--tex4ht:ref: Eq:10 --></a>) using (<a 
+href="#x1-5003r7">7<!--tex4ht:ref: Eq:7 --></a>) to
 obtain
    <table 
 class="equation"><tr><td><a 
- id="x1-6001r12"></a>
+ id="x1-7001r12"></a>
    <center class="math-display" >
 <img 
 src="theory11x.png" alt="(          )
  EI (x)v&#x2032;&#x2032;(x )&#x2032;&#x2032; + w (x ) = 0
 " class="math-display" ></center></td><td class="equation-label">(12)</td></tr></table>
-<!--l. 120--><p class="nopar" >
+<!--l. 122--><p class="nopar" >
 This equation is known as the governing equation of the Bernoulli-Euler
 beam.
 
-<!--l. 123--><p class="indent" >   If the beam possesses a constant cross section and is made of one material,
+<!--l. 125--><p class="indent" >   If the beam possesses a constant cross section and is made of one material,
 then <span 
 class="cmmi-10x-x-109">EI</span>(<span 
 class="cmmi-10x-x-109">x</span>) = <span 
 class="cmmi-10x-x-109">EI </span>= <span 
 class="cmmi-10x-x-109">const. </span>and (<a 
-href="#x1-6001r12">12<!--tex4ht:ref: Eq:11 --></a>) simplifies to
+href="#x1-7001r12">12<!--tex4ht:ref: Eq:11 --></a>) simplifies to
    <table 
 class="equation"><tr><td><a 
- id="x1-6002r13"></a>
+ id="x1-7002r13"></a>
    <center class="math-display" >
 <img 
 src="theory12x.png" alt="   &#x2032;&#x2032;&#x2032;&#x2032;
 EIv  (x)+  w(x) = 0
 " class="math-display" ></center></td><td class="equation-label">(13)</td></tr></table>
-<!--l. 128--><p class="nopar" >
+<!--l. 130--><p class="nopar" >
 Equation&#x00A0;(<a 
-href="#x1-6002r13">13<!--tex4ht:ref: Eq:12 --></a>) is what is implemented in this program.
-<!--l. 131--><p class="noindent" >
+href="#x1-7002r13">13<!--tex4ht:ref: Eq:12 --></a>) is what is implemented in this program.
+<!--l. 133--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">7   </span> <a 
- id="x1-70007"></a>Finding moment, shear force, and slope from the displacement
+ id="x1-80007"></a>Finding moment, shear force, and slope from the displacement
 function</h3>
-<!--l. 132--><p class="noindent" >Solving (<a 
-href="#x1-6002r13">13<!--tex4ht:ref: Eq:12 --></a>) and applying suitable boundary conditions yields the displacement
+<!--l. 134--><p class="noindent" >Solving (<a 
+href="#x1-7002r13">13<!--tex4ht:ref: Eq:12 --></a>) and applying suitable boundary conditions yields the displacement
 function, <span 
 class="cmmi-10x-x-109">v</span>(<span 
 class="cmmi-10x-x-109">x</span>), for the beam. The slope, <span 
@@ -293,72 +321,72 @@ class="cmmi-10x-x-109">x</span>), is obtained through differentiation
 as
    <table 
 class="equation"><tr><td><a 
- id="x1-7001r14"></a>
+ id="x1-8001r14"></a>
    <center class="math-display" >
 <img 
 src="theory13x.png" alt="&#x03B8;(x) = v&#x2032;(x) .
 " class="math-display" ></center></td><td class="equation-label">(14)</td></tr></table>
-<!--l. 137--><p class="nopar" >
+<!--l. 139--><p class="nopar" >
 It is positive if the cross section rotates counter-clockwise during deformation.
-<!--l. 140--><p class="indent" >   The moment follows from (<a 
-href="#x1-4003r7">7<!--tex4ht:ref: Eq:7 --></a>) as
+<!--l. 142--><p class="indent" >   The moment follows from (<a 
+href="#x1-5003r7">7<!--tex4ht:ref: Eq:7 --></a>) as
 
    <table 
 class="equation"><tr><td><a 
- id="x1-7002r15"></a>
+ id="x1-8002r15"></a>
    <center class="math-display" >
 <img 
 src="theory14x.png" alt="M (x) = EI (x )v&#x2032;&#x2032;(x) = EI (x)&#x03B8;&#x2032;(x) .
 " class="math-display" ></center></td><td class="equation-label">(15)</td></tr></table>
-<!--l. 144--><p class="nopar" >
+<!--l. 146--><p class="nopar" >
 The transverse shear force follows from&#x00A0;(<a 
-href="#x1-5003r11">11<!--tex4ht:ref: Eq:10 --></a>) as
+href="#x1-6003r11">11<!--tex4ht:ref: Eq:10 --></a>) as
    <table 
 class="equation"><tr><td><a 
- id="x1-7003r16"></a>
+ id="x1-8003r16"></a>
    <center class="math-display" >
 <img 
 src="theory15x.png" alt="V (x ) = M &#x2032;(x) = (EI (x)v&#x2032;&#x2032;(x))&#x2032;
 " class="math-display" ></center></td><td class="equation-label">(16)</td></tr></table>
-<!--l. 149--><p class="nopar" >
+<!--l. 151--><p class="nopar" >
 or, for constant <span 
 class="cmmi-10x-x-109">EI</span>, simplifies to
    <table 
 class="equation"><tr><td><a 
- id="x1-7004r17"></a>
+ id="x1-8004r17"></a>
    <center class="math-display" >
 <img 
 src="theory16x.png" alt="V(x) = EIv &#x2032;&#x2032;&#x2032;(x) .
 
 " class="math-display" ></center></td><td class="equation-label">(17)</td></tr></table>
-<!--l. 154--><p class="nopar" >
-<!--l. 156--><p class="noindent" >
-   <h3 class="sectionHead"><span class="titlemark">8   </span> <a 
- id="x1-80008"></a>Examples</h3>
+<!--l. 156--><p class="nopar" >
 <!--l. 158--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">8   </span> <a 
+ id="x1-90008"></a>Examples</h3>
+<!--l. 160--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">8.1   </span> <a 
- id="x1-90008.1"></a>Single span beam with constant distributed force</h4>
-<!--l. 160--><p class="noindent" >Both bending stiffness, <span 
+ id="x1-100008.1"></a>Single span beam with constant distributed force</h4>
+<!--l. 162--><p class="noindent" >Both bending stiffness, <span 
 class="cmmi-10x-x-109">EI</span>, and distributed load, <span 
 class="cmmi-10x-x-109">w</span>(<span 
 class="cmmi-10x-x-109">x</span>) = <span 
 class="cmmi-10x-x-109">w</span><sub><span 
 class="cmr-8">0</span></sub>, are constant over
 the length of the beam. Thus, (<a 
-href="#x1-6002r13">13<!--tex4ht:ref: Eq:12 --></a>) simplifies to
+href="#x1-7002r13">13<!--tex4ht:ref: Eq:12 --></a>) simplifies to
    <table 
 class="equation"><tr><td><a 
- id="x1-9001r18"></a>
+ id="x1-10001r18"></a>
    <center class="math-display" >
 <img 
 src="theory17x.png" alt="           w0
 v &#x2032;&#x2032;&#x2032;&#x2032;(x) = - ---
            EI
 " class="math-display" ></center></td><td class="equation-label">(18)</td></tr></table>
-<!--l. 164--><p class="nopar" >
+<!--l. 166--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9002r19"></a>
+ id="x1-10002r19"></a>
    <center class="math-display" >
 <img 
 src="theory18x.png" alt="          w0x
@@ -366,59 +394,59 @@ v&#x2032;&#x2032;&#x2032;(x ) = -----+ c1
           EI
 " class="math-display" ></center></td><td class="equation-label">(19)</td></tr></table>
 
-<!--l. 168--><p class="nopar" >
+<!--l. 170--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9003r20"></a>
+ id="x1-10003r20"></a>
    <center class="math-display" >
 <img 
 src="theory19x.png" alt="          w x2
 v&#x2032;&#x2032;(x) = - -0---+ c1x+ c2
           2EI
 " class="math-display" ></center></td><td class="equation-label">(20)</td></tr></table>
-<!--l. 172--><p class="nopar" >
+<!--l. 174--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9004r21"></a>
+ id="x1-10004r21"></a>
    <center class="math-display" >
 <img 
 src="theory20x.png" alt="                   3
 &#x03B8;(x) = v&#x2032;(x) = - w0x--+ 1c1x2 + c2x+ c3
                 6EI    2
 " class="math-display" ></center></td><td class="equation-label">(21)</td></tr></table>
-<!--l. 176--><p class="nopar" >
+<!--l. 178--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9005r22"></a>
+ id="x1-10005r22"></a>
    <center class="math-display" >
 <img 
 src="theory21x.png" alt="             4
 v (x ) = - w0x-+  1c1x3 + 1c2x2 + c3x + c4
          24EI    6       2
 " class="math-display" ></center></td><td class="equation-label">(22)</td></tr></table>
-<!--l. 180--><p class="nopar" >
+<!--l. 182--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9006r23"></a>
+ id="x1-10006r23"></a>
    <center class="math-display" >
 <img 
 src="theory22x.png" alt="            &#x2032;&#x2032;       w0x2-
 M (x) = EIv  (x ) = -  2  + EIc1x  + EIc2
 " class="math-display" ></center></td><td class="equation-label">(23)</td></tr></table>
-<!--l. 184--><p class="nopar" >
+<!--l. 186--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9007r24"></a>
+ id="x1-10007r24"></a>
    <center class="math-display" >
 <img 
 src="theory23x.png" alt="V(x) = M &#x2032;(x) = EIv &#x2032;&#x2032;&#x2032;(x ) = - w x + EIc
                              0        1
 " class="math-display" ></center></td><td class="equation-label">(24)</td></tr></table>
-<!--l. 188--><p class="nopar" >
+<!--l. 190--><p class="nopar" >
 Pinned on both ends yields the boundary conditions
    <table 
 class="equation"><tr><td><a 
- id="x1-9008r25"></a>
+ id="x1-10008r25"></a>
 
    <center class="math-display" >
 <img 
@@ -428,10 +456,10 @@ src="theory24x.png" alt="(        )   (    )
 ||(   v(&#x2113;)  ||)   ||(  0 ||)
    M (&#x2113;)        0
 " class="math-display" ></center></td><td class="equation-label">(25)</td></tr></table>
-<!--l. 214--><p class="nopar" >
+<!--l. 216--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9009r26"></a>
+ id="x1-10009r26"></a>
    <center class="math-display" >
 <img 
 src="theory25x.png" alt="                               (        )
@@ -443,10 +471,10 @@ src="theory25x.png" alt="                               (        )
                          4     |(  w0-&#x2113;- |)
                                     2
 " class="math-display" ></center></td><td class="equation-label">(26)</td></tr></table>
-<!--l. 242--><p class="nopar" >
+<!--l. 244--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9010r27"></a>
+ id="x1-10010r27"></a>
    <center class="math-display" >
 <img 
 src="theory26x.png" alt="          (    w &#x2113;   )
@@ -458,29 +486,29 @@ src="theory26x.png" alt="          (    w &#x2113;   )
           ||(          ||)
                 0
 " class="math-display" ></center></td><td class="equation-label">(27)</td></tr></table>
-<!--l. 262--><p class="nopar" >
+<!--l. 264--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9011r28"></a>
+ id="x1-10011r28"></a>
    <center class="math-display" >
 <img 
 src="theory27x.png" alt="           4  (      )(  2        )
 v(x) = -w0&#x2113;- x- 1- x-   x--- x-- 1
        24EI  &#x2113;      &#x2113;   &#x2113;2   &#x2113;
 " class="math-display" ></center></td><td class="equation-label">(28)</td></tr></table>
-<!--l. 268--><p class="nopar" >
+<!--l. 270--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9012r29"></a>
+ id="x1-10012r29"></a>
    <center class="math-display" >
 <img 
 src="theory28x.png" alt="           &#x2032;&#x2032;     w0-&#x2113;2x-(    x)
 M (x) = EIv (x) =   2  &#x2113;  1-  &#x2113;
 " class="math-display" ></center></td><td class="equation-label">(29)</td></tr></table>
-<!--l. 272--><p class="nopar" >
+<!--l. 274--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-9013r30"></a>
+ id="x1-10013r30"></a>
 
    <center class="math-display" >
 <img 
@@ -488,209 +516,328 @@ src="theory29x.png" alt="                           w  &#x2113;(     x )
 V (x) = M &#x2032;(x ) = EIv &#x2032;&#x2032;&#x2032;(x) =--0- 1 - 2--
                             2        &#x2113;
 " class="math-display" ></center></td><td class="equation-label">(30)</td></tr></table>
-<!--l. 276--><p class="nopar" >
+<!--l. 278--><p class="nopar" >
 Shear vanishes at <span 
 class="cmmi-10x-x-109">x </span>= <span 
 class="cmmi-10x-x-109">&#x2113; </span>and, thus,
    <table 
 class="equation"><tr><td><a 
- id="x1-9014r31"></a>
+ id="x1-10014r31"></a>
    <center class="math-display" >
 <img 
 src="theory30x.png" alt="                       2
 max  M =  M (&#x2113;&#x2215;2) = w0-&#x2113;
                      8
 " class="math-display" ></center></td><td class="equation-label">(31)</td></tr></table>
-<!--l. 281--><p class="nopar" >
+<!--l. 283--><p class="nopar" >
 By symmetry, rotation vanishes at <span 
 class="cmmi-10x-x-109">x </span>= <span 
 class="cmmi-10x-x-109">&#x2113; </span>and, thus,
    <table 
 class="equation"><tr><td><a 
- id="x1-9015r32"></a>
+ id="x1-10015r32"></a>
    <center class="math-display" >
 <img 
 src="theory31x.png" alt="                              5w0&#x2113;4-
 max  |v| = - min v = - v(&#x2113;&#x2215;2) = 384EI
 " class="math-display" ></center></td><td class="equation-label">(32)</td></tr></table>
-<!--l. 286--><p class="nopar" >
+<!--l. 288--><p class="nopar" >
 
-<!--l. 288--><p class="noindent" >
+<!--l. 290--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">8.2   </span> <a 
- id="x1-100008.2"></a>Single span beam with a single concentrated force</h4>
-   <table 
-class="equation"><tr><td><a 
- id="x1-10001r33"></a>
+ id="x1-110008.2"></a>Single span beam with a single concentrated force</h4>
+<!--l. 292--><p class="noindent" ><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="theory32x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(33)</td></tr></table>
-<!--l. 292--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-10002r34"></a>
+src="theory32x.png" alt="                  v&#x2032;1&#x2032;&#x2032;&#x2032;(x)  =  0                           (33)
+                   v&#x2032;&#x2032;&#x2032;(x)  =  c                           (34)
+                    1&#x2032;&#x2032;        1
+                   v1(x)  =  c1x + c2                    (35)
+                    &#x2032;         1-  2
+            &#x03B8;1(x ) = v1(x) =   2c1x + c2x + c3            (36)
+                              1-  3   1-  2
+                   v1(x)  =   6c1x +  2c2x + c3x + c4    (37)
+        M  (x) = EIv &#x2032;&#x2032;(x) =  EIc  x + EIc                (38)
+          1&#x2032;         1&#x2032;&#x2032;&#x2032;           1       2
+V1(x) = M 1(x) = EIv 1 (x) = EIc1                        (39)
+" class="math-display" ><a 
+ id="x1-11001r39"></a></center>
+</div><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="theory33x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(34)</td></tr></table>
-<!--l. 295--><p class="nopar" >
+src="theory33x.png" alt="                    &#x2032;&#x2032;&#x2032;&#x2032;
+                   v2 (x) =   0                           (40)
+                   v&#x2032;2&#x2032;&#x2032;(x) =   d1                          (41)
+                     &#x2032;&#x2032;
+                    v2(x) =   d1x + d2                    (42)
+            &#x03B8;2(x) = v&#x2032;(x) =   1d1x2 + d2x + d3            (43)
+                     2        2
+                    v (x) =   1d x3 + 1-d x2 + d x + d    (44)
+                     2        6  1    2  2     3     4
+        M2 (x) = EIv &#x2032;&#x2032;2(x) =   EId1x + EId2                (45)
+          &#x2032;         &#x2032;&#x2032;&#x2032;
+V2(x) = M 2(x) = EIv 2 (x) =  EId1                        (46)
+" class="math-display" ><a 
+ id="x1-11002r46"></a></center>
+</div>Boundary conditions
    <table 
 class="equation"><tr><td><a 
- id="x1-10003r35"></a>
+ id="x1-11003r47"></a>
    <center class="math-display" >
+<img 
+src="theory34x.png" alt="(   v(0) = v (0) )    ( 0 )
+||{          1     ||}    ||{   ||}
+   M (0) = M1 (0)  =    0
+||(   v(&#x2113;) = v2(&#x2113;) ||)    ||( 0 ||)
+   M (&#x2113;) = M2 (&#x2113;)       0
+" class="math-display" ></center></td><td class="equation-label">(47)</td></tr></table>
+<!--l. 332--><p class="nopar" >
+Continuity conditions:
+   <table 
+class="equation"><tr><td><a 
+ id="x1-11004r48"></a>
+   <center class="math-display" >
+<img 
+src="theory35x.png" alt="v1(a) = v2(a)    and     &#x03B8;1(a) = &#x03B8;2(a)
+" class="math-display" ></center></td><td class="equation-label">(48)</td></tr></table>
+<!--l. 339--><p class="nopar" >
+Equilibrium of forces for the interval [<span 
+class="cmmi-10x-x-109">a </span><span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">&#x03F5;,a </span>+ <span 
+class="cmmi-10x-x-109">&#x03F5;</span>]:
+   <table 
+class="equation"><tr><td><a 
+ id="x1-11005r49"></a>
+   <center class="math-display" >
+<img 
+src="theory36x.png" alt="li&#x03F5;&#x2192;m0 [V(a - &#x03F5;)- P - V (a+ &#x03F5;)] = 0    &#x21D2;    V1(a)- V2(a) = P
+" class="math-display" ></center></td><td class="equation-label">(49)</td></tr></table>
+<!--l. 346--><p class="nopar" >
+Moment equilibrium for the interval [<span 
+class="cmmi-10x-x-109">a </span><span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">&#x03F5;,a </span>+ <span 
+class="cmmi-10x-x-109">&#x03F5;</span>]:
+   <table 
+class="equation"><tr><td><a 
+ id="x1-11006r50"></a>
+   <center class="math-display" >
+<img 
+src="theory37x.png" alt="l&#x03F5;&#x2192;im0 [M (a-  &#x03F5;) + &#x03F5;V(a - &#x03F5;)- M (a + &#x03F5;)+ &#x03F5;V(a + &#x03F5;)] = 0  &#x21D2;   M1 (a) = M2 (a)
+" class="math-display" ></center></td><td class="equation-label">(50)</td></tr></table>
+<!--l. 353--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-11007r51"></a>
 
-<img 
-src="theory34x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(35)</td></tr></table>
-<!--l. 298--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-10004r36"></a>
    <center class="math-display" >
 <img 
-src="theory35x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(36)</td></tr></table>
-<!--l. 301--><p class="nopar" >
+src="theory38x.png" alt="&#x230A;  0     0    0  1    0       0     0    0 &#x230B; (     )   (     )
+|                                          | ||  c1 ||   ||   0 ||
+|  0     EI   0  0    0       0     0    0 | |||     |||   |||     |||
+||                                          || ||||  c2 ||||   ||||   0 ||||
+||  0     0    0  0   &#x2113;3&#x2215;6   &#x2113;2&#x2215;2    &#x2113;    1 || ||||     ||||   ||||     ||||
+||                                          || |||  c3 |||   |||   0 |||
+||  0     0    0  0   EI &#x2113;    EI     0    0 || ||{  c4 ||}   ||{   0 ||}
+||                                          ||         =
+| a3&#x2215;6  a2&#x2215;2  a  1  - a3&#x2215;6 - a2&#x2215;2  - a  - 1 | ||| d1 |||   |||   0 |||
+||                                          || ||||     ||||   ||||     ||||
+|| a2&#x2215;2   a    1  0  - a2&#x2215;2   - a   - 1   0 || ||||  d2 ||||   ||||   0 ||||
+||                                          || |||  d  |||   |||   0 |||
+|&#x2308; EIa    EI   0  0  - EIa   - EI    0    0 |&#x2309; ||||   3 ||||   ||||     ||||
+                                             (  d4 )   (  P  )
+   EI    0    0  0   - EI     0     0    0
+" class="math-display" ></center></td><td class="equation-label">(51)</td></tr></table>
+<!--l. 393--><p class="nopar" >
+Using <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= <span 
+class="cmmi-10x-x-109">a&#x2215;&#x2113;</span>, the integration constants are obtained as
    <table 
 class="equation"><tr><td><a 
- id="x1-10005r37"></a>
+ id="x1-11008r52"></a>
    <center class="math-display" >
 <img 
-src="theory36x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(37)</td></tr></table>
-<!--l. 304--><p class="nopar" >
+src="theory39x.png" alt="                 {                  (          )       }
+                  (1---&#x03B1;)P-       &#x03B1;--&#x03B1;2 --3&#x03B1;-+-2-P&#x2113;2-
+{c1, c2, c3, c4} =    EI    , 0, -        6EI        , 0
+" class="math-display" ></center></td><td class="equation-label">(52)</td></tr></table>
+<!--l. 410--><p class="nopar" >
+and
    <table 
 class="equation"><tr><td><a 
- id="x1-10006r38"></a>
+ id="x1-11009r53"></a>
 
    <center class="math-display" >
 <img 
-src="theory37x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(38)</td></tr></table>
-<!--l. 307--><p class="nopar" >
+src="theory40x.png" alt="                  {                  (     2)  2    3  3}
+{d1, d2, d3, d4} =  --&#x03B1;P-, &#x03B1;P-&#x2113;, - &#x03B1;--2+-&#x03B1;---P&#x2113;-, &#x03B1;--P&#x2113;-
+                    2EI    EI           6EI        6EI
+" class="math-display" ></center></td><td class="equation-label">(53)</td></tr></table>
+<!--l. 427--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-10007r39"></a>
-   <center class="math-display" >
-<img 
-src="theory38x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(39)</td></tr></table>
-<!--l. 310--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-10008r40"></a>
-   <center class="math-display" >
-<img 
-src="theory39x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(40)</td></tr></table>
-<!--l. 313--><p class="nopar" >
-
-   <table 
-class="equation"><tr><td><a 
- id="x1-10009r41"></a>
-   <center class="math-display" >
-<img 
-src="theory40x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(41)</td></tr></table>
-<!--l. 316--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-10010r42"></a>
+ id="x1-11010r54"></a>
    <center class="math-display" >
 <img 
 src="theory41x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(42)</td></tr></table>
-<!--l. 319--><p class="nopar" >
-<!--l. 321--><p class="noindent" >
-   <h4 class="subsectionHead"><span class="titlemark">8.3   </span> <a 
- id="x1-110008.3"></a>Single span beam with a concentrated force and distributed load using
-the stiffness method</h4>
+" class="math-display" ></center></td><td class="equation-label">(54)</td></tr></table>
+<!--l. 430--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11001r43"></a>
-
+ id="x1-11011r55"></a>
    <center class="math-display" >
 <img 
 src="theory42x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(43)</td></tr></table>
-<!--l. 325--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(55)</td></tr></table>
+
+<!--l. 433--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11002r44"></a>
+ id="x1-11012r56"></a>
    <center class="math-display" >
 <img 
 src="theory43x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(44)</td></tr></table>
-<!--l. 328--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(56)</td></tr></table>
+<!--l. 436--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11003r45"></a>
+ id="x1-11013r57"></a>
    <center class="math-display" >
 <img 
 src="theory44x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(45)</td></tr></table>
-<!--l. 331--><p class="nopar" >
-
+" class="math-display" ></center></td><td class="equation-label">(57)</td></tr></table>
+<!--l. 439--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11004r46"></a>
+ id="x1-11014r58"></a>
    <center class="math-display" >
 <img 
 src="theory45x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(46)</td></tr></table>
-<!--l. 334--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(58)</td></tr></table>
+<!--l. 442--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11005r47"></a>
+ id="x1-11015r59"></a>
    <center class="math-display" >
 <img 
 src="theory46x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(47)</td></tr></table>
-<!--l. 337--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(59)</td></tr></table>
+<!--l. 445--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11006r48"></a>
+ id="x1-11016r60"></a>
    <center class="math-display" >
 <img 
 src="theory47x.png" alt="
-
-" class="math-display" ></center></td><td class="equation-label">(48)</td></tr></table>
-<!--l. 340--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(60)</td></tr></table>
+<!--l. 448--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11007r49"></a>
+ id="x1-11017r61"></a>
+
    <center class="math-display" >
 <img 
 src="theory48x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(49)</td></tr></table>
-<!--l. 343--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(61)</td></tr></table>
+<!--l. 451--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11008r50"></a>
+ id="x1-11018r62"></a>
    <center class="math-display" >
 <img 
 src="theory49x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(50)</td></tr></table>
-<!--l. 346--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(62)</td></tr></table>
+<!--l. 454--><p class="nopar" >
+<!--l. 456--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">8.3   </span> <a 
+ id="x1-120008.3"></a>Single span beam with a concentrated force and distributed load using
+the stiffness method</h4>
    <table 
 class="equation"><tr><td><a 
- id="x1-11009r51"></a>
+ id="x1-12001r63"></a>
    <center class="math-display" >
 <img 
 src="theory50x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(51)</td></tr></table>
-<!--l. 349--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(63)</td></tr></table>
+<!--l. 460--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-11010r52"></a>
+ id="x1-12002r64"></a>
    <center class="math-display" >
 <img 
 src="theory51x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(52)</td></tr></table>
-<!--l. 352--><p class="nopar" >
+" class="math-display" ></center></td><td class="equation-label">(64)</td></tr></table>
+<!--l. 463--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12003r65"></a>
+   <center class="math-display" >
+<img 
+src="theory52x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(65)</td></tr></table>
+<!--l. 466--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12004r66"></a>
+
+   <center class="math-display" >
+<img 
+src="theory53x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(66)</td></tr></table>
+<!--l. 469--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12005r67"></a>
+   <center class="math-display" >
+<img 
+src="theory54x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(67)</td></tr></table>
+<!--l. 472--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12006r68"></a>
+   <center class="math-display" >
+<img 
+src="theory55x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(68)</td></tr></table>
+<!--l. 475--><p class="nopar" >
+
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12007r69"></a>
+   <center class="math-display" >
+<img 
+src="theory56x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(69)</td></tr></table>
+<!--l. 478--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12008r70"></a>
+   <center class="math-display" >
+<img 
+src="theory57x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(70)</td></tr></table>
+<!--l. 481--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12009r71"></a>
+   <center class="math-display" >
+<img 
+src="theory58x.png" alt="
+
+" class="math-display" ></center></td><td class="equation-label">(71)</td></tr></table>
+<!--l. 484--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12010r72"></a>
+   <center class="math-display" >
+<img 
+src="theory59x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(72)</td></tr></table>
+<!--l. 487--><p class="nopar" >
     
 </body></html> 
-
 
 
 

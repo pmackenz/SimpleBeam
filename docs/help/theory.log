@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  27 JUN 2019 19:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  27 JUN 2019 23:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,100 +482,113 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 21.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3] [4
+) (./theory.4ct)
+[3] [4
 
 ]
-l.26 --- TeX4ht warning --- File `"beam.xbb"' not found ---
-l.26 --- TeX4ht warning --- Cannot determine size of graphic in "beam.xbb" (no 
+l.28 --- TeX4ht warning --- File `"beam.xbb"' not found ---
+l.28 --- TeX4ht warning --- Cannot determine size of graphic in "beam.xbb" (no 
 BoundingBox) ---
-l. 26 --- needs --- beam.png ---
+l. 28 --- needs --- beam.png ---
 [5
 
 ]
-l. 39 Writing theory.idv[1] (theory0x.png)
-l. 46 Writing theory.idv[2] (theory1x.png)
+l. 41 Writing theory.idv[1] (theory0x.png)
+l. 48 Writing theory.idv[2] (theory1x.png)
  [6
 
 ]
-l. 54 Writing theory.idv[3] (theory2x.png)
-l. 61 Writing theory.idv[4] (theory3x.png)
+l. 56 Writing theory.idv[3] (theory2x.png)
+l. 63 Writing theory.idv[4] (theory3x.png)
  [7]
-l. 69 Writing theory.idv[5] (theory4x.png)
-l. 74 Writing theory.idv[6] (theory5x.png)
+l. 71 Writing theory.idv[5] (theory4x.png)
+l. 76 Writing theory.idv[6] (theory5x.png)
  [8]
-l. 79 Writing theory.idv[7] (theory6x.png)
-l. 84 Writing theory.idv[8] (theory7x.png)
+l. 81 Writing theory.idv[7] (theory6x.png)
+l. 86 Writing theory.idv[8] (theory7x.png)
  [9]
-l. 95 Writing theory.idv[9] (theory8x.png)
-l. 102 Writing theory.idv[10] (theory9x.png)
+l. 97 Writing theory.idv[9] (theory8x.png)
+l. 104 Writing theory.idv[10] (theory9x.png)
  [10]
-l. 109 Writing theory.idv[11] (theory10x.png)
-l. 117 Writing theory.idv[12] (theory11x.png)
+l. 111 Writing theory.idv[11] (theory10x.png)
+l. 119 Writing theory.idv[12] (theory11x.png)
  [11]
-l. 125 Writing theory.idv[13] (theory12x.png)
-l. 134 Writing theory.idv[14] (theory13x.png)
+l. 127 Writing theory.idv[13] (theory12x.png)
+l. 136 Writing theory.idv[14] (theory13x.png)
  [12]
-l. 141 Writing theory.idv[15] (theory14x.png)
-l. 146 Writing theory.idv[16] (theory15x.png)
-l. 151 Writing theory.idv[17] (theory16x.png)
+l. 143 Writing theory.idv[15] (theory14x.png)
+l. 148 Writing theory.idv[16] (theory15x.png)
+l. 153 Writing theory.idv[17] (theory16x.png)
  [13]
-l. 161 Writing theory.idv[18] (theory17x.png)
-l. 165 Writing theory.idv[19] (theory18x.png)
+l. 163 Writing theory.idv[18] (theory17x.png)
+l. 167 Writing theory.idv[19] (theory18x.png)
  [14]
-l. 169 Writing theory.idv[20] (theory19x.png)
-l. 173 Writing theory.idv[21] (theory20x.png)
-l. 177 Writing theory.idv[22] (theory21x.png)
+l. 171 Writing theory.idv[20] (theory19x.png)
+l. 175 Writing theory.idv[21] (theory20x.png)
+l. 179 Writing theory.idv[22] (theory21x.png)
  [15]
-l. 181 Writing theory.idv[23] (theory22x.png)
-l. 185 Writing theory.idv[24] (theory23x.png)
-l. 190 Writing theory.idv[25] (theory24x.png)
+l. 183 Writing theory.idv[23] (theory22x.png)
+l. 187 Writing theory.idv[24] (theory23x.png)
+l. 192 Writing theory.idv[25] (theory24x.png)
  [16]
-l. 215 Writing theory.idv[26] (theory25x.png)
-l. 243 Writing theory.idv[27] (theory26x.png)
+l. 217 Writing theory.idv[26] (theory25x.png)
+l. 245 Writing theory.idv[27] (theory26x.png)
  [17]
-l. 263 Writing theory.idv[28] (theory27x.png)
-l. 269 Writing theory.idv[29] (theory28x.png)
+l. 265 Writing theory.idv[28] (theory27x.png)
+l. 271 Writing theory.idv[29] (theory28x.png)
  [18]
-l. 273 Writing theory.idv[30] (theory29x.png)
-l. 278 Writing theory.idv[31] (theory30x.png)
-l. 283 Writing theory.idv[32] (theory31x.png)
+l. 275 Writing theory.idv[30] (theory29x.png)
+l. 280 Writing theory.idv[31] (theory30x.png)
+l. 285 Writing theory.idv[32] (theory31x.png)
  [19]
-l. 290 Writing theory.idv[33] (theory32x.png)
-l. 293 Writing theory.idv[34] (theory33x.png)
-l. 296 Writing theory.idv[35] (theory34x.png)
+l. 292 Writing theory.idv[33] (theory32x.png)
+l. 302 Writing theory.idv[34] (theory33x.png)
  [20]
-l. 299 Writing theory.idv[36] (theory35x.png)
-l. 302 Writing theory.idv[37] (theory36x.png)
-l. 305 Writing theory.idv[38] (theory37x.png)
+l. 313 Writing theory.idv[35] (theory34x.png)
+l. 334 Writing theory.idv[36] (theory35x.png)
 
 [21]
-l. 308 Writing theory.idv[39] (theory38x.png)
-l. 311 Writing theory.idv[40] (theory39x.png)
+l. 341 Writing theory.idv[37] (theory36x.png)
+l. 348 Writing theory.idv[38] (theory37x.png)
+l. 354 Writing theory.idv[39] (theory38x.png)
  [22]
-l. 314 Writing theory.idv[41] (theory40x.png)
-l. 317 Writing theory.idv[42] (theory41x.png)
-l. 323 Writing theory.idv[43] (theory42x.png)
+l. 395 Writing theory.idv[40] (theory39x.png)
  [23]
-l. 326 Writing theory.idv[44] (theory43x.png)
-l. 329 Writing theory.idv[45] (theory44x.png)
+l. 412 Writing theory.idv[41] (theory40x.png)
+l. 428 Writing theory.idv[42] (theory41x.png)
+l. 431 Writing theory.idv[43] (theory42x.png)
  [24]
-l. 332 Writing theory.idv[46] (theory45x.png)
-l. 335 Writing theory.idv[47] (theory46x.png)
-l. 338 Writing theory.idv[48] (theory47x.png)
+l. 434 Writing theory.idv[44] (theory43x.png)
+l. 437 Writing theory.idv[45] (theory44x.png)
+l. 440 Writing theory.idv[46] (theory45x.png)
  [25]
-l. 341 Writing theory.idv[49] (theory48x.png)
-l. 344 Writing theory.idv[50] (theory49x.png)
-l. 347 Writing theory.idv[51] (theory50x.png)
+l. 443 Writing theory.idv[47] (theory46x.png)
+l. 446 Writing theory.idv[48] (theory47x.png)
+l. 449 Writing theory.idv[49] (theory48x.png)
  [26]
-l. 350 Writing theory.idv[52] (theory51x.png)
- [27] (./theory.aux) ) 
+l. 452 Writing theory.idv[50] (theory49x.png)
+l. 458 Writing theory.idv[51] (theory50x.png)
+ [27]
+l. 461 Writing theory.idv[52] (theory51x.png)
+l. 464 Writing theory.idv[53] (theory52x.png)
+l. 467 Writing theory.idv[54] (theory53x.png)
+ [28]
+l. 470 Writing theory.idv[55] (theory54x.png)
+l. 473 Writing theory.idv[56] (theory55x.png)
+ [29]
+l. 476 Writing theory.idv[57] (theory56x.png)
+l. 479 Writing theory.idv[58] (theory57x.png)
+l. 482 Writing theory.idv[59] (theory58x.png)
+ [30]
+l. 485 Writing theory.idv[60] (theory59x.png)
+ [31] (./theory.aux) ) 
 Here is how much of TeX's memory you used:
- 5427 strings out of 492996
- 62368 string characters out of 6132730
- 253644 words of memory out of 5000000
- 8886 multiletter control sequences out of 15000+600000
+ 5481 strings out of 492996
+ 63062 string characters out of 6132730
+ 256704 words of memory out of 5000000
+ 8938 multiletter control sequences out of 15000+600000
  11558 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,10n,32p,874b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on theory.dvi (27 pages, 55112 bytes).
+Output written on theory.dvi (31 pages, 68352 bytes).

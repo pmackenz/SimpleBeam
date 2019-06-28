@@ -166,23 +166,14 @@ File: beam.png
 --- needs --- theory.idv[32] ==> theory30x.png ---
 --- needs --- theory.idv[33] ==> theory31x.png ---
 --- needs --- theory.idv[34] ==> theory32x.png ---
---- empty picture --- theory.idv[34] ---
 --- needs --- theory.idv[35] ==> theory33x.png ---
---- empty picture --- theory.idv[35] ---
 --- needs --- theory.idv[36] ==> theory34x.png ---
---- empty picture --- theory.idv[36] ---
 --- needs --- theory.idv[37] ==> theory35x.png ---
---- empty picture --- theory.idv[37] ---
 --- needs --- theory.idv[38] ==> theory36x.png ---
---- empty picture --- theory.idv[38] ---
 --- needs --- theory.idv[39] ==> theory37x.png ---
---- empty picture --- theory.idv[39] ---
 --- needs --- theory.idv[40] ==> theory38x.png ---
---- empty picture --- theory.idv[40] ---
 --- needs --- theory.idv[41] ==> theory39x.png ---
---- empty picture --- theory.idv[41] ---
 --- needs --- theory.idv[42] ==> theory40x.png ---
---- empty picture --- theory.idv[42] ---
 --- needs --- theory.idv[43] ==> theory41x.png ---
 --- empty picture --- theory.idv[43] ---
 --- needs --- theory.idv[44] ==> theory42x.png ---
@@ -205,6 +196,22 @@ File: beam.png
 --- empty picture --- theory.idv[52] ---
 --- needs --- theory.idv[53] ==> theory51x.png ---
 --- empty picture --- theory.idv[53] ---
+--- needs --- theory.idv[54] ==> theory52x.png ---
+--- empty picture --- theory.idv[54] ---
+--- needs --- theory.idv[55] ==> theory53x.png ---
+--- empty picture --- theory.idv[55] ---
+--- needs --- theory.idv[56] ==> theory54x.png ---
+--- empty picture --- theory.idv[56] ---
+--- needs --- theory.idv[57] ==> theory55x.png ---
+--- empty picture --- theory.idv[57] ---
+--- needs --- theory.idv[58] ==> theory56x.png ---
+--- empty picture --- theory.idv[58] ---
+--- needs --- theory.idv[59] ==> theory57x.png ---
+--- empty picture --- theory.idv[59] ---
+--- needs --- theory.idv[60] ==> theory58x.png ---
+--- empty picture --- theory.idv[60] ---
+--- needs --- theory.idv[61] ==> theory59x.png ---
+--- empty picture --- theory.idv[61] ---
 --- characters ---
 Font("cmr","10","10","109")
 Font("cmr","17","17","100")

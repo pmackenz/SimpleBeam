@@ -20,6 +20,8 @@
 \begin{document}
 \maketitle
 
+\tableofcontents
+
 \section{Introduction}
 \begin{figure}[h]
 	\begin{center}
@@ -287,35 +289,168 @@ By symmetry, rotation vanishes at $x=\ell$ and, thus,
 
 \subsection{Single span beam with a single concentrated force}
 
-\begin{equation}
+\begin{eqnarray}
+   v_1''''(x) &=&  0 \\
+   v_1'''(x) &=&   c_1 \\
+   v_1''(x) &=&   c_1\,x + c_2  \\
+   \theta_1(x) = v_1'(x) &=&  \frac{1}{2} \,c_1\,x^2 + c_2\,x + c_3 \\
+   v_1(x) &=&  \frac{1}{6} \,c_1\,x^3 + \frac{1}{2} \,c_2\,x^2+ c_3\,x + c_4 \\
+   M_1(x) = EI \, v_1''(x) &=&  EI\,c_1\,x + EI\,c_2 \\
+   V_1(x) = M_1'(x) = EI \, v_1'''(x) &=& EI\,c_1
    \label{B1}
-\end{equation}
-\begin{equation}
+\end{eqnarray}
+\begin{eqnarray}
+   v_2''''(x) &=&  0 \\
+   v_2'''(x) &=&   d_1 \\
+   v_2''(x) &=&   d_1\,x + d_2  \\
+   \theta_2(x) = v_2'(x) &=&   \frac{1}{2} \,d_1\,x^2 + d_2\,x + d_3 \\
+   v_2(x) &=&   \frac{1}{6} \,d_1\,x^3 + \frac{1}{2} \,d_2\,x^2+ d_3\,x + d_4 \\
+   M_2(x) = EI \, v_2''(x) &=&  EI\,d_1\,x + EI\,d_2 \\
+   V_2(x) = M_2'(x) = EI \, v_2'''(x) &=&  EI\,d_1
    \label{B2}
-\end{equation}
+\end{eqnarray}
+Boundary conditions
 \begin{equation}
+   \left\{ 
+   \begin{array}{c}
+   v(0) = v_1(0) \\
+   M(0) = M_1(0) \\
+   v(\ell) = v_2(\ell) \\
+   M(\ell) = M_2(\ell)
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    0 \\
+    0 \\
+    0 \\
+    0 
+   \end{array}
+   \right\}
    \label{B3}
 \end{equation}
+Continuity conditions:
 \begin{equation}
+   v_1(a) = v_2(a)
+   \qquad\hbox{and}\qquad
+   \theta_1(a) = \theta_2(a)
    \label{B4}
 \end{equation}
+Equilibrium of forces for the interval $[a-\epsilon,a+\epsilon]$:
 \begin{equation}
+   \lim_{\epsilon\to 0} \left[ V(a-\epsilon) - P - V(a+\epsilon)  \right] = 0
+   \qquad\Rightarrow\quad
+   V_1(a) - V_2(a) = P
    \label{B5}
 \end{equation}
+Moment equilibrium for the interval $[a-\epsilon,a+\epsilon]$:
 \begin{equation}
+   \lim_{\epsilon\to 0} \left[ M(a-\epsilon) + \epsilon V(a-\epsilon) - M(a+\epsilon) + \epsilon V(a+\epsilon) \right] = 0
+   \quad\Rightarrow\quad
+   M_1(a) = M_2(a)
    \label{B6}
 \end{equation}
 \begin{equation}
+   \left[ 
+   \begin{array}{cccccccc}
+    0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\[2ex]
+    0 & EI & 0 & 0 & 0 & 0 & 0 & 0 \\[2ex]
+    0 & 0 & 0 & 0 & \ell^3/6 & \ell^2/2 & \ell & 1 \\[2ex]
+    0 & 0 & 0 & 0 & EI\,\ell & EI & 0 & 0 \\[2ex]
+    a^3/6 & a^2/2 & a & 1 & -a^3/6 & -a^2/2 & -a & -1 \\[2ex]
+    a^2/2 & a & 1 & 0 & -a^2/2 & -a & -1 & 0 \\[2ex]
+    EI \,a & EI & 0 & 0 & -EI\,a & -EI & 0 & 0 \\[2ex]
+    EI & 0 & 0 & 0 & -EI & 0 & 0 & 0 
+   \end{array}
+   \right]
+   \left\{ 
+   \begin{array}{c}
+    c_1 \\[1.5ex]
+    c_2 \\[1.5ex]
+    c_3 \\[1.5ex]
+    c_4 \\[1.5ex]
+    d_1 \\[1.5ex]
+    d_2 \\[1.5ex]
+    d_3 \\[1.5ex]
+    d_4
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    P 
+   \end{array}
+   \right\}
    \label{B7}
 \end{equation}
+Using $\alpha=a/\ell$, the integration constants are obtained as
 \begin{equation}
+   \left\{ 
+    c_1 \,,~
+    c_2 \,,~
+    c_3 \,,~
+    c_4 
+   \right\}
+   =
+   \left\{
+   	\frac{ (1-\alpha)  P}{{EI}},~
+	0,~
+	-\frac{ \alpha  \left(\alpha ^2-3 \alpha +2\right) P \ell^2 }{6 \,{EI}},~
+   	0
+   \right\}
    \label{B8}
 \end{equation}
+and
 \begin{equation}
+   \left\{ 
+    d_1 \,,~
+    d_2 \,,~
+    d_3 \,,~
+    d_4
+   \right\}
+   =
+   \left\{
+	\frac{ -\alpha  P}{2 {EI}},~
+	\frac{\alpha  P \ell }{{EI}},~
+	-\frac{ \alpha  \left(2+\alpha^2\right) P \ell^2 }{6 \,{EI}},~
+	\frac{\alpha^3  P \ell^3}{6 \,{EI}}
+   \right\}
    \label{B9}
 \end{equation}
 \begin{equation}
    \label{B10}
+\end{equation}
+\begin{equation}
+   \label{B11}
+\end{equation}
+\begin{equation}
+   \label{B12}
+\end{equation}
+\begin{equation}
+   \label{B13}
+\end{equation}
+\begin{equation}
+   \label{B14}
+\end{equation}
+\begin{equation}
+   \label{B15}
+\end{equation}
+\begin{equation}
+   \label{B16}
+\end{equation}
+\begin{equation}
+   \label{B17}
+\end{equation}
+\begin{equation}
+   \label{B18}
 \end{equation}
 
 \subsection{Single span beam with a concentrated force and distributed load using the stiffness method}
