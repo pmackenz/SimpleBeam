@@ -426,32 +426,72 @@ and
    \label{B9}
 \end{equation}
 \begin{equation}
+   v(x) = \left\{ \begin{array}{ll}
+                       \frac{(1-\alpha)Px(x^2 - \alpha(2-\alpha)\ell^2)}{6\,EI}  & x<a \\[2ex]
+                       -\frac{\alpha^2(1-\alpha)^2P\ell^3 }{3\,EI}  & x=a \\[2ex]
+                       \frac{\alpha P(\ell - x)(x^2 - 2 \ell x + \alpha^2\ell^2)}{6\,EI}  & x>a 
+                      \end{array} \right.
    \label{B10}
 \end{equation}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[]{forceDeflection.png}
+        \caption{Deformed shape for different locations, $\alpha=a/\ell$, for $EI=1$, $\ell=1$, $P=1$}
+        \label{default1}
+    \end{center}
+\end{figure}
+
 \begin{equation}
+   \theta(x) = \left\{ \begin{array}{ll}
+                       \frac{(1-\alpha)P( 3 x^2 - \alpha(2-\alpha)\ell^2)}{6\,EI}  & x<a \\[2ex]
+                       \frac{\alpha(1-\alpha)( 2 \alpha - 1 )P\ell^2}{3\,EI}  & x=a \\[2ex]
+                        \frac{-\alpha P(3 x^2-6\ell x+(2+\alpha^2)\ell^2)}{6\,EI}   & x>a 
+                      \end{array} \right.
    \label{B11}
 \end{equation}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[]{forceSlope.png}
+        \caption{Rotation for different locations, $\alpha=a/\ell$, for $EI=1$, $\ell=1$, $P=1$}
+        \label{default2}
+    \end{center}
+\end{figure}
+
 \begin{equation}
+   M(x) = \left\{ \begin{array}{ll}
+                       (1-\alpha) P x  & x<a \\[2ex]
+                       \alpha(1-\alpha) P \ell  & x=a \\[2ex]
+                       \alpha P(\ell - x)  & x>a 
+                      \end{array} \right.
    \label{B12}
 \end{equation}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[]{forceMoment.png}
+        \caption{Moment diagrams for different locations, $\alpha=a/\ell$, for $EI=1$, $\ell=1$, $P=1$}
+        \label{default3}
+    \end{center}
+\end{figure}
+
 \begin{equation}
+   V(x) = \left\{ \begin{array}{ll}
+                       (1-\alpha)P  & x<a \\[2ex]
+                       \text{undefined}  & x=a \\[2ex]
+                       -\alpha P  & x>a 
+                      \end{array} \right.
    \label{B13}
 \end{equation}
-\begin{equation}
-   \label{B14}
-\end{equation}
-\begin{equation}
-   \label{B15}
-\end{equation}
-\begin{equation}
-   \label{B16}
-\end{equation}
-\begin{equation}
-   \label{B17}
-\end{equation}
-\begin{equation}
-   \label{B18}
-\end{equation}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[]{forceShear.png}
+        \caption{Shear diagrams for different locations, $\alpha=a/\ell$, for $EI=1$, $\ell=1$, $P=1$}
+        \label{default4}
+    \end{center}
+\end{figure}
 
 \subsection{Single span beam with a concentrated force and distributed load using the stiffness method}
 

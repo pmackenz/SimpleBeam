@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  27 JUN 2019 23:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  28 JUN 2019 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -556,39 +556,78 @@ l. 395 Writing theory.idv[40] (theory39x.png)
  [23]
 l. 412 Writing theory.idv[41] (theory40x.png)
 l. 428 Writing theory.idv[42] (theory41x.png)
-l. 431 Writing theory.idv[43] (theory42x.png)
- [24]
-l. 434 Writing theory.idv[44] (theory43x.png)
-l. 437 Writing theory.idv[45] (theory44x.png)
-l. 440 Writing theory.idv[46] (theory45x.png)
- [25]
-l. 443 Writing theory.idv[47] (theory46x.png)
-l. 446 Writing theory.idv[48] (theory47x.png)
-l. 449 Writing theory.idv[49] (theory48x.png)
- [26]
-l. 452 Writing theory.idv[50] (theory49x.png)
-l. 458 Writing theory.idv[51] (theory50x.png)
- [27]
-l. 461 Writing theory.idv[52] (theory51x.png)
-l. 464 Writing theory.idv[53] (theory52x.png)
-l. 467 Writing theory.idv[54] (theory53x.png)
- [28]
-l. 470 Writing theory.idv[55] (theory54x.png)
-l. 473 Writing theory.idv[56] (theory55x.png)
- [29]
-l. 476 Writing theory.idv[57] (theory56x.png)
-l. 479 Writing theory.idv[58] (theory57x.png)
-l. 482 Writing theory.idv[59] (theory58x.png)
- [30]
-l. 485 Writing theory.idv[60] (theory59x.png)
- [31] (./theory.aux) ) 
+ [24] [25
+
+]
+l.439 --- TeX4ht warning --- File `"forceDeflection.xbb"' not found ---
+l.439 --- TeX4ht warning --- Cannot determine size of graphic in "forceDeflecti
+on.xbb" (no BoundingBox) ---
+l. 439 --- needs --- forceDeflection.png ---
+[26
+
+]
+l. 445 Writing theory.idv[43] (theory42x.png)
+ [27
+
+] [28
+
+]
+l.456 --- TeX4ht warning --- File `"forceSlope.xbb"' not found ---
+l.456 --- TeX4ht warning --- Cannot determine size of graphic in "forceSlope.xb
+b" (no BoundingBox) ---
+l. 456 --- needs --- forceSlope.png ---
+[29
+
+]
+l. 462 Writing theory.idv[44] (theory43x.png)
+ [30
+
+] [31
+
+]
+l.473 --- TeX4ht warning --- File `"forceMoment.xbb"' not found ---
+l.473 --- TeX4ht warning --- Cannot determine size of graphic in "forceMoment.x
+bb" (no BoundingBox) ---
+l. 473 --- needs --- forceMoment.png ---
+[32
+
+]
+l. 479 Writing theory.idv[45] (theory44x.png)
+ [33
+
+] [34
+
+]
+l.490 --- TeX4ht warning --- File `"forceShear.xbb"' not found ---
+l.490 --- TeX4ht warning --- Cannot determine size of graphic in "forceShear.xb
+b" (no BoundingBox) ---
+l. 490 --- needs --- forceShear.png ---
+[35
+
+]
+l. 498 Writing theory.idv[46] (theory45x.png)
+l. 501 Writing theory.idv[47] (theory46x.png)
+l. 504 Writing theory.idv[48] (theory47x.png)
+ [36
+
+]
+l. 507 Writing theory.idv[49] (theory48x.png)
+l. 510 Writing theory.idv[50] (theory49x.png)
+ [37]
+l. 513 Writing theory.idv[51] (theory50x.png)
+l. 516 Writing theory.idv[52] (theory51x.png)
+l. 519 Writing theory.idv[53] (theory52x.png)
+ [38]
+l. 522 Writing theory.idv[54] (theory53x.png)
+l. 525 Writing theory.idv[55] (theory54x.png)
+ [39] (./theory.aux) ) 
 Here is how much of TeX's memory you used:
- 5481 strings out of 492996
- 63062 string characters out of 6132730
- 256704 words of memory out of 5000000
- 8938 multiletter control sequences out of 15000+600000
+ 5499 strings out of 492996
+ 63319 string characters out of 6132730
+ 256745 words of memory out of 5000000
+ 8952 multiletter control sequences out of 15000+600000
  11558 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,10n,32p,874b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,11n,32p,874b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on theory.dvi (31 pages, 68352 bytes).
+Output written on theory.dvi (39 pages, 71172 bytes).

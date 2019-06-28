@@ -4,8 +4,6 @@
         <file>images/I-Beam.png</file>
         <file>images/Rectangle.png</file>
         <file>docs/help/theory.html</file>
-        <file>docs/help/theory.4ct</file>
-        <file>docs/help/theory.4tc</file>
         <file>docs/help/theory.css</file>
         <file>docs/help/theory.xref</file>
         <file>docs/help/theory0x.png</file>
@@ -52,6 +50,9 @@
         <file>docs/help/theory38x.png</file>
         <file>docs/help/theory39x.png</file>
         <file>docs/help/theory40x.png</file>
-        <file>docs/help/theory.toc</file>
+        <file>docs/help/forceDeflection.png</file>
+        <file>docs/help/forceMoment.png</file>
+        <file>docs/help/forceShear.png</file>
+        <file>docs/help/forceSlope.png</file>
     </qresource>
 </RCC>

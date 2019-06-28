@@ -175,13 +175,13 @@ File: beam.png
 --- needs --- theory.idv[41] ==> theory39x.png ---
 --- needs --- theory.idv[42] ==> theory40x.png ---
 --- needs --- theory.idv[43] ==> theory41x.png ---
---- empty picture --- theory.idv[43] ---
+File: forceDeflection.png
 --- needs --- theory.idv[44] ==> theory42x.png ---
---- empty picture --- theory.idv[44] ---
+File: forceSlope.png
 --- needs --- theory.idv[45] ==> theory43x.png ---
---- empty picture --- theory.idv[45] ---
+File: forceMoment.png
 --- needs --- theory.idv[46] ==> theory44x.png ---
---- empty picture --- theory.idv[46] ---
+File: forceShear.png
 --- needs --- theory.idv[47] ==> theory45x.png ---
 --- empty picture --- theory.idv[47] ---
 --- needs --- theory.idv[48] ==> theory46x.png ---
@@ -202,21 +202,12 @@ File: beam.png
 --- empty picture --- theory.idv[55] ---
 --- needs --- theory.idv[56] ==> theory54x.png ---
 --- empty picture --- theory.idv[56] ---
---- needs --- theory.idv[57] ==> theory55x.png ---
---- empty picture --- theory.idv[57] ---
---- needs --- theory.idv[58] ==> theory56x.png ---
---- empty picture --- theory.idv[58] ---
---- needs --- theory.idv[59] ==> theory57x.png ---
---- empty picture --- theory.idv[59] ---
---- needs --- theory.idv[60] ==> theory58x.png ---
---- empty picture --- theory.idv[60] ---
---- needs --- theory.idv[61] ==> theory59x.png ---
---- empty picture --- theory.idv[61] ---
 --- characters ---
 Font("cmr","10","10","109")
 Font("cmr","17","17","100")
 Font("cmr","12","12","100")
 Font("cmr","8","8","100")
+Font("cmr","6","6","100")
 Font("cmmi","8","8","100")
 Font("cmsy","8","8","100")
 Font("cmti","10","10","109")

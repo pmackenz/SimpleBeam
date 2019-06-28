@@ -18,7 +18,7 @@
 <div class="author" ><span 
 class="cmr-12">Peter Mackenzie-Helnwein</span></div><br />
 <div class="date" ><span 
-class="cmr-12">June 27, 2019</span></div>
+class="cmr-12">June 28, 2019</span></div>
    </div>
    <h3 class="likesectionHead"><a 
  id="x1-1000"></a>Contents</h3>
@@ -44,7 +44,7 @@ href="#x1-100008.1" id="QQ2-1-11">Single span beam with constant distributed for
 <br />   &#x00A0;<span class="subsectionToc" >8.2 <a 
 href="#x1-110008.2" id="QQ2-1-12">Single span beam with a single concentrated force</a></span>
 <br />   &#x00A0;<span class="subsectionToc" >8.3 <a 
-href="#x1-120008.3" id="QQ2-1-13">Single span beam with a concentrated force and distributed
+href="#x1-120008.3" id="QQ2-1-17">Single span beam with a concentrated force and distributed
 load using the stiffness method</a></span>
    </div>
 <!--l. 25--><p class="noindent" >
@@ -680,162 +680,234 @@ class="equation"><tr><td><a
  id="x1-11010r54"></a>
    <center class="math-display" >
 <img 
-src="theory41x.png" alt="
+src="theory41x.png" alt="       (
+       ||  (1--&#x03B1;)P-x(x2-&#x03B1;(2-&#x03B1;)&#x2113;2)  x &#x003C; a
+       ||{         6EI
+v(x) =    - &#x03B1;2(1-&#x03B1;)2P&#x2113;3        x = a
+       |||       3EI
+       |(  &#x03B1;P(&#x2113;-x)(x2-2&#x2113;x+-&#x03B1;2&#x2113;2)
+                 6EI          x &#x003E; a
 " class="math-display" ></center></td><td class="equation-label">(54)</td></tr></table>
-<!--l. 430--><p class="nopar" >
+<!--l. 435--><p class="nopar" >
+<!--l. 437--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-110112"></a>
+
+<div class="center" 
+>
+<!--l. 438--><p class="noindent" >
+<!--l. 439--><p class="noindent" ><img 
+src="forceDeflection.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content">Deformed shape for different locations, <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= <span 
+class="cmmi-10x-x-109">a&#x2215;&#x2113;</span>, for <span 
+class="cmmi-10x-x-109">EI </span>= 1,
+<span 
+class="cmmi-10x-x-109">&#x2113; </span>= 1, <span 
+class="cmmi-10x-x-109">P </span>= 1</span></div><!--tex4ht:label?: x1-110112 -->
+</div>
+
+<!--l. 443--><p class="noindent" ></div><hr class="endfigure">
    <table 
 class="equation"><tr><td><a 
- id="x1-11011r55"></a>
+ id="x1-11012r55"></a>
    <center class="math-display" >
 <img 
-src="theory42x.png" alt="
+src="theory42x.png" alt="      (|  (1-&#x03B1;)P(3x2-&#x03B1;(2-&#x03B1;)&#x2113;2)
+      |||{          6EI           x &#x003C; a
+         &#x03B1;(1-&#x03B1;)(2&#x03B1;-1)P&#x2113;2
+&#x03B8;(x) = ||       3EI             x = a
+      ||(  - &#x03B1;P(3x2-6&#x2113;x+(2+ &#x03B1;2)&#x2113;2)
+         --------6EI--------  x &#x003E; a
 " class="math-display" ></center></td><td class="equation-label">(55)</td></tr></table>
+<!--l. 452--><p class="nopar" >
+<!--l. 454--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
 
-<!--l. 433--><p class="nopar" >
+<a 
+ id="x1-110133"></a>
+
+<div class="center" 
+>
+<!--l. 455--><p class="noindent" >
+<!--l. 456--><p class="noindent" ><img 
+src="forceSlope.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;3: </span><span  
+class="content">Rotation for different locations, <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= <span 
+class="cmmi-10x-x-109">a&#x2215;&#x2113;</span>, for <span 
+class="cmmi-10x-x-109">EI </span>= 1, <span 
+class="cmmi-10x-x-109">&#x2113; </span>= 1,
+<span 
+class="cmmi-10x-x-109">P </span>= 1</span></div><!--tex4ht:label?: x1-110133 -->
+</div>
+
+<!--l. 460--><p class="indent" >   </div><hr class="endfigure">
    <table 
 class="equation"><tr><td><a 
- id="x1-11012r56"></a>
+ id="x1-11014r56"></a>
    <center class="math-display" >
 <img 
-src="theory43x.png" alt="
+src="theory43x.png" alt="       (|  (1-  &#x03B1;)Px   x &#x003C; a
+       ||{
+M (x) =   &#x03B1; (1 - &#x03B1;)P &#x2113; x = a
+       |||
+       (  &#x03B1;P (&#x2113;- x )  x &#x003E; a
 " class="math-display" ></center></td><td class="equation-label">(56)</td></tr></table>
-<!--l. 436--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-11013r57"></a>
-   <center class="math-display" >
-<img 
-src="theory44x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(57)</td></tr></table>
-<!--l. 439--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-11014r58"></a>
-   <center class="math-display" >
-<img 
-src="theory45x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(58)</td></tr></table>
-<!--l. 442--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-11015r59"></a>
-   <center class="math-display" >
-<img 
-src="theory46x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(59)</td></tr></table>
-<!--l. 445--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-11016r60"></a>
-   <center class="math-display" >
-<img 
-src="theory47x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(60)</td></tr></table>
-<!--l. 448--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-11017r61"></a>
+<!--l. 469--><p class="nopar" >
+<!--l. 471--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
 
-   <center class="math-display" >
-<img 
-src="theory48x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(61)</td></tr></table>
-<!--l. 451--><p class="nopar" >
+<a 
+ id="x1-110154"></a>
+
+<div class="center" 
+>
+<!--l. 472--><p class="noindent" >
+<!--l. 473--><p class="noindent" ><img 
+src="forceMoment.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;4: </span><span  
+class="content">Moment diagrams for different locations, <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= <span 
+class="cmmi-10x-x-109">a&#x2215;&#x2113;</span>, for <span 
+class="cmmi-10x-x-109">EI </span>= 1,
+<span 
+class="cmmi-10x-x-109">&#x2113; </span>= 1, <span 
+class="cmmi-10x-x-109">P </span>= 1</span></div><!--tex4ht:label?: x1-110154 -->
+</div>
+
+<!--l. 477--><p class="indent" >   </div><hr class="endfigure">
    <table 
 class="equation"><tr><td><a 
- id="x1-11018r62"></a>
+ id="x1-11016r57"></a>
    <center class="math-display" >
 <img 
-src="theory49x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(62)</td></tr></table>
-<!--l. 454--><p class="nopar" >
-<!--l. 456--><p class="noindent" >
+src="theory44x.png" alt="       (|  (1 - &#x03B1;)P   x &#x003C; a
+       ||{
+V(x) =    undefined  x = a
+       |||
+       (  - &#x03B1;P      x &#x003E; a
+" class="math-display" ></center></td><td class="equation-label">(57)</td></tr></table>
+<!--l. 486--><p class="nopar" >
+<!--l. 488--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-110175"></a>
+
+<div class="center" 
+>
+<!--l. 489--><p class="noindent" >
+<!--l. 490--><p class="noindent" ><img 
+src="forceShear.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;5: </span><span  
+class="content">Shear diagrams for different locations, <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= <span 
+class="cmmi-10x-x-109">a&#x2215;&#x2113;</span>, for <span 
+class="cmmi-10x-x-109">EI </span>= 1, <span 
+class="cmmi-10x-x-109">&#x2113; </span>= 1,
+<span 
+class="cmmi-10x-x-109">P </span>= 1</span></div><!--tex4ht:label?: x1-110175 -->
+</div>
+
+<!--l. 494--><p class="indent" >   </div><hr class="endfigure">
    <h4 class="subsectionHead"><span class="titlemark">8.3   </span> <a 
  id="x1-120008.3"></a>Single span beam with a concentrated force and distributed load using
 the stiffness method</h4>
    <table 
 class="equation"><tr><td><a 
- id="x1-12001r63"></a>
+ id="x1-12001r58"></a>
+   <center class="math-display" >
+<img 
+src="theory45x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(58)</td></tr></table>
+<!--l. 500--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12002r59"></a>
+   <center class="math-display" >
+<img 
+src="theory46x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(59)</td></tr></table>
+<!--l. 503--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12003r60"></a>
+
+   <center class="math-display" >
+<img 
+src="theory47x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(60)</td></tr></table>
+<!--l. 506--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12004r61"></a>
+   <center class="math-display" >
+<img 
+src="theory48x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(61)</td></tr></table>
+<!--l. 509--><p class="nopar" >
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12005r62"></a>
+   <center class="math-display" >
+<img 
+src="theory49x.png" alt="
+" class="math-display" ></center></td><td class="equation-label">(62)</td></tr></table>
+<!--l. 512--><p class="nopar" >
+
+   <table 
+class="equation"><tr><td><a 
+ id="x1-12006r63"></a>
    <center class="math-display" >
 <img 
 src="theory50x.png" alt="
 " class="math-display" ></center></td><td class="equation-label">(63)</td></tr></table>
-<!--l. 460--><p class="nopar" >
+<!--l. 515--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-12002r64"></a>
+ id="x1-12007r64"></a>
    <center class="math-display" >
 <img 
 src="theory51x.png" alt="
 " class="math-display" ></center></td><td class="equation-label">(64)</td></tr></table>
-<!--l. 463--><p class="nopar" >
+<!--l. 518--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-12003r65"></a>
+ id="x1-12008r65"></a>
    <center class="math-display" >
 <img 
 src="theory52x.png" alt="
+
 " class="math-display" ></center></td><td class="equation-label">(65)</td></tr></table>
-<!--l. 466--><p class="nopar" >
+<!--l. 521--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-12004r66"></a>
-
+ id="x1-12009r66"></a>
    <center class="math-display" >
 <img 
 src="theory53x.png" alt="
 " class="math-display" ></center></td><td class="equation-label">(66)</td></tr></table>
-<!--l. 469--><p class="nopar" >
+<!--l. 524--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x1-12005r67"></a>
+ id="x1-12010r67"></a>
    <center class="math-display" >
 <img 
 src="theory54x.png" alt="
 " class="math-display" ></center></td><td class="equation-label">(67)</td></tr></table>
-<!--l. 472--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-12006r68"></a>
-   <center class="math-display" >
-<img 
-src="theory55x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(68)</td></tr></table>
-<!--l. 475--><p class="nopar" >
-
-   <table 
-class="equation"><tr><td><a 
- id="x1-12007r69"></a>
-   <center class="math-display" >
-<img 
-src="theory56x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(69)</td></tr></table>
-<!--l. 478--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-12008r70"></a>
-   <center class="math-display" >
-<img 
-src="theory57x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(70)</td></tr></table>
-<!--l. 481--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-12009r71"></a>
-   <center class="math-display" >
-<img 
-src="theory58x.png" alt="
-
-" class="math-display" ></center></td><td class="equation-label">(71)</td></tr></table>
-<!--l. 484--><p class="nopar" >
-   <table 
-class="equation"><tr><td><a 
- id="x1-12010r72"></a>
-   <center class="math-display" >
-<img 
-src="theory59x.png" alt="
-" class="math-display" ></center></td><td class="equation-label">(72)</td></tr></table>
-<!--l. 487--><p class="nopar" >
+<!--l. 527--><p class="nopar" >
     
 </body></html> 
 
