@@ -28,5 +28,20 @@
         <file>images/W-Logo_Purple_RGB.png</file>
         <file>docs/about.html</file>
         <file>docs/help/beam.png</file>
+        <file>docs/help/theory17x.png</file>
+        <file>docs/help/theory18x.png</file>
+        <file>docs/help/theory19x.png</file>
+        <file>docs/help/theory20x.png</file>
+        <file>docs/help/theory21x.png</file>
+        <file>docs/help/theory22x.png</file>
+        <file>docs/help/theory23x.png</file>
+        <file>docs/help/theory24x.png</file>
+        <file>docs/help/theory25x.png</file>
+        <file>docs/help/theory26x.png</file>
+        <file>docs/help/theory27x.png</file>
+        <file>docs/help/theory28x.png</file>
+        <file>docs/help/theory29x.png</file>
+        <file>docs/help/theory30x.png</file>
+        <file>docs/help/theory31x.png</file>
     </qresource>
 </RCC>

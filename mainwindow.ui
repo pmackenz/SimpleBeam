@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>779</width>
+    <width>782</width>
     <height>726</height>
    </rect>
   </property>
@@ -76,6 +76,9 @@
     </item>
     <item row="1" column="11" rowspan="2">
      <widget class="QSlider" name="loadPslider">
+      <property name="minimum">
+       <number>-100</number>
+      </property>
       <property name="maximum">
        <number>100</number>
       </property>
@@ -87,10 +90,13 @@
     <item row="3" column="11">
      <widget class="QDoubleSpinBox" name="loadP">
       <property name="minimum">
-       <double>0.000000000000000</double>
+       <double>-100.000000000000000</double>
       </property>
       <property name="maximum">
        <double>100.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.020000000000000</double>
       </property>
      </widget>
     </item>
@@ -999,7 +1005,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>779</width>
+     <width>782</width>
      <height>22</height>
     </rect>
    </property>
@@ -1062,6 +1068,9 @@
    <property name="text">
     <string>&amp;Quit</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
   </action>
   <action name="actionE_xport_to_PNG">
    <property name="text">
@@ -1074,6 +1083,9 @@
   <action name="action_About">
    <property name="text">
     <string>&amp;About</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+/, Ctrl+B</string>
    </property>
   </action>
   <action name="actionBackground">

@@ -9,7 +9,8 @@
 
 %SetFonts
 
-%SetFonts
+% Macros
+\newcommand{\DS}{\displaystyle}
 
 
 \title{Bernoulli-Euler beam theory}
@@ -151,4 +152,203 @@ or, for constant $EI$, simplifies to
 	V(x) = EI\, v'''(x) ~.
 	\label{Eq:16}
 \end{equation}
+
+\section{Examples}
+
+\subsection{Single span beam with constant distributed force}
+
+Both bending stiffness, $EI$, and distributed load, $w(x) = w_0$, are constant over the length of the beam.  Thus, \eqref{Eq:12} simplifies to
+\begin{equation}
+   v''''(x) =  -\frac{w_0}{EI}
+   \label{A1}
+\end{equation}
+\begin{equation}
+   v'''(x) =  -\frac{w_0\,x}{EI} + c_1
+   \label{A2}
+\end{equation}
+\begin{equation}
+   v''(x) =  -\frac{w_0\,x^2}{2 EI} + c_1\,x + c_2
+   \label{A3}
+\end{equation}
+\begin{equation}
+   \theta(x) = v'(x) =  -\frac{w_0\,x^3}{6 EI} + \frac{1}{2} \,c_1\,x^2 + c_2\,x + c_3
+   \label{A4}
+\end{equation}
+\begin{equation}
+   v(x) =  -\frac{w_0\,x^4}{24 EI} + \frac{1}{6} \,c_1\,x^3 + \frac{1}{2} \,c_2\,x^2+ c_3\,x + c_4
+   \label{A5}
+\end{equation}
+\begin{equation}
+   M(x) = EI \, v''(x) = -\frac{w_0\,x^2}{2} + EI\,c_1\,x + EI\,c_2
+   \label{A6}
+\end{equation}
+\begin{equation}
+   V(x) = M'(x) = EI \, v'''(x) = -w_0\,x + EI\,c_1
+   \label{A7}
+\end{equation}
+Pinned on both ends yields the boundary conditions
+\begin{equation}
+%   v(0) = 0 ~,~~~
+%   M(0) = 0 ~,~~~
+%   v(\ell) = 0 ~,~~~
+%   M(\ell) = 0 ~.
+%  
+   \left\{ 
+   \begin{array}{c}
+   v(0) \\
+   M(0) \\
+   v(\ell) \\
+   M(\ell) 
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    0 \\
+    0 \\
+    0 \\
+    0 
+   \end{array}
+   \right\}
+   \label{A8}
+\end{equation}
+\begin{equation}
+   \left[ 
+   \begin{array}{cccc}
+    0 & 0 & 0 & 1 \\
+    0 & EI & 0 & 0 \\
+    \ell^3/6 & \ell^2/2 & \ell & 1 \\
+    EI\,\ell & EI & 0 & 0 
+   \end{array}
+   \right]
+   \left\{ 
+   \begin{array}{c}
+    c_1 \\
+    c_2 \\
+    c_3 \\
+    c_4 
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    0 \\
+    0 \\
+    \DS\frac{w_0 \ell^4}{24\, EI} \\[2ex]
+    \DS\frac{w_0 \ell^2}{2}
+   \end{array}
+   \right\}
+   \label{A9}
+\end{equation}
+\begin{equation}
+   \left\{ 
+   \begin{array}{c}
+    c_1 \\
+    c_2 \\
+    c_3 \\
+    c_4 
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    \DS\frac{w_0 \ell}{2\, EI} \\[2ex]
+    0 \\
+    \DS-\frac{w_0 \ell^3}{24\, EI} \\[2ex]
+    0
+   \end{array}
+   \right\}
+   \label{A10}
+\end{equation}
+\begin{equation}
+   v(x) 
+   % =  -\frac{w_0\,x^4}{24 EI} + \frac{w_0 \ell}{12\, EI}\,x^3  -\frac{w_0 \ell^3}{24\, EI}\,x 
+   =  \frac{w_0\,\ell^4}{24 EI} \, \frac{x}{\ell} \left( 1 -\frac{x}{\ell}  \right)\left( \frac{x^2}{\ell^2} -\frac{x}{\ell}  - 1 \right)
+   \label{A11}
+\end{equation}
+\begin{equation}
+   M(x) = EI\,v''(x) = \frac{w_0\,\ell^2}{2} \,\frac{x}{\ell} \left( 1 -\frac{x}{\ell}  \right)
+   \label{A12}
+\end{equation}
+\begin{equation}
+   V(x) = M'(x) = EI\,v'''(x) = \frac{w_0\,\ell}{2} \left( 1 - 2\frac{x}{\ell}  \right)
+   \label{A13}
+\end{equation}
+Shear vanishes at $x=\ell$ and, thus,
+\begin{equation}
+   \max M = M(\ell/2) = \frac{w_0\,\ell^2}{8} 
+   \label{A14}
+\end{equation}
+By symmetry, rotation vanishes at $x=\ell$ and, thus,
+\begin{equation}
+   \max |v| = -\min v = -v(\ell/2) = \frac{5 w_0\,\ell^4}{384 EI}
+   \label{A15}
+\end{equation}
+
+\subsection{Single span beam with a single concentrated force}
+
+\begin{equation}
+   \label{B1}
+\end{equation}
+\begin{equation}
+   \label{B2}
+\end{equation}
+\begin{equation}
+   \label{B3}
+\end{equation}
+\begin{equation}
+   \label{B4}
+\end{equation}
+\begin{equation}
+   \label{B5}
+\end{equation}
+\begin{equation}
+   \label{B6}
+\end{equation}
+\begin{equation}
+   \label{B7}
+\end{equation}
+\begin{equation}
+   \label{B8}
+\end{equation}
+\begin{equation}
+   \label{B9}
+\end{equation}
+\begin{equation}
+   \label{B10}
+\end{equation}
+
+\subsection{Single span beam with a concentrated force and distributed load using the stiffness method}
+
+\begin{equation}
+   \label{C1}
+\end{equation}
+\begin{equation}
+   \label{C2}
+\end{equation}
+\begin{equation}
+   \label{C3}
+\end{equation}
+\begin{equation}
+   \label{C4}
+\end{equation}
+\begin{equation}
+   \label{C5}
+\end{equation}
+\begin{equation}
+   \label{C6}
+\end{equation}
+\begin{equation}
+   \label{C7}
+\end{equation}
+\begin{equation}
+   \label{C8}
+\end{equation}
+\begin{equation}
+   \label{C9}
+\end{equation}
+\begin{equation}
+   \label{C10}
+\end{equation}
+
 \end{document}  

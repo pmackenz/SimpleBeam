@@ -7,4 +7,8 @@
 \doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-50005}{QQ2-1-6}{Equilibrium}}{10}\relax 
 \doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-60006}{QQ2-1-7}{Governing equation}}{11}\relax 
 \doTocEntry\tocsection{7}{\csname a:TocLink\endcsname{1}{x1-70007}{QQ2-1-8}{Finding moment, shear force, and slope from the displacement function}}{12}\relax 
+\doTocEntry\tocsection{8}{\csname a:TocLink\endcsname{1}{x1-80008}{QQ2-1-9}{Examples}}{14}\relax 
+\doTocEntry\tocsubsection{8.1}{\csname a:TocLink\endcsname{1}{x1-90008.1}{QQ2-1-10}{Single span beam with constant distributed force}}{14}\relax 
+\doTocEntry\tocsubsection{8.2}{\csname a:TocLink\endcsname{1}{x1-100008.2}{QQ2-1-11}{Single span beam with a single concentrated force}}{20}\relax 
+\doTocEntry\tocsubsection{8.3}{\csname a:TocLink\endcsname{1}{x1-110008.3}{QQ2-1-12}{Single span beam with a concentrated force and distributed load using the stiffness method}}{23}\relax 
 \par 

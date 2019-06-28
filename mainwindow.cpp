@@ -13,8 +13,8 @@
 #include <QDebug>
 
 
-#define MAX_FORCE 100.
-#define MAX_W     10.
+#define MAX_FORCE 50.
+#define MAX_W     5.
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -73,55 +73,59 @@ void MainWindow::on_loadWslider_valueChanged(int value)
 {
     m_w = MAX_W * double(value) / 100. / 12.;
     ui->loadW->setValue(m_w*12.);
-    this->updatePlots();
+    //this->updatePlots();
 }
 
 void MainWindow::on_loadW_valueChanged(double arg1)
 {
     ui->loadWslider->setValue(int(100.*arg1/MAX_W));
+    this->updatePlots();
 }
 
 void MainWindow::on_loadW_editingFinished()
 {
     double arg1 = ui->loadW->value();
     ui->loadWslider->setValue(int(100.*arg1/MAX_W));
+    this->updatePlots();
 }
 
 void MainWindow::on_loadP_valueChanged(double arg1)
 {
     ui->loadPslider->setValue(int(100.*arg1/MAX_FORCE));
+    this->updatePlots();
 }
 
 void MainWindow::on_loadP_editingFinished()
 {
     double arg1 = ui->loadP->value();
     ui->loadPslider->setValue(int(100.*arg1/MAX_FORCE));
+    this->updatePlots();
 }
 
 void MainWindow::on_loadPslider_valueChanged(int value)
 {
-    m_P = MAX_FORCE * double(value) / 100.;
-    ui->loadP->setValue(m_P);
-    this->updatePlots();
+    ui->loadP->setValue(MAX_FORCE * double(value) / 100.);
+    //this->updatePlots();
 }
 
 void MainWindow::on_loadXP_valueChanged(double arg1)
 {
     ui->loadXPslider->setValue(int(100.*arg1*12./m_length));
-    //this->updatePlots();
+    this->updatePlots();
 }
 
 void MainWindow::on_loadXP_editingFinished()
 {
     double arg1 = ui->loadXP->value();
     ui->loadXPslider->setValue(int(100.*arg1*12./m_length));
+    this->updatePlots();
 }
 
 void MainWindow::on_loadXPslider_valueChanged(int value)
 {
     m_xP = m_length * double(value)/100.;
     ui->loadXP->setValue(m_xP/12.);
-    this->updatePlots();
+    //this->updatePlots();
 }
 
 void MainWindow::on_leftBCfree_clicked()
@@ -535,10 +539,15 @@ void MainWindow::doAnalysis(void)
 {
     this->computeI();
     m_solver->setParameters(m_E, m_I, m_length, leftBC, rightBC);
+
+    m_P  = ui->loadP->value();
+    m_w  = ui->loadW->value();
+    m_xP = 12*ui->loadXP->value();
+
     m_status = m_solver->doAnalysis(m_w, m_P, m_xP);
 };
 
-void MainWindow::updateResultPlot(QCustomPlot * plot, QVector<double> &x, QVector<double> &y)
+void MainWindow::updateResultPlot(QCustomPlot * plot, QVector<double> &x, QVector<double> &y, double xP)
 {
     plot->clearPlottables();
 
@@ -553,6 +562,25 @@ void MainWindow::updateResultPlot(QCustomPlot * plot, QVector<double> &x, QVecto
 
     plot->graph(0)->rescaleAxes();
     plot->graph(1)->rescaleAxes(true);
+
+    if (xP > 0.0)
+    {
+        QVector<double> XP;
+        QVector<double> YP;
+
+        double minY = MIN(y);
+        double maxY = MAX(y);
+
+        XP.append(xP);  YP.append(minY);
+        XP.append(xP);  YP.append(maxY);
+
+        plot->addGraph();
+        QPen pen(Qt::darkGreen, 1);
+        pen.setStyle(Qt::DashDotLine);
+        plot->graph(2)->setPen(pen);
+        plot->graph(2)->setData(XP, YP);
+    }
+
     plot->replot();
 };
 
@@ -585,11 +613,13 @@ void MainWindow::updatePlots()
         d  = &ZEROS;
     }
 
+    double xP = ui->loadXP->value();
+
     this->updateSystemPlot();
-    this->updateResultPlot(ui->momentPlot, *X, *M);
-    this->updateResultPlot(ui->shearPlot,  *X, *V);
-    this->updateResultPlot(ui->slopePlot,  *X, *th);
-    this->updateResultPlot(ui->dispPlot,   *X, *d);
+    this->updateResultPlot(ui->momentPlot, *X, *M,  xP);
+    this->updateResultPlot(ui->shearPlot,  *X, *V,  xP);
+    this->updateResultPlot(ui->slopePlot,  *X, *th, xP);
+    this->updateResultPlot(ui->dispPlot,   *X, *d,  xP);
 }
 
 void MainWindow::on_action_Load_triggered()
@@ -832,4 +862,9 @@ void MainWindow::on_actionBackground_triggered()
 {
     HelpWindow *help = new HelpWindow();
     help->show();
+}
+
+void MainWindow::on_action_Quit_triggered()
+{
+    this->close();
 }
