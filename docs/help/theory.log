@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  28 JUN 2019 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  1 JUL 2019 00:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -37,13 +37,39 @@ Package: tex4ht
 \tmp:toks=\toks14
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/tex4ht/usepackage.4ht)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks16
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
@@ -58,8 +84,8 @@ Package graphics Info: Driver file: dvips.def on input line 99.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/dvips.def
 File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/11/05 v2.16a AMS math features
@@ -71,51 +97,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen105
+\@emptytoks=\toks17
+\ex@=\dimen113
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen106
+\pmbraise@=\dimen114
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count87
+\inf@bad=\count90
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count88
-\leftroot@=\count89
+\uproot@=\count91
+\leftroot@=\count92
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count90
-\DOTSCASE@=\count91
+\classnum@=\count93
+\DOTSCASE@=\count94
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen107
+\big@size=\dimen115
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
 \dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
-\tag@help=\toks17
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
-\andhelp@=\toks18
-\eqnshift@=\dimen108
-\alignsep@=\dimen109
-\tagshift@=\dimen110
-\tagwidth@=\dimen111
-\totwidth@=\dimen112
-\lineht@=\dimen113
-\@envbody=\toks19
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks18
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks19
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks20
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
@@ -142,7 +168,7 @@ version 2017-05-09-09:21
 version 2016-07-18-16:08
 
 --- needs --- tex4ht theory ---
-\tmp:cnt=\count99
+\tmp:cnt=\count102
 \openout15 = `theory.tmp'.
 
 (./theory.tmp)
@@ -239,8 +265,8 @@ on `imgdir:.../'
 (/usr/local/texlive/2017/texmf-dist/tex/generic/tex4ht/html4-math.4ht
 version 2017-03-30-16:04
 )
-\:tokwrite=\toks21
-\:tokpage=\toks22
+\:tokwrite=\toks22
+\:tokpage=\toks23
 --------------------------------------
 --- Note --- for back links to toc, use the command line option `sections+'
 --------------------------------------
@@ -359,6 +385,15 @@ index=2)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/tex4ht/html4-math.4ht
 version 2017-03-30-16:04
 ))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/tex4ht/geometry.4ht
+version 2016-07-01-08:55
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2017-05-09-09:20
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2017-03-30-16:04
+))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/tex4ht/graphicx.4ht
 version 2015-08-05-15:37
 
@@ -454,31 +489,75 @@ version 2017-05-09-09:20
 (/usr/local/texlive/2017/texmf-dist/tex/generic/tex4ht/html4-math.4ht
 version 2017-03-30-16:04
 ))
-(./theory.aux)
+(./theory.aux
+
+LaTeX Warning: Label `C1' multiply defined.
+
+
+LaTeX Warning: Label `C1' multiply defined.
+
+
+LaTeX Warning: Label `C1' multiply defined.
+
+)
 \openout1 = `theory.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 --- file theory.css ---
- [1
+[1
 
 ] [2]
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -486,148 +565,177 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [3] [4
 
 ]
-l.28 --- TeX4ht warning --- File `"beam.xbb"' not found ---
-l.28 --- TeX4ht warning --- Cannot determine size of graphic in "beam.xbb" (no 
+l.29 --- TeX4ht warning --- File `"beam.xbb"' not found ---
+l.29 --- TeX4ht warning --- Cannot determine size of graphic in "beam.xbb" (no 
 BoundingBox) ---
-l. 28 --- needs --- beam.png ---
+l. 29 --- needs --- beam.png ---
 [5
 
 ]
-l. 41 Writing theory.idv[1] (theory0x.png)
-l. 48 Writing theory.idv[2] (theory1x.png)
+l. 42 Writing theory.idv[1] (theory0x.png)
+l. 49 Writing theory.idv[2] (theory1x.png)
  [6
 
 ]
-l. 56 Writing theory.idv[3] (theory2x.png)
-l. 63 Writing theory.idv[4] (theory3x.png)
+l. 57 Writing theory.idv[3] (theory2x.png)
+l. 64 Writing theory.idv[4] (theory3x.png)
+l. 72 Writing theory.idv[5] (theory4x.png)
  [7]
-l. 71 Writing theory.idv[5] (theory4x.png)
-l. 76 Writing theory.idv[6] (theory5x.png)
+l. 77 Writing theory.idv[6] (theory5x.png)
+l. 82 Writing theory.idv[7] (theory6x.png)
+l. 87 Writing theory.idv[8] (theory7x.png)
  [8]
-l. 81 Writing theory.idv[7] (theory6x.png)
-l. 86 Writing theory.idv[8] (theory7x.png)
+l. 98 Writing theory.idv[9] (theory8x.png)
+l. 105 Writing theory.idv[10] (theory9x.png)
  [9]
-l. 97 Writing theory.idv[9] (theory8x.png)
-l. 104 Writing theory.idv[10] (theory9x.png)
+l. 112 Writing theory.idv[11] (theory10x.png)
+l. 120 Writing theory.idv[12] (theory11x.png)
+l. 128 Writing theory.idv[13] (theory12x.png)
  [10]
-l. 111 Writing theory.idv[11] (theory10x.png)
-l. 119 Writing theory.idv[12] (theory11x.png)
+l. 137 Writing theory.idv[14] (theory13x.png)
+l. 144 Writing theory.idv[15] (theory14x.png)
+l. 149 Writing theory.idv[16] (theory15x.png)
  [11]
-l. 127 Writing theory.idv[13] (theory12x.png)
-l. 136 Writing theory.idv[14] (theory13x.png)
+l. 154 Writing theory.idv[17] (theory16x.png)
+l. 164 Writing theory.idv[18] (theory17x.png)
  [12]
-l. 143 Writing theory.idv[15] (theory14x.png)
-l. 148 Writing theory.idv[16] (theory15x.png)
-l. 153 Writing theory.idv[17] (theory16x.png)
+l. 168 Writing theory.idv[19] (theory18x.png)
+l. 172 Writing theory.idv[20] (theory19x.png)
+l. 176 Writing theory.idv[21] (theory20x.png)
  [13]
-l. 163 Writing theory.idv[18] (theory17x.png)
-l. 167 Writing theory.idv[19] (theory18x.png)
+l. 180 Writing theory.idv[22] (theory21x.png)
+l. 184 Writing theory.idv[23] (theory22x.png)
+l. 188 Writing theory.idv[24] (theory23x.png)
+l. 193 Writing theory.idv[25] (theory24x.png)
  [14]
-l. 171 Writing theory.idv[20] (theory19x.png)
-l. 175 Writing theory.idv[21] (theory20x.png)
-l. 179 Writing theory.idv[22] (theory21x.png)
+l. 218 Writing theory.idv[26] (theory25x.png)
+l. 246 Writing theory.idv[27] (theory26x.png)
  [15]
-l. 183 Writing theory.idv[23] (theory22x.png)
-l. 187 Writing theory.idv[24] (theory23x.png)
-l. 192 Writing theory.idv[25] (theory24x.png)
+l. 266 Writing theory.idv[28] (theory27x.png)
+l. 272 Writing theory.idv[29] (theory28x.png)
+l. 276 Writing theory.idv[30] (theory29x.png)
+l. 281 Writing theory.idv[31] (theory30x.png)
  [16]
-l. 217 Writing theory.idv[26] (theory25x.png)
-l. 245 Writing theory.idv[27] (theory26x.png)
+l. 286 Writing theory.idv[32] (theory31x.png)
+l. 293 Writing theory.idv[33] (theory32x.png)
  [17]
-l. 265 Writing theory.idv[28] (theory27x.png)
-l. 271 Writing theory.idv[29] (theory28x.png)
+l. 303 Writing theory.idv[34] (theory33x.png)
+l. 314 Writing theory.idv[35] (theory34x.png)
+l. 335 Writing theory.idv[36] (theory35x.png)
  [18]
-l. 275 Writing theory.idv[30] (theory29x.png)
-l. 280 Writing theory.idv[31] (theory30x.png)
-l. 285 Writing theory.idv[32] (theory31x.png)
+l. 342 Writing theory.idv[37] (theory36x.png)
+l. 349 Writing theory.idv[38] (theory37x.png)
+l. 355 Writing theory.idv[39] (theory38x.png)
  [19]
-l. 292 Writing theory.idv[33] (theory32x.png)
-l. 302 Writing theory.idv[34] (theory33x.png)
+l. 396 Writing theory.idv[40] (theory39x.png)
+l. 413 Writing theory.idv[41] (theory40x.png)
  [20]
-l. 313 Writing theory.idv[35] (theory34x.png)
-l. 334 Writing theory.idv[36] (theory35x.png)
+l. 429 Writing theory.idv[42] (theory41x.png)
 
-[21]
-l. 341 Writing theory.idv[37] (theory36x.png)
-l. 348 Writing theory.idv[38] (theory37x.png)
-l. 354 Writing theory.idv[39] (theory38x.png)
- [22]
-l. 395 Writing theory.idv[40] (theory39x.png)
- [23]
-l. 412 Writing theory.idv[41] (theory40x.png)
-l. 428 Writing theory.idv[42] (theory41x.png)
- [24] [25
+[21] [22
 
 ]
-l.439 --- TeX4ht warning --- File `"forceDeflection.xbb"' not found ---
-l.439 --- TeX4ht warning --- Cannot determine size of graphic in "forceDeflecti
+l.440 --- TeX4ht warning --- File `"forceDeflection.xbb"' not found ---
+l.440 --- TeX4ht warning --- Cannot determine size of graphic in "forceDeflecti
 on.xbb" (no BoundingBox) ---
-l. 439 --- needs --- forceDeflection.png ---
+l. 440 --- needs --- forceDeflection.png ---
+[23
+
+]
+l. 446 Writing theory.idv[43] (theory42x.png)
+ [24
+
+] [25
+
+]
+l.457 --- TeX4ht warning --- File `"forceSlope.xbb"' not found ---
+l.457 --- TeX4ht warning --- Cannot determine size of graphic in "forceSlope.xb
+b" (no BoundingBox) ---
+l. 457 --- needs --- forceSlope.png ---
 [26
 
 ]
-l. 445 Writing theory.idv[43] (theory42x.png)
+l. 463 Writing theory.idv[44] (theory43x.png)
  [27
 
 ] [28
 
 ]
-l.456 --- TeX4ht warning --- File `"forceSlope.xbb"' not found ---
-l.456 --- TeX4ht warning --- Cannot determine size of graphic in "forceSlope.xb
-b" (no BoundingBox) ---
-l. 456 --- needs --- forceSlope.png ---
+l.474 --- TeX4ht warning --- File `"forceMoment.xbb"' not found ---
+l.474 --- TeX4ht warning --- Cannot determine size of graphic in "forceMoment.x
+bb" (no BoundingBox) ---
+l. 474 --- needs --- forceMoment.png ---
 [29
 
 ]
-l. 462 Writing theory.idv[44] (theory43x.png)
+l. 480 Writing theory.idv[45] (theory44x.png)
  [30
 
 ] [31
 
 ]
-l.473 --- TeX4ht warning --- File `"forceMoment.xbb"' not found ---
-l.473 --- TeX4ht warning --- Cannot determine size of graphic in "forceMoment.x
-bb" (no BoundingBox) ---
-l. 473 --- needs --- forceMoment.png ---
+l.491 --- TeX4ht warning --- File `"forceShear.xbb"' not found ---
+l.491 --- TeX4ht warning --- Cannot determine size of graphic in "forceShear.xb
+b" (no BoundingBox) ---
+l. 491 --- needs --- forceShear.png ---
 [32
 
 ]
-l. 479 Writing theory.idv[45] (theory44x.png)
+l. 499 Writing theory.idv[46] (theory45x.png)
+l. 507 Writing theory.idv[47] (theory46x.png)
+l. 554 Writing theory.idv[48] (theory47x.png)
  [33
 
-] [34
-
 ]
-l.490 --- TeX4ht warning --- File `"forceShear.xbb"' not found ---
-l.490 --- TeX4ht warning --- Cannot determine size of graphic in "forceShear.xb
-b" (no BoundingBox) ---
-l. 490 --- needs --- forceShear.png ---
-[35
-
-]
-l. 498 Writing theory.idv[46] (theory45x.png)
-l. 501 Writing theory.idv[47] (theory46x.png)
-l. 504 Writing theory.idv[48] (theory47x.png)
- [36
-
-]
-l. 507 Writing theory.idv[49] (theory48x.png)
-l. 510 Writing theory.idv[50] (theory49x.png)
+l. 558 Writing theory.idv[49] (theory48x.png)
+l. 573 Writing theory.idv[50] (theory49x.png)
+ [34]
+l. 604 Writing theory.idv[51] (theory50x.png)
+l. 625 Writing theory.idv[52] (theory51x.png)
+l. 670 Writing theory.idv[53] (theory52x.png)
+ [35]
+l. 673 Writing theory.idv[54] (theory53x.png)
+l. 676 Writing theory.idv[55] (theory54x.png)
+l. 679 Writing theory.idv[56] (theory55x.png)
+ [36]
+l. 682 Writing theory.idv[57] (theory56x.png)
+l. 685 Writing theory.idv[58] (theory57x.png)
+l. 691 Writing theory.idv[59] (theory58x.png)
  [37]
-l. 513 Writing theory.idv[51] (theory50x.png)
-l. 516 Writing theory.idv[52] (theory51x.png)
-l. 519 Writing theory.idv[53] (theory52x.png)
+l. 695 Writing theory.idv[60] (theory59x.png)
+l. 699 Writing theory.idv[61] (theory60x.png)
+l. 703 Writing theory.idv[62] (theory61x.png)
  [38]
-l. 522 Writing theory.idv[54] (theory53x.png)
-l. 525 Writing theory.idv[55] (theory54x.png)
- [39] (./theory.aux) ) 
-Here is how much of TeX's memory you used:
- 5499 strings out of 492996
- 63319 string characters out of 6132730
- 256745 words of memory out of 5000000
- 8952 multiletter control sequences out of 15000+600000
- 11558 words of font info for 44 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 30i,11n,32p,874b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+l. 716 Writing theory.idv[63] (theory62x.png)
+l. 728 Writing theory.idv[64] (theory63x.png)
+ [39]
+l. 748 Writing theory.idv[65] (theory64x.png)
+l. 753 Writing theory.idv[66] (theory65x.png)
+l. 771 Writing theory.idv[67] (theory66x.png)
+ [40]
+l. 775 Writing theory.idv[68] (theory67x.png)
+l. 785 Writing theory.idv[69] (theory68x.png)
+l. 796 Writing theory.idv[70] (theory69x.png)
+ [41]
+l. 806 Writing theory.idv[71] (theory70x.png)
+l. 818 Writing theory.idv[72] (theory71x.png)
+l. 823 Writing theory.idv[73] (theory72x.png)
+l. 828 Writing theory.idv[74] (theory73x.png)
+ [42]
+l. 840 Writing theory.idv[75] (theory74x.png)
+l. 845 Writing theory.idv[76] (theory75x.png)
+ [43] (./theory.aux)
 
-Output written on theory.dvi (39 pages, 71172 bytes).
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6071 strings out of 492996
+ 71912 string characters out of 6132730
+ 271827 words of memory out of 5000000
+ 9495 multiletter control sequences out of 15000+600000
+ 14328 words of font info for 53 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,17n,35p,874b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on theory.dvi (43 pages, 102384 bytes).

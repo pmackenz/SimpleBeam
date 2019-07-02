@@ -54,5 +54,36 @@
         <file>docs/help/forceMoment.png</file>
         <file>docs/help/forceShear.png</file>
         <file>docs/help/forceSlope.png</file>
+        <file>docs/help/theory68x.png</file>
+        <file>docs/help/theory69x.png</file>
+        <file>docs/help/theory70x.png</file>
+        <file>docs/help/theory71x.png</file>
+        <file>docs/help/theory72x.png</file>
+        <file>docs/help/theory73x.png</file>
+        <file>docs/help/theory74x.png</file>
+        <file>docs/help/theory75x.png</file>
+        <file>docs/help/theory49x.png</file>
+        <file>docs/help/theory50x.png</file>
+        <file>docs/help/theory51x.png</file>
+        <file>docs/help/theory58x.png</file>
+        <file>docs/help/theory59x.png</file>
+        <file>docs/help/theory60x.png</file>
+        <file>docs/help/theory61x.png</file>
+        <file>docs/help/theory62x.png</file>
+        <file>docs/help/theory63x.png</file>
+        <file>docs/help/theory64x.png</file>
+        <file>docs/help/theory65x.png</file>
+        <file>docs/help/theory66x.png</file>
+        <file>docs/help/theory67x.png</file>
+        <file>docs/help/theory.4ct</file>
+        <file>docs/help/theory.4tc</file>
+        <file>docs/help/theory.toc</file>
+        <file>docs/help/theory41x.png</file>
+        <file>docs/help/theory42x.png</file>
+        <file>docs/help/theory43x.png</file>
+        <file>docs/help/theory44x.png</file>
+        <file>docs/help/theory45x.png</file>
+        <file>docs/help/theory46x.png</file>
+        <file>docs/help/theory48x.png</file>
     </qresource>
 </RCC>
