@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>782</width>
-    <height>726</height>
+    <height>734</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -513,7 +513,7 @@
              </sizepolicy>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="page">
              <layout class="QGridLayout" name="gridLayout_2">
@@ -596,7 +596,7 @@
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="resources.qrc">:/images/Rectangle.png</pixmap>
+                 <pixmap>:/images/Rectangle.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>false</bool>
@@ -729,7 +729,7 @@
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="resources.qrc">:/images/I-Beam.png</pixmap>
+                 <pixmap>:/images/I-Beam.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>false</bool>
@@ -817,7 +817,7 @@
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="resources.qrc">:/images/BoxChannel.png</pixmap>
+                 <pixmap>:/images/BoxChannel.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>false</bool>
@@ -1106,8 +1106,6 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
