@@ -150,14 +150,87 @@ File: beam.png
 --- needs --- theory.idv[16] ==> theory14x.png ---
 --- needs --- theory.idv[17] ==> theory15x.png ---
 --- needs --- theory.idv[18] ==> theory16x.png ---
+--- needs --- theory.idv[19] ==> theory17x.png ---
+--- needs --- theory.idv[20] ==> theory18x.png ---
+--- needs --- theory.idv[21] ==> theory19x.png ---
+--- needs --- theory.idv[22] ==> theory20x.png ---
+--- needs --- theory.idv[23] ==> theory21x.png ---
+--- needs --- theory.idv[24] ==> theory22x.png ---
+--- needs --- theory.idv[25] ==> theory23x.png ---
+--- needs --- theory.idv[26] ==> theory24x.png ---
+--- needs --- theory.idv[27] ==> theory25x.png ---
+--- needs --- theory.idv[28] ==> theory26x.png ---
+--- needs --- theory.idv[29] ==> theory27x.png ---
+--- needs --- theory.idv[30] ==> theory28x.png ---
+--- needs --- theory.idv[31] ==> theory29x.png ---
+--- needs --- theory.idv[32] ==> theory30x.png ---
+--- needs --- theory.idv[33] ==> theory31x.png ---
+--- needs --- theory.idv[34] ==> theory32x.png ---
+--- needs --- theory.idv[35] ==> theory33x.png ---
+--- needs --- theory.idv[36] ==> theory34x.png ---
+--- needs --- theory.idv[37] ==> theory35x.png ---
+--- needs --- theory.idv[38] ==> theory36x.png ---
+--- needs --- theory.idv[39] ==> theory37x.png ---
+--- needs --- theory.idv[40] ==> theory38x.png ---
+--- needs --- theory.idv[41] ==> theory39x.png ---
+--- needs --- theory.idv[42] ==> theory40x.png ---
+--- needs --- theory.idv[43] ==> theory41x.png ---
+File: forceDeflection.png
+--- needs --- theory.idv[44] ==> theory42x.png ---
+File: forceSlope.png
+--- needs --- theory.idv[45] ==> theory43x.png ---
+File: forceMoment.png
+--- needs --- theory.idv[46] ==> theory44x.png ---
+File: forceShear.png
+--- needs --- theory.idv[47] ==> theory45x.png ---
+--- needs --- theory.idv[48] ==> theory46x.png ---
+--- needs --- theory.idv[49] ==> theory47x.png ---
+--- empty picture --- theory.idv[49] ---
+--- needs --- theory.idv[50] ==> theory48x.png ---
+--- needs --- theory.idv[51] ==> theory49x.png ---
+--- needs --- theory.idv[52] ==> theory50x.png ---
+--- needs --- theory.idv[53] ==> theory51x.png ---
+--- needs --- theory.idv[54] ==> theory52x.png ---
+--- empty picture --- theory.idv[54] ---
+--- needs --- theory.idv[55] ==> theory53x.png ---
+--- empty picture --- theory.idv[55] ---
+--- needs --- theory.idv[56] ==> theory54x.png ---
+--- empty picture --- theory.idv[56] ---
+--- needs --- theory.idv[57] ==> theory55x.png ---
+--- empty picture --- theory.idv[57] ---
+--- needs --- theory.idv[58] ==> theory56x.png ---
+--- empty picture --- theory.idv[58] ---
+--- needs --- theory.idv[59] ==> theory57x.png ---
+--- empty picture --- theory.idv[59] ---
+--- needs --- theory.idv[60] ==> theory58x.png ---
+--- needs --- theory.idv[61] ==> theory59x.png ---
+--- needs --- theory.idv[62] ==> theory60x.png ---
+--- needs --- theory.idv[63] ==> theory61x.png ---
+--- needs --- theory.idv[64] ==> theory62x.png ---
+--- needs --- theory.idv[65] ==> theory63x.png ---
+--- needs --- theory.idv[66] ==> theory64x.png ---
+--- needs --- theory.idv[67] ==> theory65x.png ---
+--- needs --- theory.idv[68] ==> theory66x.png ---
+--- needs --- theory.idv[69] ==> theory67x.png ---
+--- needs --- theory.idv[70] ==> theory68x.png ---
+--- needs --- theory.idv[71] ==> theory69x.png ---
+--- needs --- theory.idv[72] ==> theory70x.png ---
+--- needs --- theory.idv[73] ==> theory71x.png ---
+--- needs --- theory.idv[74] ==> theory72x.png ---
+--- needs --- theory.idv[75] ==> theory73x.png ---
+--- needs --- theory.idv[76] ==> theory74x.png ---
+--- needs --- theory.idv[77] ==> theory75x.png ---
 --- characters ---
 Font("cmr","10","10","109")
 Font("cmr","17","17","100")
 Font("cmr","12","12","100")
 Font("cmr","8","8","100")
+Font("cmr","6","6","100")
 Font("cmmi","8","8","100")
+Font("cmmi","6","6","100")
 Font("cmsy","8","8","100")
 Font("cmti","10","10","109")
 Font("cmmi","10","10","109")
 Font("cmsy","10","10","109")
 Font("cmex","10","10","109")
+Font("cmmib","10","10","109")

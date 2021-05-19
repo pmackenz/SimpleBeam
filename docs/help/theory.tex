@@ -1,6 +1,6 @@
 \documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-%\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-%\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[margin=1.0in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
@@ -9,7 +9,9 @@
 
 %SetFonts
 
-%SetFonts
+% Macros
+\newcommand{\DS}{\displaystyle}
+\newcommand{\vectr}[1]{\hbox{\boldmath$#1$}}
 
 
 \title{Bernoulli-Euler beam theory}
@@ -18,6 +20,8 @@
 
 \begin{document}
 \maketitle
+
+\tableofcontents
 
 \section{Introduction}
 \begin{figure}[h]
@@ -151,4 +155,697 @@ or, for constant $EI$, simplifies to
 	V(x) = EI\, v'''(x) ~.
 	\label{Eq:16}
 \end{equation}
+
+\section{Examples}
+
+\subsection{Single span beam with constant distributed force}
+
+Both bending stiffness, $EI$, and distributed load, $w(x) = w_0$, are constant over the length of the beam.  Thus, \eqref{Eq:12} simplifies to
+\begin{equation}
+   v''''(x) =  -\frac{w_0}{EI}
+   \label{A1}
+\end{equation}
+\begin{equation}
+   v'''(x) =  -\frac{w_0\,x}{EI} + c_1
+   \label{A2}
+\end{equation}
+\begin{equation}
+   v''(x) =  -\frac{w_0\,x^2}{2 EI} + c_1\,x + c_2
+   \label{A3}
+\end{equation}
+\begin{equation}
+   \theta(x) = v'(x) =  -\frac{w_0\,x^3}{6 EI} + \frac{1}{2} \,c_1\,x^2 + c_2\,x + c_3
+   \label{A4}
+\end{equation}
+\begin{equation}
+   v(x) =  -\frac{w_0\,x^4}{24 EI} + \frac{1}{6} \,c_1\,x^3 + \frac{1}{2} \,c_2\,x^2+ c_3\,x + c_4
+   \label{A5}
+\end{equation}
+\begin{equation}
+   M(x) = EI \, v''(x) = -\frac{w_0\,x^2}{2} + EI\,c_1\,x + EI\,c_2
+   \label{A6}
+\end{equation}
+\begin{equation}
+   V(x) = M'(x) = EI \, v'''(x) = -w_0\,x + EI\,c_1
+   \label{A7}
+\end{equation}
+Pinned on both ends yields the boundary conditions
+\begin{equation}
+%   v(0) = 0 ~,~~~
+%   M(0) = 0 ~,~~~
+%   v(\ell) = 0 ~,~~~
+%   M(\ell) = 0 ~.
+%  
+   \left\{ 
+   \begin{array}{c}
+   v(0) \\
+   M(0) \\
+   v(\ell) \\
+   M(\ell) 
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    0 \\
+    0 \\
+    0 \\
+    0 
+   \end{array}
+   \right\}
+   \label{A8}
+\end{equation}
+\begin{equation}
+   \left[ 
+   \begin{array}{cccc}
+    0 & 0 & 0 & 1 \\
+    0 & EI & 0 & 0 \\
+    \ell^3/6 & \ell^2/2 & \ell & 1 \\
+    EI\,\ell & EI & 0 & 0 
+   \end{array}
+   \right]
+   \left\{ 
+   \begin{array}{c}
+    c_1 \\
+    c_2 \\
+    c_3 \\
+    c_4 
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    0 \\
+    0 \\
+    \DS\frac{w_0 \ell^4}{24\, EI} \\[2ex]
+    \DS\frac{w_0 \ell^2}{2}
+   \end{array}
+   \right\}
+   \label{A9}
+\end{equation}
+\begin{equation}
+   \left\{ 
+   \begin{array}{c}
+    c_1 \\
+    c_2 \\
+    c_3 \\
+    c_4 
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    \DS\frac{w_0 \ell}{2\, EI} \\[2ex]
+    0 \\
+    \DS-\frac{w_0 \ell^3}{24\, EI} \\[2ex]
+    0
+   \end{array}
+   \right\}
+   \label{A10}
+\end{equation}
+\begin{equation}
+   v(x) 
+   % =  -\frac{w_0\,x^4}{24 EI} + \frac{w_0 \ell}{12\, EI}\,x^3  -\frac{w_0 \ell^3}{24\, EI}\,x 
+   =  \frac{w_0\,\ell^4}{24 EI} \, \frac{x}{\ell} \left( 1 -\frac{x}{\ell}  \right)\left( \frac{x^2}{\ell^2} -\frac{x}{\ell}  - 1 \right)
+   \label{A11}
+\end{equation}
+\begin{equation}
+   M(x) = EI\,v''(x) = \frac{w_0\,\ell^2}{2} \,\frac{x}{\ell} \left( 1 -\frac{x}{\ell}  \right)
+   \label{A12}
+\end{equation}
+\begin{equation}
+   V(x) = M'(x) = EI\,v'''(x) = \frac{w_0\,\ell}{2} \left( 1 - 2\frac{x}{\ell}  \right)
+   \label{A13}
+\end{equation}
+Shear vanishes at $x=\ell$ and, thus,
+\begin{equation}
+   \max M = M(\ell/2) = \frac{w_0\,\ell^2}{8} 
+   \label{A14}
+\end{equation}
+By symmetry, rotation vanishes at $x=\ell$ and, thus,
+\begin{equation}
+   \max |v| = -\min v = -v(\ell/2) = \frac{5 w_0\,\ell^4}{384 EI}
+   \label{A15}
+\end{equation}
+
+\subsection{Single span beam with a single concentrated force}
+
+\begin{eqnarray}
+   v_1''''(x) &=&  0 \\
+   v_1'''(x) &=&   c_1 \\
+   v_1''(x) &=&   c_1\,x + c_2  \\
+   \theta_1(x) = v_1'(x) &=&  \frac{1}{2} \,c_1\,x^2 + c_2\,x + c_3 \\
+   v_1(x) &=&  \frac{1}{6} \,c_1\,x^3 + \frac{1}{2} \,c_2\,x^2+ c_3\,x + c_4 \\
+   M_1(x) = EI \, v_1''(x) &=&  EI\,c_1\,x + EI\,c_2 \\
+   V_1(x) = M_1'(x) = EI \, v_1'''(x) &=& EI\,c_1
+   \label{B1}
+\end{eqnarray}
+\begin{eqnarray}
+   v_2''''(x) &=&  0 \\
+   v_2'''(x) &=&   d_1 \\
+   v_2''(x) &=&   d_1\,x + d_2  \\
+   \theta_2(x) = v_2'(x) &=&   \frac{1}{2} \,d_1\,x^2 + d_2\,x + d_3 \\
+   v_2(x) &=&   \frac{1}{6} \,d_1\,x^3 + \frac{1}{2} \,d_2\,x^2+ d_3\,x + d_4 \\
+   M_2(x) = EI \, v_2''(x) &=&  EI\,d_1\,x + EI\,d_2 \\
+   V_2(x) = M_2'(x) = EI \, v_2'''(x) &=&  EI\,d_1
+   \label{B2}
+\end{eqnarray}
+Boundary conditions
+\begin{equation}
+   \left\{ 
+   \begin{array}{c}
+   v(0) = v_1(0) \\
+   M(0) = M_1(0) \\
+   v(\ell) = v_2(\ell) \\
+   M(\ell) = M_2(\ell)
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    0 \\
+    0 \\
+    0 \\
+    0 
+   \end{array}
+   \right\}
+   \label{B3}
+\end{equation}
+Continuity conditions:
+\begin{equation}
+   v_1(a) = v_2(a)
+   \qquad\hbox{and}\qquad
+   \theta_1(a) = \theta_2(a)
+   \label{B4}
+\end{equation}
+Equilibrium of forces for the interval $[a-\epsilon,a+\epsilon]$:
+\begin{equation}
+   \lim_{\epsilon\to 0} \left[ V(a-\epsilon) - P - V(a+\epsilon)  \right] = 0
+   \qquad\Rightarrow\quad
+   V_1(a) - V_2(a) = P
+   \label{B5}
+\end{equation}
+Moment equilibrium for the interval $[a-\epsilon,a+\epsilon]$:
+\begin{equation}
+   \lim_{\epsilon\to 0} \left[ M(a-\epsilon) + \epsilon V(a-\epsilon) - M(a+\epsilon) + \epsilon V(a+\epsilon) \right] = 0
+   \quad\Rightarrow\quad
+   M_1(a) = M_2(a)
+   \label{B6}
+\end{equation}
+\begin{equation}
+   \left[ 
+   \begin{array}{cccccccc}
+    0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\[2ex]
+    0 & EI & 0 & 0 & 0 & 0 & 0 & 0 \\[2ex]
+    0 & 0 & 0 & 0 & \ell^3/6 & \ell^2/2 & \ell & 1 \\[2ex]
+    0 & 0 & 0 & 0 & EI\,\ell & EI & 0 & 0 \\[2ex]
+    a^3/6 & a^2/2 & a & 1 & -a^3/6 & -a^2/2 & -a & -1 \\[2ex]
+    a^2/2 & a & 1 & 0 & -a^2/2 & -a & -1 & 0 \\[2ex]
+    EI \,a & EI & 0 & 0 & -EI\,a & -EI & 0 & 0 \\[2ex]
+    EI & 0 & 0 & 0 & -EI & 0 & 0 & 0 
+   \end{array}
+   \right]
+   \left\{ 
+   \begin{array}{c}
+    c_1 \\[1.5ex]
+    c_2 \\[1.5ex]
+    c_3 \\[1.5ex]
+    c_4 \\[1.5ex]
+    d_1 \\[1.5ex]
+    d_2 \\[1.5ex]
+    d_3 \\[1.5ex]
+    d_4
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    0 \\[1.5ex]
+    P 
+   \end{array}
+   \right\}
+   \label{B7}
+\end{equation}
+Using $\alpha=a/\ell$, the integration constants are obtained as
+\begin{equation}
+   \left\{ 
+    c_1 \,,~
+    c_2 \,,~
+    c_3 \,,~
+    c_4 
+   \right\}
+   =
+   \left\{
+   	\frac{ (1-\alpha)  P}{{EI}},~
+	0,~
+	-\frac{ \alpha  \left(\alpha ^2-3 \alpha +2\right) P \ell^2 }{6 \,{EI}},~
+   	0
+   \right\}
+   \label{B8}
+\end{equation}
+and
+\begin{equation}
+   \left\{ 
+    d_1 \,,~
+    d_2 \,,~
+    d_3 \,,~
+    d_4
+   \right\}
+   =
+   \left\{
+	\frac{ -\alpha  P}{2 {EI}},~
+	\frac{\alpha  P \ell }{{EI}},~
+	-\frac{ \alpha  \left(2+\alpha^2\right) P \ell^2 }{6 \,{EI}},~
+	\frac{\alpha^3  P \ell^3}{6 \,{EI}}
+   \right\}
+   \label{B9}
+\end{equation}
+\begin{equation}
+   v(x) = \left\{ \begin{array}{ll}
+                       \frac{(1-\alpha)Px(x^2 - \alpha(2-\alpha)\ell^2)}{6\,EI}  & x<a \\[2ex]
+                       -\frac{\alpha^2(1-\alpha)^2P\ell^3 }{3\,EI}  & x=a \\[2ex]
+                       \frac{\alpha P(\ell - x)(x^2 - 2 \ell x + \alpha^2\ell^2)}{6\,EI}  & x>a 
+                      \end{array} \right.
+   \label{B10}
+\end{equation}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[]{forceDeflection.png}
+        \caption{Deformed shape for different locations, $\alpha=a/\ell$, for $EI=1$, $\ell=1$, $P=1$}
+        \label{default1}
+    \end{center}
+\end{figure}
+
+\begin{equation}
+   \theta(x) = \left\{ \begin{array}{ll}
+                       \frac{(1-\alpha)P( 3 x^2 - \alpha(2-\alpha)\ell^2)}{6\,EI}  & x<a \\[2ex]
+                       \frac{\alpha(1-\alpha)( 2 \alpha - 1 )P\ell^2}{3\,EI}  & x=a \\[2ex]
+                        \frac{-\alpha P(3 x^2-6\ell x+(2+\alpha^2)\ell^2)}{6\,EI}   & x>a 
+                      \end{array} \right.
+   \label{B11}
+\end{equation}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[]{forceSlope.png}
+        \caption{Rotation for different locations, $\alpha=a/\ell$, for $EI=1$, $\ell=1$, $P=1$}
+        \label{default2}
+    \end{center}
+\end{figure}
+
+\begin{equation}
+   M(x) = \left\{ \begin{array}{ll}
+                       (1-\alpha) P x  & x<a \\[2ex]
+                       \alpha(1-\alpha) P \ell  & x=a \\[2ex]
+                       \alpha P(\ell - x)  & x>a 
+                      \end{array} \right.
+   \label{B12}
+\end{equation}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[]{forceMoment.png}
+        \caption{Moment diagrams for different locations, $\alpha=a/\ell$, for $EI=1$, $\ell=1$, $P=1$}
+        \label{default3}
+    \end{center}
+\end{figure}
+
+\begin{equation}
+   V(x) = \left\{ \begin{array}{ll}
+                       (1-\alpha)P  & x<a \\[2ex]
+                       \text{undefined}  & x=a \\[2ex]
+                       -\alpha P  & x>a 
+                      \end{array} \right.
+   \label{B13}
+\end{equation}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[]{forceShear.png}
+        \caption{Shear diagrams for different locations, $\alpha=a/\ell$, for $EI=1$, $\ell=1$, $P=1$}
+        \label{default4}
+    \end{center}
+\end{figure}
+
+\subsection{Fundamentals of the stiffness method}
+
+\begin{eqnarray}
+   v''''(x) &=&  -\frac{w_0}{EI} \\
+   v'''(x) &=&  -\frac{w_0 x}{EI} + c_1 \\
+   v''(x) &=&   -\frac{w_0 x^2}{2 EI} + c_1\,x + c_2  \\
+   \theta(x) = v'(x) &=&  -\frac{w_0 x^3}{6 EI} + \frac{1}{2} \,c_1\,x^2 + c_2\,x + c_3 \\
+   v(x) &=&  -\frac{w_0 x^4}{24 EI} + \frac{1}{6} \,c_1\,x^3 + \frac{1}{2} \,c_2\,x^2+ c_3\,x + c_4
+   \label{C1}
+\end{eqnarray}
+\begin{equation}
+   \left\{ 
+   \begin{array}{c}
+   v(0)  \\
+   \theta(0) = v'(0)  \\
+   v(\ell)  \\
+   \theta(\ell) = v'(\ell) 
+   \end{array}
+   \right\}
+   =
+   \left[ 
+   \begin{array}{cccc}
+    0 & 0 & 0 & 1 \\
+    0 & 0 & 1 & 0 \\
+    \ell^3/6 & \ell^2/2 & \ell & 1 \\
+    \ell^2/2 & \ell & 1 & 0
+   \end{array}
+   \right]
+   \left\{ 
+   \begin{array}{c}
+    c_1 \\
+    c_2 \\
+    c_3 \\
+    c_4 
+   \end{array}
+   \right\}
+   +
+   \left\{ 
+   \begin{array}{c}
+    0 \\
+    0 \\
+    -\frac{w_0 \ell^3}{6 EI} \\
+    -\frac{w_0 \ell^4}{24 EI} 
+   \end{array}
+   \right\}
+   =
+   \left\{ 
+   \begin{array}{c}
+    v_i \\
+    \theta_i \\
+    v_j \\
+    \theta_j 
+   \end{array}
+   \right\}
+   \label{C2}
+\end{equation}
+
+\begin{equation}
+   \label{C3}
+\end{equation}
+
+\begin{eqnarray}
+   v(x) &=& v_h(x) + v_p(x) \\
+   \theta(x) 
+   %= v'(x) 
+   &=&  \theta_h(x) + \theta_p(x) \\
+   M(x) 
+   %= EI \, v''(x) 
+   &=&  M_h(x) + M_p(x) \\
+   V(x) 
+   %= M'(x) = EI \, v'''(x) 
+   &=& V_h(x) + V_p(x) 
+   \label{C1}
+\end{eqnarray}
+
+
+\begin{eqnarray}
+   v_h(x) &=&  
+    \left(\frac{2 x^3}{\ell^3}-\frac{3 x^2}{\ell^2}+1\right) {v_i}
+   +  \left(\frac{x^3}{\ell^2}-\frac{2 x^2}{\ell}+x\right) {\theta_i}
+   + \left(\frac{3 x^2}{\ell^2}-\frac{2 x^3}{\ell^3}\right) {v_j}
+   + \left(\frac{x^3}{\ell^2}-\frac{x^2}{\ell}\right) {\theta_j}
+    \\
+   \theta_h(x) 
+   %= v_h'(x) 
+   &=&  
+    \left(\frac{6  x^2}{\ell^3}-\frac{6 x}{\ell^2}\right) {v_i}
+   + \left(\frac{3 x^2}{\ell^2}-\frac{4 x}{\ell}+1\right) {\theta_i}
+   + \left(\frac{6 x}{\ell^2}-\frac{6 x^2}{\ell^3}\right) {v_j}
+   +\left(\frac{3 x^2}{\ell^2}-\frac{2 x}{\ell}\right) {\theta_j} 
+    \\
+   M_h(x) 
+   %= EI \, v_h''(x) 
+   &=&  
+    \frac{6 {EI}}{\ell^2}  \left(2 \frac{x}{\ell} - 1 \right) \left( {v_i} - {v_j}  \right)
+   +  \frac{2 {EI}}{\ell}  \left( 3 \frac{x}{\ell} - 2 \right) {\theta_i}
+   +  \frac{2 {EI}}{\ell}  \left( 3 \frac{x}{\ell} - 1 \right) {\theta_j}
+    \\
+   V_h(x) 
+   %= M_h'(x) = EI \, v_h'''(x) 
+   &=& 
+   \frac{12 {EI} }{\ell^3} \left( {v_i} - {v_j} \right) 
+   +   \frac{6 {EI} }{\ell^2} \left( {\theta_i} + {\theta_j} \right)
+   \label{C1}
+\end{eqnarray}
+
+
+\begin{eqnarray}
+   v_p(x) &=&  
+   - \frac{w_0 \ell^4}{24 EI} \left( \frac{x}{\ell} \right)^2 \left( 1 - \frac{x}{\ell} \right)^2
+    \\
+   \theta_p(x) 
+   %= v_p'(x) 
+   &=&  
+   - \frac{w_0 \ell^3}{12 EI} \left( \frac{x}{\ell} \right) \left( 1 - \frac{x}{\ell} \right) \left( 1 - 2 \frac{x}{L} \right)
+    \\
+   M_p(x) 
+   %= EI \, v_p''(x) 
+   &=&  
+   + \frac{w_0 \ell^2}{12} \left( 1 - 6 \frac{x}{\ell} + 6 \frac{x^2}{\ell^2} \right)
+    \\
+   V_p(x) 
+   %= M_p'(x) = EI \, v_p'''(x) 
+   &=& 
+   + \frac{w_0 \ell}{2}  \left( 1 - 2 \frac{x}{\ell} \right)
+   \label{C1}
+\end{eqnarray}
+
+\begin{equation}
+   \underbrace{
+   \left\{ 
+   \begin{array}{c}
+    \bar V_i = V(0) \\
+    \bar M_i = -M(0) \\
+    \bar V_j = -V(\ell) \\
+    \bar M_j = M(\ell) 
+   \end{array}
+   \right\}
+   }_{=:\vectr{f}^e}
+   =
+   \underbrace{
+   \left[
+   \begin{array}{cccc}
+    \frac{12 {EI} }{\ell^3} & \frac{6 {EI} }{\ell^2} & -\frac{12 {EI} }{\ell^3} & \frac{6 {EI} }{\ell^2} \\[2ex]
+    \frac{6 {EI}}{\ell^2} & \frac{4 {EI}}{\ell} & -\frac{6 {EI}}{\ell^2} & \frac{2 {EI}}{\ell} \\[2ex]
+    -\frac{12 {EI} }{\ell^3} & -\frac{6 {EI} }{\ell^2} & \frac{12 {EI} }{\ell^3} & -\frac{6 {EI} }{\ell^2} \\[2ex]
+    \frac{6 {EI}}{\ell^2} & \frac{2 {EI}}{\ell} &  -\frac{6 {EI}}{\ell^2}  &  \frac{4 {EI}}{\ell}
+   \end{array}
+   \right]
+   }_{=:\vectr{K}^e}
+   \underbrace{
+   \left\{ 
+   \begin{array}{c}
+    v_i \\
+    \theta_i \\
+    v_j \\
+    \theta_j 
+   \end{array}
+   \right\}
+   }_{=:\vectr{q}^e}
+   +
+   \underbrace{
+   \left\{ 
+   \begin{array}{c}
+    \frac{w_0 \ell}{2} \\[2ex]
+    -\frac{w_0 \ell^2}{12}  \\[2ex]
+    \frac{w_0 \ell}{2} \\[2ex]
+    \frac{w_0 \ell^2}{12} 
+   \end{array}
+   \right\}
+   }_{=:\vectr{P}^e}
+   \label{C4}
+\end{equation}
+\begin{equation}
+   \label{C5}
+\end{equation}
+\begin{equation}
+   \label{C6}
+\end{equation}
+\begin{equation}
+   \label{C7}
+\end{equation}
+\begin{equation}
+   \label{C8}
+\end{equation}
+\begin{equation}
+   \label{C9}
+\end{equation}
+\begin{equation}
+   \label{C10}
+\end{equation}
+
+\subsection{Single span beam with a concentrated force and distributed load using the stiffness method}
+
+\begin{equation}
+   \{ \vectr{q} \}  = \{ q_1,~ q_2,~ q_3,~ q_4,~ q_5,~ q_6 \}^t = \{ v_1,~ \theta_1,~ v_2,~ \theta_2,~ v_3,~ \theta_3\}^t
+   \label{D1}
+\end{equation}
+\begin{equation}
+   \{ \vectr{q}^{(1)} \} = \{ v_1,~ \theta_1,~ v_2,~ \theta_2\}^t = \{ q_1,~ q_2,~ q_3,~ q_4 \}^t
+   \label{D2}
+\end{equation}
+\begin{equation}
+   \{ \vectr{q}^{(2)} \} = \{  v_2,~ \theta_2,~ v_3,~ \theta_3\}^t = \{  q_3,~ q_4,~ q_5,~ q_6 \}^t
+   \label{D3}
+\end{equation}
+\begin{equation}
+   [ \vectr{K}^{(1)} ] =
+   \left[
+   \begin{array}{cccc}
+    \frac{12 {EI} }{a^3} & \frac{6 {EI} }{a^2} & -\frac{12 {EI} }{a^3} & \frac{6 {EI} }{a^2} \\[2ex]
+    \frac{6 {EI}}{a^2} & \frac{4 {EI}}{a} & -\frac{6 {EI}}{a^2} & \frac{2 {EI}}{a} \\[2ex]
+    -\frac{12 {EI} }{a^3} & -\frac{6 {EI} }{a^2} & \frac{12 {EI} }{a^3} & -\frac{6 {EI} }{a^2} \\[2ex]
+    \frac{6 {EI}}{a^2} & \frac{2 {EI}}{a} &  -\frac{6 {EI}}{a^2}  &  \frac{4 {EI}}{a}
+   \end{array}
+   \right]
+   \label{D4}
+\end{equation}
+$b=\ell-a$:
+\begin{equation}
+   [ \vectr{K}^{(2)} ] =
+   \left[
+   \begin{array}{cccc}
+    \frac{12 {EI} }{b^3} & \frac{6 {EI} }{b^2} & -\frac{12 {EI} }{b^3} & \frac{6 {EI} }{b^2} \\[2ex]
+    \frac{6 {EI}}{b^2} & \frac{4 {EI}}{b} & -\frac{6 {EI}}{b^2} & \frac{2 {EI}}{b} \\[2ex]
+    -\frac{12 {EI} }{b^3} & -\frac{6 {EI} }{b^2} & \frac{12 {EI} }{b^3} & -\frac{6 {EI} }{b^2} \\[2ex]
+    \frac{6 {EI}}{b^2} & \frac{2 {EI}}{b} &  -\frac{6 {EI}}{b^2}  &  \frac{4 {EI}}{b}
+   \end{array}
+   \right]
+   \label{D5}
+\end{equation}
+\begin{equation}
+   [ \vectr{K} ] =
+   \left[
+   \begin{array}{cccccc}
+    \frac{12 {EI} }{a^3} & \frac{6 {EI} }{a^2} & -\frac{12 {EI} }{a^3} & \frac{6 {EI} }{a^2} & 0 & 0 \\[2ex]
+    \frac{6 {EI}}{a^2} & \frac{4 {EI}}{a} & -\frac{6 {EI}}{a^2} & \frac{2 {EI}}{a} & 0 & 0 \\[2ex]
+    -\frac{12 {EI} }{a^3} & -\frac{6 {EI} }{a^2} & 
+    \left( \frac{12 {EI} }{a^3} +  \frac{12 {EI} }{b^3} \right)  &
+    \left( -\frac{6 {EI} }{a^2}  + \frac{6 {EI} }{b^2} \right)  &
+    -\frac{12 {EI} }{b^3} & \frac{6 {EI} }{b^2} \\[2ex]
+    \frac{6 {EI}}{a^2} & \frac{2 {EI}}{a} &  
+    \left(  -\frac{6 {EI}}{a^2}  + \frac{6 {EI}}{b^2} \right) &
+    \left(  \frac{4 {EI}}{a}  +  \frac{4 {EI}}{b} \right)  & 
+    -\frac{6 {EI}}{b^2} & \frac{2 {EI}}{b} \\[2ex]
+    0 & 0 & -\frac{12 {EI} }{b^3} & -\frac{6 {EI} }{b^2} & \frac{12 {EI} }{b^3} & -\frac{6 {EI} }{b^2} \\[2ex]
+    0 & 0 & \frac{6 {EI}}{b^2} & \frac{2 {EI}}{b} &  -\frac{6 {EI}}{b^2}  &  \frac{4 {EI}}{b}
+   \end{array}
+   \right]
+   \label{D6}
+\end{equation}
+\begin{equation}
+   \{ \vectr{P} \} = \{ 0,~ 0,~ -P,~ 0,~ 0,~ 0 \}^t
+   \label{D7}
+\end{equation}
+Boundary conditions $v(0) = v_1 = q_1 =0$ and $v(\ell) = v_3 = q_5 =0$ tell us that the 1$^{st}$ and 5$^{th}$ columns and rows are to be eliminated, resulting in
+\begin{equation}
+   [ \vectr{K}_{ff} ] =
+   \left[
+   \begin{array}{cccc}
+    \frac{4 {EI}}{a} & -\frac{6 {EI}}{a^2} & \frac{2 {EI}}{a} & 0 \\[2ex]
+    -\frac{6 {EI} }{a^2} & 
+    \left( \frac{12 {EI} }{a^3} +  \frac{12 {EI} }{b^3} \right)  &
+    \left( -\frac{6 {EI} }{a^2}  + \frac{6 {EI} }{b^2} \right)  &
+    \frac{6 {EI} }{b^2} \\[2ex]
+    \frac{2 {EI}}{a} &  
+    \left(  -\frac{6 {EI}}{a^2}  + \frac{6 {EI}}{b^2} \right) &
+    \left(  \frac{4 {EI}}{a}  +  \frac{4 {EI}}{b} \right)  & 
+    \frac{2 {EI}}{b} \\[2ex]
+    0 & \frac{6 {EI}}{b^2} & \frac{2 {EI}}{b} & \frac{4 {EI}}{b}
+   \end{array}
+   \right]
+   \label{D8}
+\end{equation}
+\begin{equation}
+   \{ \vectr{P}_f \} = \{ 0,~ -P,~ 0,~ 0 \}^t
+   \label{D9}
+\end{equation}
+\begin{equation}
+   \{ \vectr{q}_f \} = [ \vectr{K}_{ff} ]^{-1} \{ \vectr{P}_f \}
+   =
+   \left\{
+       -\frac{(\ell + b) a b P}{6 EI \ell}, ~
+       -\frac{(a^2 b^2 P)}{3 EI \ell}, ~
+       \frac{(a - b) a b P}{3 EI \ell}, ~
+       \frac{(a + \ell) a b P}{6 EI \ell} \right\}^t
+   \label{D10}
+\end{equation}
+\begin{equation}
+   \{ \vectr{q}^{(1)} \} 
+   =
+   \left\{
+       0 ,~
+       -\frac{(\ell + b) a b P}{6 EI \ell}, ~
+       -\frac{(a^2 b^2 P)}{3 EI \ell}, ~
+       \frac{(a - b) a b P}{3 EI \ell}
+       \right\}^t
+   \label{D11}
+\end{equation}
+\begin{equation}
+   \{ \vectr{q}^{(2)} \} 
+   =
+   \left\{
+       -\frac{(a^2 b^2 P)}{3 EI \ell}, ~
+       \frac{(a - b) a b P}{3 EI \ell}, ~
+       0 ,~
+       \frac{(a + \ell) a b P}{6 EI \ell} \right\}^t
+   \label{D12}
+\end{equation}
+\begin{equation}
+   \{ \vectr{f}^{(1)} \} 
+   = [ \vectr{K}^{(1)} ] \{ \vectr{q}^{(1)} \} 
+   = \{  
+       \underbrace{ \frac{b P}{\ell} }_{V_1^{(1)}}, 
+       \underbrace{ 0\strut }_{ -M_1^{(1)} }, 
+       \underbrace{ -\frac{b P}{\ell} }_{-V_2^{(1)}}, 
+       \underbrace{ \frac{a b P}{\ell} }_{M_2^{(1)}}
+      \}^t
+   \label{D13}
+\end{equation}
+Measuring $\bar x$ from the left end of segment~1, i.e., $\bar x = x$, we get
+\begin{equation}
+   M(\bar x) = \frac{\bar x b P}{\ell}
+   \qquad \text{where}~ 0\le \bar x\le a
+   \label{D15}
+\end{equation}
+\begin{equation}
+   V(\bar x) = \frac{b P}{\ell} 
+   \qquad \text{where}~ 0\le \bar x\le a
+   \label{D16}
+\end{equation}
+\begin{equation}
+   \{ \vectr{f}^{(2)} \} 
+   = [ \vectr{K}^{(2)} ] \{ \vectr{q}^{(2)} \} 
+   = \{  
+       \underbrace{ -\frac{a P}{\ell} }_{V_2^{(2)}}, 
+       \underbrace{ -\frac{a b P}{\ell} }_{-M_2^{(2)}}, 
+       \underbrace{ \frac{a P}{\ell} }_{-V_3^{(2)}}, 
+       \underbrace{ 0\strut }_{M_3^{(2)}}
+      \}^t
+   \label{D14}
+\end{equation}
+Measuring $\bar x$ from the left end of segment~2, i.e., $\bar x = (x-a)$, we get
+\begin{equation}
+   M(\bar x) = \frac{ a (b -\bar x) P}{\ell}
+   \qquad \text{where}~ 0\le \bar x\le b
+   \label{D17}
+\end{equation}
+\begin{equation}
+   V(\bar x) = -\frac{a P}{\ell} 
+   \qquad \text{where}~ 0\le \bar x\le b
+   \label{D18}
+\end{equation}
+
 \end{document}  

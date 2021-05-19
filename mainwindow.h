@@ -6,6 +6,11 @@
 #include "./qcp/qcustomplot.h"
 #include "definitions.h"
 
+#include <algorithm>
+
+#define MAX(vec) *std::max_element(vec.constBegin(), vec.constEnd())
+#define MIN(vec) *std::min_element(vec.constBegin(), vec.constEnd())
+
 class Solver;
 
 namespace Ui {
@@ -23,7 +28,7 @@ public:
 
     void updateSystemPlot(void);
     void doAnalysis(void);
-    void updateResultPlot(QCustomPlot * plot, QVector<double> &x, QVector<double> &y);
+    void updateResultPlot(QCustomPlot * plot, QVector<double> &x, QVector<double> &y, double xP = -1.);
     void computeI(void);
 
 private slots:
@@ -73,6 +78,8 @@ private slots:
     void on_actionE_xport_to_PNG_triggered();
     void on_action_About_triggered();
     void on_actionBackground_triggered();
+
+    void on_action_Quit_triggered();
 
 private:
     Ui::MainWindow *ui;

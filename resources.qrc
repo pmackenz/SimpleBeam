@@ -4,8 +4,6 @@
         <file>images/I-Beam.png</file>
         <file>images/Rectangle.png</file>
         <file>docs/help/theory.html</file>
-        <file>docs/help/theory.4ct</file>
-        <file>docs/help/theory.4tc</file>
         <file>docs/help/theory.css</file>
         <file>docs/help/theory.xref</file>
         <file>docs/help/theory0x.png</file>
@@ -28,5 +26,64 @@
         <file>images/W-Logo_Purple_RGB.png</file>
         <file>docs/about.html</file>
         <file>docs/help/beam.png</file>
+        <file>docs/help/theory17x.png</file>
+        <file>docs/help/theory18x.png</file>
+        <file>docs/help/theory19x.png</file>
+        <file>docs/help/theory20x.png</file>
+        <file>docs/help/theory21x.png</file>
+        <file>docs/help/theory22x.png</file>
+        <file>docs/help/theory23x.png</file>
+        <file>docs/help/theory24x.png</file>
+        <file>docs/help/theory25x.png</file>
+        <file>docs/help/theory26x.png</file>
+        <file>docs/help/theory27x.png</file>
+        <file>docs/help/theory28x.png</file>
+        <file>docs/help/theory29x.png</file>
+        <file>docs/help/theory30x.png</file>
+        <file>docs/help/theory31x.png</file>
+        <file>docs/help/theory32x.png</file>
+        <file>docs/help/theory33x.png</file>
+        <file>docs/help/theory34x.png</file>
+        <file>docs/help/theory35x.png</file>
+        <file>docs/help/theory36x.png</file>
+        <file>docs/help/theory37x.png</file>
+        <file>docs/help/theory38x.png</file>
+        <file>docs/help/theory39x.png</file>
+        <file>docs/help/theory40x.png</file>
+        <file>docs/help/forceDeflection.png</file>
+        <file>docs/help/forceMoment.png</file>
+        <file>docs/help/forceShear.png</file>
+        <file>docs/help/forceSlope.png</file>
+        <file>docs/help/theory68x.png</file>
+        <file>docs/help/theory69x.png</file>
+        <file>docs/help/theory70x.png</file>
+        <file>docs/help/theory71x.png</file>
+        <file>docs/help/theory72x.png</file>
+        <file>docs/help/theory73x.png</file>
+        <file>docs/help/theory74x.png</file>
+        <file>docs/help/theory75x.png</file>
+        <file>docs/help/theory49x.png</file>
+        <file>docs/help/theory50x.png</file>
+        <file>docs/help/theory51x.png</file>
+        <file>docs/help/theory58x.png</file>
+        <file>docs/help/theory59x.png</file>
+        <file>docs/help/theory60x.png</file>
+        <file>docs/help/theory61x.png</file>
+        <file>docs/help/theory62x.png</file>
+        <file>docs/help/theory63x.png</file>
+        <file>docs/help/theory64x.png</file>
+        <file>docs/help/theory65x.png</file>
+        <file>docs/help/theory66x.png</file>
+        <file>docs/help/theory67x.png</file>
+        <file>docs/help/theory.4ct</file>
+        <file>docs/help/theory.4tc</file>
+        <file>docs/help/theory.toc</file>
+        <file>docs/help/theory41x.png</file>
+        <file>docs/help/theory42x.png</file>
+        <file>docs/help/theory43x.png</file>
+        <file>docs/help/theory44x.png</file>
+        <file>docs/help/theory45x.png</file>
+        <file>docs/help/theory46x.png</file>
+        <file>docs/help/theory48x.png</file>
     </qresource>
 </RCC>

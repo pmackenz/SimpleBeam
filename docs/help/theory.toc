@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Kinematics}{2}
+\contentsline {section}{\numberline {3}Constitutive relations}{2}
+\contentsline {section}{\numberline {4}Stress resultants}{2}
+\contentsline {section}{\numberline {5}Equilibrium}{3}
+\contentsline {section}{\numberline {6}Governing equation}{3}
+\contentsline {section}{\numberline {7}Finding moment, shear force, and slope from the displacement function}{4}
+\contentsline {section}{\numberline {8}Examples}{4}
+\contentsline {subsection}{\numberline {8.1}Single span beam with constant distributed force}{4}
+\contentsline {subsection}{\numberline {8.2}Single span beam with a single concentrated force}{5}
+\contentsline {subsection}{\numberline {8.3}Fundamentals of the stiffness method}{9}
+\contentsline {subsection}{\numberline {8.4}Single span beam with a concentrated force and distributed load using the stiffness method}{10}

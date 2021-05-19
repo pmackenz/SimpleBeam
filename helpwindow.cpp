@@ -13,6 +13,8 @@ HelpWindow::HelpWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->textBrowser->setSource(QUrl("qrc:/docs/help/theory.html"));
+
     //
     // adjust size of application window to the available display
     //
