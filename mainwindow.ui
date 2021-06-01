@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>782</width>
-    <height>734</height>
+    <width>784</width>
+    <height>736</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -513,7 +513,7 @@
              </sizepolicy>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="page">
              <layout class="QGridLayout" name="gridLayout_2">
@@ -596,7 +596,7 @@
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap>:/images/Rectangle.png</pixmap>
+                 <pixmap resource="resources.qrc">:/images/Rectangle.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>false</bool>
@@ -617,6 +617,9 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
+                </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
                 </property>
                 <property name="value">
                  <double>0.500000000000000</double>
@@ -670,6 +673,9 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
+                </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
                 </property>
                 <property name="value">
                  <double>1.000000000000000</double>
@@ -729,7 +735,7 @@
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap>:/images/I-Beam.png</pixmap>
+                 <pixmap resource="resources.qrc">:/images/I-Beam.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>false</bool>
@@ -817,7 +823,7 @@
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap>:/images/BoxChannel.png</pixmap>
+                 <pixmap resource="resources.qrc">:/images/BoxChannel.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>false</bool>
@@ -862,6 +868,9 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
+                </property>
                 <property name="value">
                  <double>0.750000000000000</double>
                 </property>
@@ -902,6 +911,9 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
+                </property>
                 <property name="value">
                  <double>0.500000000000000</double>
                 </property>
@@ -914,6 +926,9 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
+                </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
                 </property>
                 <property name="value">
                  <double>0.500000000000000</double>
@@ -1005,8 +1020,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>782</width>
-     <height>22</height>
+     <width>784</width>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -1106,6 +1121,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

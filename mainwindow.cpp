@@ -541,7 +541,7 @@ void MainWindow::doAnalysis(void)
     m_solver->setParameters(m_E, m_I, m_length, leftBC, rightBC);
 
     m_P  = ui->loadP->value();
-    m_w  = ui->loadW->value();
+    m_w  = ui->loadW->value() / 12.;
     m_xP = 12*ui->loadXP->value();
 
     m_status = m_solver->doAnalysis(m_w, m_P, m_xP);
